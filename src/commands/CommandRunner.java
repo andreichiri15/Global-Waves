@@ -816,7 +816,7 @@ public final class CommandRunner {
 
     public void wrapped(final User myUser, final InputCommands inputCommand,
                         final ArrayList<Result> results) {
-        WrappedStats result = myUser.getStats();
+        WrappedStats result = myUser.getWrappedStats();
 
         Result wrappedResult = new WrappedResult(inputCommand, result);
         results.add(wrappedResult);

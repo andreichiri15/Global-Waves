@@ -15,10 +15,7 @@ import library.user.helper.wrapped.WrappedStatsUser;
 import page.Page;
 import utils.Errors;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 public class User {
     private String username;
@@ -616,7 +613,66 @@ public class User {
         return 0;
     }
 
+    /**
+     * method that sorts a hashmap by its values
+     * (took this from GeeksForGeeks)
+     *
+     * @param hm the hashmap I want sorted
+     * @return the sorted hashmap
+     */
+    public static HashMap<String, Integer> sortByValue(HashMap<String, Integer> hm)
+    {
+        List<Map.Entry<String, Integer>> list =
+                new LinkedList<Map.Entry<String, Integer>> (hm.entrySet());
+
+        Collections.sort(list, new Comparator<Map.Entry<String, Integer>>() {
+            public int compare(Map.Entry<String, Integer> o1,
+                               Map.Entry<String, Integer> o2)
+            {
+                int returnValue = (o2.getValue()).compareTo(o1.getValue());
+                if (returnValue == 0) {
+                    return (o1.getKey()).compareTo(o2.getKey());
+                }
+                return returnValue;
+            }
+        });
+
+        HashMap<String, Integer> temp = new LinkedHashMap<>();
+        int count = 0;
+        for (Map.Entry<String, Integer> aa : list) {
+            if (count == 5) {
+                break;
+            }
+            System.out.println(aa.getKey() + " " + aa.getValue());
+            temp.put(aa.getKey(), aa.getValue());
+            count++;
+        }
+        return temp;
+    }
+
     public WrappedStats getStats() {
+        return wrappedStatsUser;
+    }
+
+    public WrappedStats getWrappedStats() {
+        if (userType.equals("user")) {
+            WrappedStatsUser userStats = (WrappedStatsUser) wrappedStatsUser;
+
+            HashMap<String, Integer> topSongs = sortByValue(userStats.getTopSongs());
+            HashMap<String, Integer> topAlbums = sortByValue(userStats.getTopAlbums());
+            HashMap<String, Integer> topArtists = sortByValue(userStats.getTopArtists());
+            HashMap<String, Integer> topGenres = sortByValue(userStats.getTopGenres());
+            HashMap<String, Integer> topEpisodes = sortByValue(userStats.getTopEpisodes());
+
+            WrappedStatsUser sortedWrappedStats = new WrappedStatsUser();
+            sortedWrappedStats.setTopSongs(topSongs);
+            sortedWrappedStats.setTopAlbums(topAlbums);
+            sortedWrappedStats.setTopArtists(topArtists);
+            sortedWrappedStats.setTopGenres(topGenres);
+            sortedWrappedStats.setTopEpisodes(topEpisodes);
+            return sortedWrappedStats;
+        }
+
         return wrappedStatsUser;
     }
 

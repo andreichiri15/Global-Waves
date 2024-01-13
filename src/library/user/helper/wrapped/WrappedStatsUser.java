@@ -1,5 +1,6 @@
 package library.user.helper.wrapped;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import library.filetypes.Song;
 
 import java.util.HashMap;
