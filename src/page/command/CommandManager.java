@@ -6,6 +6,7 @@ import java.util.LinkedList;
 
 public class CommandManager {
     LinkedList<Command> commands = new LinkedList<>();
+    LinkedList<Command> undoCommands = new LinkedList<>();
 
     public void changePage(Command command) {
         commands.add(command);
@@ -19,9 +20,23 @@ public class CommandManager {
 
         Command command = commands.pop();
         if (command != null) {
+            undoCommands.add(command);
             command.undo();
         }
 
         return Errors.SUCCES_PREV;
+    }
+
+
+    public int redo() {
+        if (undoCommands.isEmpty()) {
+            return Errors.HISTORY_EMPTY_NEXT;
+        }
+
+        Command command = undoCommands.pop();
+        if (command != null) {
+        }
+
+        return Errors.SUCCES_NEXT;
     }
 }

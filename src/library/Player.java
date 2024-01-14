@@ -55,6 +55,24 @@ public class Player {
         this.audioFile = Library.NULL_AUDIO_FILE;
     }
 
+    public void loadRecommendations() {
+        currentId = 0;
+        currentTime = 0;
+
+        if (user.getLastRecommandationType().equals("random_song")) {
+            audioFile = user.getRecommendedSongs().get(user.getRecommendedSongs().size() - 1);
+//            user.getRecommendedSongs().remove((Song)audioFile);
+
+            fileType = "song";
+        } else {
+            audioFile = user.getRecommendedPlaylists().get(user.getRecommendedPlaylists().
+                    size() - 1);
+//            user.getRecommendedPlaylists().remove((Playlist)audioFile);
+
+            fileType = "playlist";
+        }
+    }
+
     /**
      * method that handles the load command
      *
@@ -114,7 +132,7 @@ public class Player {
             listenedTimes = userStats.getTopArtists().getOrDefault(album.getOwner(), 0);
             userStats.getTopArtists().put(album.getOwner(), listenedTimes + 1);
 
-            listenedTimes = userStats.getTopArtists().getOrDefault(album.getSongs().get(0).getName(), 0);
+            listenedTimes = userStats.getTopSongs().getOrDefault(album.getSongs().get(0).getName(), 0);
             userStats.getTopSongs().put(album.getSongs().get(0).getName(), listenedTimes + 1);
 
             listenedTimes = userStats.getTopGenres().getOrDefault(album.getSongs().get(0).getGenre(), 0);
@@ -123,7 +141,7 @@ public class Player {
             artist = library.getUserByUsername(album.getOwner());
             WrappedStatsArtist artistStats = (WrappedStatsArtist)artist.getStats();
 
-            listenedTimes = artistStats.getTopSongs().getOrDefault(album.getOwner(), 0);
+            listenedTimes = artistStats.getTopSongs().getOrDefault(album.getSongs().get(0).getName(), 0);
             artistStats.getTopSongs().put(album.getSongs().get(0).getName(), listenedTimes + 1);
 
             listenedTimes = artistStats.getTopAlbums().getOrDefault(album.getName(), 0);

@@ -116,9 +116,12 @@ public final class CommandRunner {
                 case "subscribe" -> subscribe(myUser, inputCommands[i], myLibrary, results);
                 case "getNotifications" -> getNotifications(myUser, inputCommands[i], results);
                 case "previousPage" -> previousPage(myUser, inputCommands[i], myLibrary, results);
+                case "nextPage" -> nextPage(myUser, inputCommands[i], myLibrary, results);
                 case "updateRecommendations" -> updateRecommendations(myUser, inputCommands[i],
                         myLibrary, results);
                 case "buyMerch" -> buyMerch(myUser, inputCommands[i], myLibrary, results);
+                case "loadRecommendations" -> loadRecommendations(myUser, inputCommands[i],
+                        myLibrary, results);
                 case "seeMerch" -> seeMerch(myUser, inputCommands[i], myLibrary, results);
                 default -> System.out.println("Invalid command");
             }
@@ -900,6 +903,24 @@ public final class CommandRunner {
 
         Result seeMerchResult = new SeeMerchResult(inputCommand, result);
         results.add(seeMerchResult);
+    }
+
+    public void loadRecommendations(final User myUser, final InputCommands inputCommand,
+                                    final Library myLibrary, final ArrayList<Result> results) {
+        int returnValue = myUser.loadRecommendations();
+
+        Result loadRecommendationsResult = new LoadRecommendationsResult(inputCommand, returnValue);
+        results.add(loadRecommendationsResult);
+    }
+
+    public int nextPage(final User myUser, final InputCommands inputCommand,
+                        final Library myLibrary, final ArrayList<Result> results) {
+        int returnValue = myUser.nextPage();
+
+        Result previousNextPageResult = new PreviousNextPageResult(inputCommand, returnValue);
+        results.add(previousNextPageResult);
+
+        return returnValue;
     }
 
     public void endProgram(final ArrayList<Result> results, final Library myLibrary) {

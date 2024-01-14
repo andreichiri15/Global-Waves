@@ -3,11 +3,12 @@ package page.command;
 import library.User;
 import page.Page;
 
+import java.util.LinkedList;
+
 public class ChangePageCommand implements Command {
     private Page nextPage;
     private Page previousPage;
     private User user;
-
 
     public ChangePageCommand(User user, Page page) {
         this.user = user;

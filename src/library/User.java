@@ -51,6 +51,7 @@ public class User implements Observer, Observable {
     private ArrayList<Playlist> recommendedPlaylists;
     private ArrayList<Merch> boughtMerch;
     private RevenueStats revenueStats;
+    private String lastRecommandationType;
 
     /**
      *
@@ -184,6 +185,7 @@ public class User implements Observer, Observable {
             int randomIndex = random.nextInt(songsWithGenre.size());
 
             recommendedSongs.add(songsWithGenre.get(randomIndex));
+            lastRecommandationType = "random_song";
         } else if (inputCommand.getRecommendationType().equals("fans_playlist")) {
             Playlist playlist = new Playlist();
             String currentPlaylistArtist = player.getAudioFile().getOwner();
@@ -191,14 +193,15 @@ public class User implements Observer, Observable {
             playlist.setName(currentPlaylistArtist + " Fan Club recommendations");
 
             recommendedPlaylists.add(playlist);
+            lastRecommandationType = "fans_playlist";
         } else {
             Playlist playlist = new Playlist();
 
             playlist.setName(username + "'s recommendations");
 
             recommendedPlaylists.add(playlist);
+            lastRecommandationType = "random_playlist";
         }
-
 
         return 0;
     }
@@ -230,6 +233,21 @@ public class User implements Observer, Observable {
             merchNames.add(boughtMerch.get(i).getName());
         }
         return merchNames;
+    }
+
+    public int loadRecommendations() {
+        if (!isOnline) {
+            return Errors.USER_NOT_ONLINE;
+        }
+
+        if (lastRecommandationType == null) {
+            return Errors.NO_NEW_RECOMMANDATION;
+        }
+
+        player.loadRecommendations();
+        lastRecommandationType = null;
+
+        return 0;
     }
 
     /**
@@ -577,6 +595,10 @@ public class User implements Observer, Observable {
 
     public int previousPage() {
         return commandManager.undo();
+    }
+
+    public int nextPage() {
+        return commandManager.redo();
     }
 
     /**
@@ -1292,5 +1314,21 @@ public class User implements Observer, Observable {
      */
     public void setRevenueStats(final RevenueStats revenueStats) {
         this.revenueStats = revenueStats;
+    }
+
+    /**
+     *
+     * @return
+     */
+    public String getLastRecommandationType() {
+        return lastRecommandationType;
+    }
+
+    /**
+     *
+     * @param lastRecommandationType
+     */
+    public void setLastRecommandationType(final String lastRecommandationType) {
+        this.lastRecommandationType = lastRecommandationType;
     }
 }

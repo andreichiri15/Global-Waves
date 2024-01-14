@@ -70,8 +70,8 @@ public class SearchBar {
         ArrayList<Song> songList = new ArrayList<>();
         SongFilter songFilters = (SongFilter) filter;
         for (int i = 0; i < library.getSongs().size() && count < COUNTMAX; i++) {
-            if (songFilters.getName() != null && !library.getSongs().get(i).getName().
-                    startsWith(songFilters.getName())) {
+            if (songFilters.getName() != null && !library.getSongs().get(i).getName()
+                    .toLowerCase().startsWith(songFilters.getName().toLowerCase())) {
                 continue;
             }
 
@@ -301,26 +301,30 @@ public class SearchBar {
         ArrayList<Album> albumList = new ArrayList<>();
         AlbumFilter albumFilter = (AlbumFilter) filter;
 
-        for (int i = 0; i < Library.albumList.size() && count < COUNTMAX; i++) {
-            if (albumFilter.getName() != null && !Library.albumList.get(i).getName().
-                    startsWith(albumFilter.getName())) {
+        for (int j = 0; j < Library.users.size() && count < COUNTMAX; j++) {
+            if (!Library.users.get(j).getUserType().equals("artist")) {
                 continue;
             }
 
-            if (albumFilter.getOwner() != null && !Library.albumList.get(i).getOwner().
-                    equals(albumFilter.getOwner())) {
-                continue;
+            for (int i = 0; i < Library.users.get(j).getAlbums().size() && count < COUNTMAX; i++) {
+                if (albumFilter.getName() != null && !Library.users.get(j).getAlbums().get(i).
+                        getName().startsWith(albumFilter.getName())) {
+                    continue;
+                }
+
+                if (albumFilter.getOwner() != null && !Library.users.get(j).getAlbums().get(i).
+                        getOwner().equals(albumFilter.getOwner())) {
+                    continue;
+                }
+
+                if (albumFilter.getDescription() != null && !Library.users.get(j).getAlbums().get(i).
+                        getDescription().equalsIgnoreCase(albumFilter.getDescription())) {
+                    continue;
+                }
+
+                count++;
+                albumList.add(Library.users.get(j).getAlbums().get(i));
             }
-
-            if (albumFilter.getDescription() != null && !Library.albumList.get(i).getDescription().
-                    equalsIgnoreCase(albumFilter.getDescription())) {
-                continue;
-            }
-
-
-            count++;
-            albumList.add(Library.albumList.get(i));
-
         }
 
         return albumList;
