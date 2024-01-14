@@ -9,15 +9,22 @@ import library.filetypes.Playlist;
 import library.filetypes.Podcast;
 import library.filetypes.Song;
 import library.user.helper.PodcastUserInfo;
+import library.user.helper.notifications.Observable;
+import library.user.helper.notifications.Observer;
 import library.user.helper.wrapped.WrappedStats;
 import library.user.helper.wrapped.WrappedStatsArtist;
+import library.user.helper.wrapped.WrappedStatsHost;
 import library.user.helper.wrapped.WrappedStatsUser;
 import page.Page;
+import page.command.ChangePageCommand;
+import page.command.Command;
+import page.command.CommandManager;
 import utils.Errors;
 
+import library.user.helper.notifications.*;
 import java.util.*;
 
-public class User {
+public class User implements Observer, Observable {
     private String username;
     private int age;
     private String city;
@@ -37,6 +44,9 @@ public class User {
     private ArrayList<Podcast> podcasts;
     private HashMap<String, PodcastUserInfo> podcastInfoMap;
     private WrappedStats wrappedStatsUser;
+    private ArrayList<Observer> subscribers;
+    private ArrayList<Notification> notifications;
+    private CommandManager commandManager;
 
     /**
      *
@@ -54,6 +64,8 @@ public class User {
         this.currentPage = new Page(this, "Home");
         this.podcastInfoMap = new HashMap<>();
         this.wrappedStatsUser = new WrappedStatsUser();
+        this.notifications = new ArrayList<>();
+        this.commandManager = new CommandManager();
     }
 
     public User(final InputCommands inputCommand) {
@@ -69,15 +81,67 @@ public class User {
         if (userType.equals("user")) {
             this.podcastInfoMap = new HashMap<>();
             this.wrappedStatsUser = new WrappedStatsUser();
+            this.notifications = new ArrayList<>();
+            this.commandManager = new CommandManager();
         } else if (userType.equals("artist")) {
             this.albums = new ArrayList<>();
             this.events = new ArrayList<>();
             this.merchItems = new ArrayList<>();
             this.wrappedStatsUser = new WrappedStatsArtist();
+            this.subscribers = new ArrayList<>();
         } else if (userType.equals("host")) {
             this.podcasts = new ArrayList<>();
             this.events = new ArrayList<>();
+            this.wrappedStatsUser = new WrappedStatsHost();
+            this.subscribers = new ArrayList<>();
         }
+    }
+
+    /**
+     *
+     * @param observer
+     */
+    public void addSubscriber(Observer observer) {
+        subscribers.add(observer);
+    }
+
+    /**
+     *
+     * @param observer
+     */
+    public void removeSubscriber(Observer observer) {
+        subscribers.remove(observer);
+    }
+
+    /**
+     *
+     * @param message
+     */
+    public void notifySubscribers(String name, String message) {
+        for (Observer subscriber : subscribers) {
+            subscriber.update(name, message);
+        }
+    }
+
+    @Override
+    public void update(String name, String description) {
+        Notification notification = new Notification(name, description);
+        notifications.add(notification);
+    }
+
+    public int subscribe(InputCommands inputCommand, Library library) {
+        if (!currentPage.getCurrentPageType().equals("Artist") && !currentPage.getCurrentPageType().equals("Host")) {
+            return Errors.PAGE_NOT_CORRESPONDENT;
+        }
+
+        if (currentPage.getCurrentUserLoaded().subscribers.contains(this)) {
+            currentPage.getCurrentUserLoaded().subscribers.remove(this);
+            return Errors.HAS_UNSUBSCRIBED;
+        }
+
+        currentPage.getCurrentUserLoaded().addSubscriber(this);
+
+        return Errors.HAS_SUBSCRIBED;
     }
 
     /**
@@ -214,6 +278,8 @@ public class User {
                 Library.songs.add(newSongs.get(i));
             }
         }
+
+        notifySubscribers("New Album", "New Album from " + username + ".");
         return 0;
     }
 
@@ -269,6 +335,7 @@ public class User {
         }
 
         events.add(newEvent);
+        notifySubscribers("New Event", "New Event from " + username + ".");
         return 0;
     }
 
@@ -296,6 +363,8 @@ public class User {
         }
 
         merchItems.add(newMerchItem);
+
+        notifySubscribers("New Merchandise", "New Merchandise from " + username + ".");
         return 0;
     }
 
@@ -340,6 +409,7 @@ public class User {
         podcasts.add(newPodcast);
         Library.podcasts.add(newPodcast);
 
+        notifySubscribers("New Podcast", "New Podcast from " + username + ".");
         return 0;
     }
 
@@ -363,6 +433,8 @@ public class User {
 
         Event newAnnouncement = new Event(inputCommand);
         events.add(newAnnouncement);
+
+        notifySubscribers("New Announcement", "New Announcement from " + username + ".");
         return 0;
     }
 
@@ -393,15 +465,30 @@ public class User {
      * @param inputCommand input command
      * @return error number
      */
-    public int changePage(final InputCommands inputCommand) {
-        if (!inputCommand.getNextPage().equals("Home") && !inputCommand.getNextPage().
-                equals("LikedContent")) {
+    public int changePage(final InputCommands inputCommand, Library library) {
+//        if (!inputCommand.getNextPage().equals("Home") && !inputCommand.getNextPage().
+//                equals("LikedContent")) {
+//            return -1;
+//        }
+        if (inputCommand.getNextPage().equals("Host")) {
             return -1;
         }
 
-        currentPage = new Page(this, inputCommand.getNextPage());
+        User userLoaded = this;
+        if (inputCommand.getNextPage().equals("Artist") || inputCommand.getNextPage().
+                equals("Host")) {
+            userLoaded = library.getUserByUsername(this.getPlayer().getAudioFile().getOwner());
+        }
+
+        currentPage = new Page(userLoaded, inputCommand.getNextPage());
+        Page newPage = new Page(this, inputCommand.getNextPage());
+        commandManager.changePage(new ChangePageCommand(this, newPage));
 
         return 0;
+    }
+
+    public int previousPage() {
+        return commandManager.undo();
     }
 
     /**
@@ -643,7 +730,6 @@ public class User {
             if (count == 5) {
                 break;
             }
-            System.out.println(aa.getKey() + " " + aa.getValue());
             temp.put(aa.getKey(), aa.getValue());
             count++;
         }
@@ -670,6 +756,30 @@ public class User {
             sortedWrappedStats.setTopArtists(topArtists);
             sortedWrappedStats.setTopGenres(topGenres);
             sortedWrappedStats.setTopEpisodes(topEpisodes);
+            return sortedWrappedStats;
+        } else if (userType.equals("artist")) {
+            WrappedStatsArtist artistStats = (WrappedStatsArtist) wrappedStatsUser;
+
+            HashMap<String, Integer> topSongs = sortByValue(artistStats.getTopSongs());
+            HashMap<String, Integer> topAlbums = sortByValue(artistStats.getTopAlbums());
+            HashMap<String, Integer> listenersHash = sortByValue(artistStats.getListenersHash());
+
+            WrappedStatsArtist sortedWrappedStats = new WrappedStatsArtist();
+            sortedWrappedStats.setTopSongs(topSongs);
+            sortedWrappedStats.setTopAlbums(topAlbums);
+            sortedWrappedStats.setListeners(listenersHash.size());
+            ArrayList<String> keySet = new ArrayList<>(listenersHash.keySet().stream().toList());
+            sortedWrappedStats.setTopFans(keySet);
+            return sortedWrappedStats;
+        } else if (userType.equals("host")) {
+            WrappedStatsHost hostStats = (WrappedStatsHost) wrappedStatsUser;
+
+            HashMap<String, Integer> topPodcasts = sortByValue(hostStats.getTopEpisodes());
+            HashMap<String, Integer> listenersHash = sortByValue(hostStats.getListenersHash());
+
+            WrappedStatsHost sortedWrappedStats = new WrappedStatsHost();
+            sortedWrappedStats.setTopEpisodes(topPodcasts);
+            sortedWrappedStats.setListeners(listenersHash.size());
             return sortedWrappedStats;
         }
 
@@ -986,5 +1096,21 @@ public class User {
      */
     public void setWrappedStatsUser(final WrappedStatsUser wrappedStatsUser) {
         this.wrappedStatsUser = wrappedStatsUser;
+    }
+
+    public ArrayList<Observer> getSubscribers() {
+        return subscribers;
+    }
+
+    public void setSubscribers(ArrayList<Observer> subscribers) {
+        this.subscribers = subscribers;
+    }
+
+    public ArrayList<Notification> getNotifications() {
+        return notifications;
+    }
+
+    public void setNotifications(ArrayList<Notification> notifications) {
+        this.notifications = notifications;
     }
 }

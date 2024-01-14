@@ -8,6 +8,8 @@ import library.filetypes.AudioFile;
 import library.filetypes.Playlist;
 import library.filetypes.Podcast;
 import library.filetypes.Song;
+import library.user.helper.wrapped.WrappedStatsArtist;
+import library.user.helper.wrapped.WrappedStatsHost;
 import library.user.helper.wrapped.WrappedStatsUser;
 import utils.Errors;
 
@@ -59,7 +61,7 @@ public class Player {
      * @param searchBar of the current user
      * @return a number referring to an error, similar to other methods
      */
-    public int load(final SearchBar searchBar) {
+    public int load(final SearchBar searchBar, final Library library) {
         if (searchBar.getSelectedAudioFile() == null) {
             return -1;
         }
@@ -77,35 +79,55 @@ public class Player {
                 currentId = 0;
                 currentTime = 0;
             }
+
+            int listenedTimes = 0;
+            Podcast podcast = (Podcast) audioFile;
+
+            WrappedStatsUser userStats = (WrappedStatsUser)user.getWrappedStatsUser();
+            listenedTimes = userStats.getTopEpisodes().getOrDefault(podcast.getEpisodes().get(currentId).getName(), 0);
+            userStats.getTopEpisodes().put(podcast.getEpisodes().get(currentId).getName(), listenedTimes + 1);
+
+            User host = library.getUserByUsername(podcast.getOwner());
+            System.out.println(podcast.getOwner());
+
+            if (host != null) {
+                WrappedStatsHost hostStats = (WrappedStatsHost) host.getStats();
+                listenedTimes = hostStats.getTopEpisodes().getOrDefault(podcast.getEpisodes().get(currentId).getName(), 0);
+                hostStats.getTopEpisodes().put(podcast.getEpisodes().get(currentId).getName(), listenedTimes + 1);
+
+                listenedTimes = hostStats.getListenersHash().getOrDefault(user.getUsername(), 0);
+                hostStats.getListenersHash().put(user.getUsername(), listenedTimes + 1);
+            }
+
         } else if (fileType.equals("album")) {
+            currentId = 0;
             int listenedTimes = 0;
             Album album = (Album) audioFile;
             WrappedStatsUser userStats = (WrappedStatsUser)user.getWrappedStatsUser();
-            if (userStats.getTopAlbums().containsKey(album.getName())) {
-                listenedTimes = userStats.getTopAlbums().get(album.getName());
-            }
+
+            listenedTimes = userStats.getTopAlbums().getOrDefault(album.getName(), 0);
             userStats.getTopAlbums().put(album.getName(), listenedTimes + 1);
 
-            listenedTimes = 0;
-            if (userStats.getTopArtists().containsKey(album.getOwner())) {
-                listenedTimes = userStats.getTopArtists().get(album.getOwner());
-            }
+            listenedTimes = userStats.getTopArtists().getOrDefault(album.getOwner(), 0);
             userStats.getTopArtists().put(album.getOwner(), listenedTimes + 1);
 
-            listenedTimes = 0;
-            if (userStats.getTopGenres().containsKey(album.getSongs().get(0).getName())) {
-                listenedTimes = userStats.getTopGenres().get(album.getSongs().get(0).getName());
-            }
+            listenedTimes = userStats.getTopArtists().getOrDefault(album.getSongs().get(0).getName(), 0);
             userStats.getTopSongs().put(album.getSongs().get(0).getName(), listenedTimes + 1);
 
-            listenedTimes = 0;
-            if (userStats.getTopGenres().containsKey(album.getSongs().get(0).getGenre())) {
-                listenedTimes = userStats.getTopGenres().get(album.getSongs().get(0).getGenre());
-            }
+            listenedTimes = userStats.getTopGenres().getOrDefault(album.getSongs().get(0).getGenre(), 0);
             userStats.getTopGenres().put(album.getSongs().get(0).getGenre(), listenedTimes + 1);
 
+            User artist = library.getUserByUsername(album.getOwner());
+            WrappedStatsArtist artistStats = (WrappedStatsArtist)artist.getStats();
 
-            currentId = 0;
+            listenedTimes = artistStats.getTopSongs().getOrDefault(album.getOwner(), 0);
+            artistStats.getTopSongs().put(album.getSongs().get(0).getName(), listenedTimes + 1);
+
+            listenedTimes = artistStats.getTopAlbums().getOrDefault(album.getName(), 0);
+            artistStats.getTopAlbums().put(album.getName(), listenedTimes + 1);
+
+            listenedTimes = artistStats.getListenersHash().getOrDefault(user.getUsername(), 0);
+            artistStats.getListenersHash().put(user.getUsername(), listenedTimes + 1);
         } else if (fileType.equals("song")) {
             currentId = 0;
 
@@ -113,32 +135,29 @@ public class Player {
             Song song = (Song) audioFile;
             WrappedStatsUser userStats = (WrappedStatsUser)user.getWrappedStatsUser();
 
-            if (userStats.getTopSongs().containsKey(song.getName())) {
-                listenedTimes = userStats.getTopSongs().get(song.getName());
-            }
-
+            listenedTimes = userStats.getTopSongs().getOrDefault(song.getName(), 0);
             userStats.getTopSongs().put(song.getName(), listenedTimes + 1);
 
-            listenedTimes = 0;
-            if (userStats.getTopAlbums().containsKey(song.getAlbum())) {
-                listenedTimes = userStats.getTopAlbums().get(song.getAlbum());
-            }
-
+            listenedTimes = userStats.getTopAlbums().getOrDefault(song.getAlbum(), 0);
             userStats.getTopAlbums().put(song.getAlbum(), listenedTimes + 1);
 
-            listenedTimes = 0;
-            if (userStats.getTopArtists().containsKey(song.getOwner())) {
-                listenedTimes = userStats.getTopArtists().get(song.getOwner());
-            }
-
+            listenedTimes = userStats.getTopArtists().getOrDefault(song.getOwner(), 0);
             userStats.getTopArtists().put(song.getOwner(), listenedTimes + 1);
 
-            listenedTimes = 0;
-            if (userStats.getTopGenres().containsKey(song.getGenre())) {
-                listenedTimes = userStats.getTopGenres().get(song.getGenre());
-            }
-
+            listenedTimes = userStats.getTopGenres().getOrDefault(song.getGenre(), 0);
             userStats.getTopGenres().put(song.getGenre(), listenedTimes + 1);
+
+            User artist = library.getUserByUsername(song.getOwner());
+            WrappedStatsArtist artistStats = (WrappedStatsArtist)artist.getStats();
+
+            listenedTimes = artistStats.getTopSongs().getOrDefault(song.getName(), 0);
+            artistStats.getTopSongs().put(song.getName(), listenedTimes + 1);
+
+            listenedTimes = artistStats.getTopAlbums().getOrDefault(song.getAlbum(), 0);
+            artistStats.getTopAlbums().put(song.getAlbum(), listenedTimes + 1);
+
+            listenedTimes = artistStats.getListenersHash().getOrDefault(user.getUsername(), 0);
+            artistStats.getListenersHash().put(user.getUsername(), listenedTimes + 1);
         }
         paused = false;
         searchBar.setSearchedAudioFiles(null);

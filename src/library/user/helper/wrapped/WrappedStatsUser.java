@@ -6,11 +6,11 @@ import library.filetypes.Song;
 import java.util.HashMap;
 
 public class WrappedStatsUser extends WrappedStats {
-    HashMap<String, Integer> topSongs;
-    HashMap<String, Integer> topAlbums;
-    HashMap<String, Integer> topArtists;
-    HashMap<String, Integer> topGenres;
-    HashMap<String, Integer> topEpisodes;
+    private HashMap<String, Integer> topSongs;
+    private HashMap<String, Integer> topAlbums;
+    private HashMap<String, Integer> topArtists;
+    private HashMap<String, Integer> topGenres;
+    private HashMap<String, Integer> topEpisodes;
 
     public WrappedStatsUser() {
         super();

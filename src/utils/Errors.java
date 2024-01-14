@@ -28,6 +28,13 @@ public final class Errors {
     public static final int USER_NOT_ONLINE = -10;
     public static final int USER_NOT_NORMAL = -3;
     public static final int USER_IN_ACTION = -1;
+    public static final int PAGE_NOT_CORRESPONDENT = -3;
+    public static final int HAS_SUBSCRIBED = 1;
+    public static final int HAS_UNSUBSCRIBED = 2;
+    public static final int HISTORY_EMPTY_PREV = -1;
+    public static final int SUCCES_PREV = 1;
+    public static final int HISTORY_EMPTY_NEXT = -2;
+    public static final int SUCCES_NEXT = 2;
 
     private Errors() {
         throw new UnsupportedOperationException("This is a utility class and "

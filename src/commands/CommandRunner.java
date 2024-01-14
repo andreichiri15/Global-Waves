@@ -10,6 +10,7 @@ import library.fields.PodcastFields;
 import library.fields.StatusFields;
 import library.filetypes.AudioFile;
 import library.filetypes.Song;
+import library.user.helper.notifications.Notification;
 import library.user.helper.wrapped.WrappedStats;
 import library.user.helper.wrapped.WrappedStatsUser;
 import utils.Errors;
@@ -110,7 +111,12 @@ public final class CommandRunner {
                 case "getTop5Artists" -> getTop5Artists(myUser, inputCommands[i], myLibrary,
                         results);
                 case "wrapped" -> wrapped(myUser, inputCommands[i], results);
-                case "endProgram" -> endProgram(myUser, inputCommands[i]);
+                case "subscribe" -> subscribe(myUser, inputCommands[i], myLibrary, results);
+                case "getNotifications" -> getNotifications(myUser, inputCommands[i], results);
+                case "previousPage" -> previousPage(myUser, inputCommands[i], myLibrary, results);
+                case "updateRecommendations" -> updateRecommendations(myUser, inputCommands[i],
+                        myLibrary, results);
+                case "endProgram" -> endProgram(myUser, inputCommands[i], results);
                 default -> System.out.println("Invalid command");
             }
         }
@@ -180,7 +186,7 @@ public final class CommandRunner {
                      final Library myLibrary, final ArrayList<Result> results) {
         Player prevPlayer = myUser.getPlayer();
         myUser.setPlayer(new Player(myUser));
-        int returnValue = myUser.getPlayer().load(myUser.getSearchBar());
+        int returnValue = myUser.getPlayer().load(myUser.getSearchBar(), myLibrary);
         if (returnValue < 0) {
             myUser.setPlayer(prevPlayer);
         }
@@ -731,7 +737,7 @@ public final class CommandRunner {
      */
     public void changePage(final User myUser, final InputCommands inputCommand,
                            final Library myLibrary, final ArrayList<Result> results) {
-        int returnValue = myUser.changePage(inputCommand);
+        int returnValue = myUser.changePage(inputCommand, myLibrary);
 
         Result changePageResult = new NextPageResult(inputCommand, returnValue);
         results.add(changePageResult);
@@ -823,8 +829,54 @@ public final class CommandRunner {
 
     }
 
-    public void endProgram(final User myUser, final InputCommands inputCommand) {
-        System.out.println("endProgram");
+    public void endProgram(final User myUser, final InputCommands inputCommand,
+                           final ArrayList<Result> results) {
+//        Result endProgramResult = new EndProgramResult(inputCommand);
+//        results.add(endProgramResult);
     }
 
+
+    public void subscribe(final User myUser, final InputCommands inputCommand,
+                          final Library myLibrary, final ArrayList<Result> results) {
+        int returnValue;
+        if (myUser == null) {
+            returnValue = Errors.USER_NOT_EXIST;
+        } else {
+            returnValue = myUser.subscribe(inputCommand, myLibrary);
+        }
+        Result subscribeResult = new SubscribeResult(inputCommand, returnValue, myUser.getCurrentPage().getCurrentUserLoaded());
+        results.add(subscribeResult);
+    }
+
+    public void getNotifications(final User myUser, final InputCommands inputCommand,
+                                 final ArrayList<Result> results) {
+
+        ArrayList<Notification> notifications = myUser.getNotifications();
+
+        Result getNotificationsResult = new GetNotificationsResult(inputCommand, notifications);
+        results.add(getNotificationsResult);
+
+        myUser.setNotifications(new ArrayList<>());
+    }
+
+    public void previousPage(final User myUser, final InputCommands inputCommand,
+                             final Library myLibrary, final ArrayList<Result> results) {
+        int returnValue = myUser.previousPage();
+
+        Result previousNextPageResult = new PreviousNextPageResult(inputCommand, returnValue);
+        results.add(previousNextPageResult);
+    }
+
+    public void updateRecommendations(final User myUser, final InputCommands inputCommand,
+                                      final Library myLibrary, final ArrayList<Result> results) {
+        int returnValue;
+        if (myUser == null) {
+            returnValue = Errors.USER_NOT_EXIST;
+        } else {
+            returnValue = myUser.updateRecommendations();
+        }
+
+        Result updateRecommendationsResult = new UpdateRecommendationsResult(inputCommand, returnValue);
+        results.add(updateRecommendationsResult);
+    }
 }

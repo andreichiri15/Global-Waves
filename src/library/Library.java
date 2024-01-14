@@ -8,6 +8,8 @@ import library.filetypes.Podcast;
 import library.filetypes.Playlist;
 
 import library.user.helper.PodcastUserInfo;
+import library.user.helper.wrapped.WrappedStatsArtist;
+import library.user.helper.wrapped.WrappedStatsHost;
 import library.user.helper.wrapped.WrappedStatsUser;
 
 import java.util.ArrayList;
@@ -86,13 +88,19 @@ public class Library {
                     }
                 } else if (player.getFileType().equals("podcast")) {
                     Podcast podcast = (Podcast) player.getAudioFile();
-                    int currentTime = player.getCurrentTime();
-                    int episodeDuration = podcast.getEpisodes().get(player.getCurrentId()).
-                            getDuration();
-                    if (currentTime > episodeDuration) {
+                    while (player.getCurrentTime() >= podcast.getEpisodes().get(player.getCurrentId()).getDuration()) {
+                        int currentTime = player.getCurrentTime();
+                        int episodeDuration = podcast.getEpisodes().get(player.getCurrentId()).
+                                getDuration();
                         player.setCurrentTime(currentTime - episodeDuration);
 
                         player.setCurrentId(player.getCurrentId() + 1);
+
+                        if (player.getCurrentId() == podcast.getEpisodes().size()) {
+                            continue;
+                        }
+
+                        updatePodcastWrappedStats(users.get(i), podcast, player, player.getCurrentId());
                     }
 
                     if (player.getCurrentId() == podcast.getEpisodes().size()) {
@@ -215,34 +223,68 @@ public class Library {
         }
     }
 
+    public void updatePodcastWrappedStats(final User currUser, final Podcast podcast,
+                                          final Player player, final int currentId) {
+        WrappedStatsUser wrappedStatsUser = (WrappedStatsUser) currUser.
+                getStats();
+
+        int listenedTimes = wrappedStatsUser.getTopEpisodes().getOrDefault(podcast.getEpisodes().
+                get(currentId).getName(), 0);
+        wrappedStatsUser.getTopEpisodes().put(podcast.getEpisodes().get(currentId).getName(),
+                listenedTimes + 1);
+
+        User host = getUserByUsername(podcast.getOwner());
+        if (host == null) {
+            return;
+        }
+
+        WrappedStatsHost wrappedStatsHost = (WrappedStatsHost) host.getStats();
+
+        listenedTimes = wrappedStatsHost.getTopEpisodes().getOrDefault(podcast.getEpisodes().
+                get(currentId).getName(), 0);
+        wrappedStatsHost.getTopEpisodes().put(podcast.getEpisodes().get(currentId).getName(),
+                listenedTimes + 1);
+
+        listenedTimes = wrappedStatsHost.getListenersHash().getOrDefault(currUser.getUsername(), 0);
+        wrappedStatsHost.getListenersHash().put(currUser.getUsername(), listenedTimes + 1);
+    }
+
     public void updateAlbumWrappedStats(final User currUser, final Album album,
                                         final Player player) {
         WrappedStatsUser wrappedStatsUser = (WrappedStatsUser) currUser.
                 getStats();
-        int listenedTimes = wrappedStatsUser.getTopAlbums().get(album.getName());
+        int listenedTimes = wrappedStatsUser.getTopAlbums().getOrDefault(album.getName(), 0);
         wrappedStatsUser.getTopAlbums().put(album.getName(), listenedTimes + 1);
 
-        listenedTimes = wrappedStatsUser.getTopArtists().get(album.getOwner());
+        listenedTimes = wrappedStatsUser.getTopArtists().getOrDefault(album.getOwner(), 0);
         wrappedStatsUser.getTopArtists().put(album.getOwner(), listenedTimes + 1);
 
-        listenedTimes = 0;
-        if (wrappedStatsUser.getTopSongs().containsKey(album.getSongs().get(
-                player.getCurrentId()).getName())) {
-            listenedTimes = wrappedStatsUser.getTopSongs().get(album.getSongs().get(
-                    player.getCurrentId()).getName());
-        }
+        listenedTimes = wrappedStatsUser.getTopSongs().getOrDefault(album.getSongs().get(
+                    player.getCurrentId()).getName(), 0);
         wrappedStatsUser.getTopSongs().put(album.getSongs().get(player.
                 getCurrentId()).getName(), listenedTimes + 1);
 
-        listenedTimes = 0;
-        if (wrappedStatsUser.getTopGenres().containsKey(album.getSongs().get(
-                player.getCurrentId()).getGenre())) {
-            listenedTimes = wrappedStatsUser.getTopGenres().get(album.getSongs().get(
-                    player.getCurrentId()).getGenre());
-        }
-
+        listenedTimes = wrappedStatsUser.getTopGenres().getOrDefault(album.getSongs().get(
+                    player.getCurrentId()).getGenre(), 0);
         wrappedStatsUser.getTopGenres().put(album.getSongs().get(player.
                 getCurrentId()).getGenre(), listenedTimes + 1);
+
+        User artist = getUserByUsername(album.getOwner());
+
+        WrappedStatsArtist wrappedStatsArtist = (WrappedStatsArtist) artist.
+                getStats();
+
+        listenedTimes = wrappedStatsArtist.getTopAlbums().getOrDefault(album.getName(), 0);
+        wrappedStatsArtist.getTopAlbums().put(album.getName(), listenedTimes + 1);
+
+        listenedTimes = wrappedStatsArtist.getTopSongs().getOrDefault(album.getSongs().get(
+                    player.getCurrentId()).getName(), 0);
+        wrappedStatsArtist.getTopSongs().put(album.getSongs().get(player.
+                getCurrentId()).getName(), listenedTimes + 1);
+
+        listenedTimes = wrappedStatsArtist.getListenersHash().
+                getOrDefault(currUser.getUsername(), 0);
+        wrappedStatsArtist.getListenersHash().put(currUser.getUsername(), listenedTimes + 1);
     }
 
     /**
