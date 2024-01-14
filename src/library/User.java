@@ -9,6 +9,7 @@ import library.filetypes.Playlist;
 import library.filetypes.Podcast;
 import library.filetypes.Song;
 import library.user.helper.PodcastUserInfo;
+import library.user.helper.RevenueStats;
 import library.user.helper.notifications.Observable;
 import library.user.helper.notifications.Observer;
 import library.user.helper.wrapped.WrappedStats;
@@ -49,6 +50,7 @@ public class User implements Observer, Observable {
     private ArrayList<Song> recommendedSongs;
     private ArrayList<Playlist> recommendedPlaylists;
     private ArrayList<Merch> boughtMerch;
+    private RevenueStats revenueStats;
 
     /**
      *
@@ -97,6 +99,7 @@ public class User implements Observer, Observable {
             this.merchItems = new ArrayList<>();
             this.wrappedStatsUser = new WrappedStatsArtist();
             this.subscribers = new ArrayList<>();
+            this.revenueStats = new RevenueStats();
         } else if (userType.equals("host")) {
             this.podcasts = new ArrayList<>();
             this.events = new ArrayList<>();
@@ -208,6 +211,12 @@ public class User implements Observer, Observable {
         for (int i = 0; i < currentPage.getCurrentUserLoaded().merchItems.size(); i++) {
             if (currentPage.getCurrentUserLoaded().merchItems.get(i).getName().equals(inputCommand.getName())) {
                 boughtMerch.add(currentPage.getCurrentUserLoaded().merchItems.get(i));
+                currentPage.getCurrentUserLoaded().getRevenueStats().setArtistLoaded(true);
+
+                Double merchRevenue = currentPage.getCurrentUserLoaded().getRevenueStats().
+                        getMerchRevenue();
+                currentPage.getCurrentUserLoaded().getRevenueStats().setMerchRevenue(merchRevenue
+                        + currentPage.getCurrentUserLoaded().merchItems.get(i).getPrice());
                 return 0;
             }
         }
@@ -1267,5 +1276,21 @@ public class User implements Observer, Observable {
      */
     public void setBoughtMerch(final ArrayList<Merch> boughtMerch) {
         this.boughtMerch = boughtMerch;
+    }
+
+    /**
+     *
+     * @return
+     */
+    public RevenueStats getRevenueStats() {
+        return revenueStats;
+    }
+
+    /**
+     *
+     * @param revenueStats
+     */
+    public void setRevenueStats(final RevenueStats revenueStats) {
+        this.revenueStats = revenueStats;
     }
 }

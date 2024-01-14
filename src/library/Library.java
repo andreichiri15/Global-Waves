@@ -8,12 +8,12 @@ import library.filetypes.Podcast;
 import library.filetypes.Playlist;
 
 import library.user.helper.PodcastUserInfo;
+import library.user.helper.RevenueStats;
 import library.user.helper.wrapped.WrappedStatsArtist;
 import library.user.helper.wrapped.WrappedStatsHost;
 import library.user.helper.wrapped.WrappedStatsUser;
 
-import java.util.ArrayList;
-import java.util.Comparator;
+import java.util.*;
 
 public class Library {
     static ArrayList<Song> songs;
@@ -598,6 +598,50 @@ public class Library {
         users.remove(myUser);
 
         return 0;
+    }
+
+    public static HashMap<String, RevenueStats> sortByRevenue(HashMap<String, RevenueStats> statsHash) {
+        List<Map.Entry<String, RevenueStats>> entryList = new ArrayList<>(statsHash.entrySet());
+
+        entryList.sort((entry1, entry2) -> {
+            int rankingComparison = Double.compare(entry1.getValue().getMerchRevenue()
+                    + entry1.getValue().getSongRevenue(), entry2.getValue().getMerchRevenue()
+                    + entry2.getValue().getSongRevenue());
+
+            // If the ranking values are equal, compare lexicographically by key
+            if (rankingComparison == 0) {
+                return entry2.getKey().compareTo(entry1.getKey());
+            }
+
+            return rankingComparison;
+        });
+
+        HashMap<String, RevenueStats> sortedMap = new LinkedHashMap<>();
+        for (Map.Entry<String, RevenueStats> entry : entryList) {
+            sortedMap.put(entry.getKey(), entry.getValue());
+        }
+
+        return sortedMap;
+    }
+
+    public HashMap<String, RevenueStats> endProgram() {
+        HashMap<String, RevenueStats> artistsStatsMap = new HashMap<>();
+
+        for (int i = 0; i < users.size(); i++) {
+            if (users.get(i).getUserType().equals("artist") && users.get(i).getRevenueStats().
+                    isArtistLoaded()) {
+                artistsStatsMap.put(users.get(i).getUsername(), users.get(i).getRevenueStats());
+            }
+        }
+
+        HashMap<String, RevenueStats> sortedStatsMap = sortByRevenue(artistsStatsMap);
+
+        int ranking = sortedStatsMap.size();
+        for (Map.Entry<String, RevenueStats> entry : sortedStatsMap.entrySet()) {
+            entry.getValue().setRanking(ranking--);
+        }
+
+        return sortedStatsMap;
     }
 
     /**

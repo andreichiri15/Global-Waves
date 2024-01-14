@@ -10,12 +10,14 @@ import library.fields.PodcastFields;
 import library.fields.StatusFields;
 import library.filetypes.AudioFile;
 import library.filetypes.Song;
+import library.user.helper.RevenueStats;
 import library.user.helper.notifications.Notification;
 import library.user.helper.wrapped.WrappedStats;
 import library.user.helper.wrapped.WrappedStatsUser;
 import utils.Errors;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public final class CommandRunner {
     private static CommandRunner instance = null;
@@ -118,10 +120,11 @@ public final class CommandRunner {
                         myLibrary, results);
                 case "buyMerch" -> buyMerch(myUser, inputCommands[i], myLibrary, results);
                 case "seeMerch" -> seeMerch(myUser, inputCommands[i], myLibrary, results);
-                case "endProgram" -> endProgram(myUser, inputCommands[i], results);
                 default -> System.out.println("Invalid command");
             }
         }
+
+        endProgram(results, myLibrary);
         return results;
     }
 
@@ -899,9 +902,10 @@ public final class CommandRunner {
         results.add(seeMerchResult);
     }
 
-    public void endProgram(final User myUser, final InputCommands inputCommand,
-                           final ArrayList<Result> results) {
-//        Result endProgramResult = new EndProgramResult(inputCommand);
-//        results.add(endProgramResult);
+    public void endProgram(final ArrayList<Result> results, final Library myLibrary) {
+        HashMap<String, RevenueStats> result = myLibrary.endProgram();
+        Result endProgramResult = new EndProgramResult(result);
+
+        results.add(endProgramResult);
     }
 }

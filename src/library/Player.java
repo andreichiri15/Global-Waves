@@ -102,6 +102,9 @@ public class Player {
         } else if (fileType.equals("album")) {
             currentId = 0;
             int listenedTimes = 0;
+            User artist = library.getUserByUsername(audioFile.getOwner());
+            artist.getRevenueStats().setArtistLoaded(true);
+
             Album album = (Album) audioFile;
             WrappedStatsUser userStats = (WrappedStatsUser)user.getWrappedStatsUser();
 
@@ -117,7 +120,7 @@ public class Player {
             listenedTimes = userStats.getTopGenres().getOrDefault(album.getSongs().get(0).getGenre(), 0);
             userStats.getTopGenres().put(album.getSongs().get(0).getGenre(), listenedTimes + 1);
 
-            User artist = library.getUserByUsername(album.getOwner());
+            artist = library.getUserByUsername(album.getOwner());
             WrappedStatsArtist artistStats = (WrappedStatsArtist)artist.getStats();
 
             listenedTimes = artistStats.getTopSongs().getOrDefault(album.getOwner(), 0);
@@ -133,6 +136,9 @@ public class Player {
 
             int listenedTimes = 0;
             Song song = (Song) audioFile;
+            User artist = library.getUserByUsername(audioFile.getOwner());
+            artist.getRevenueStats().setArtistLoaded(true);
+
             WrappedStatsUser userStats = (WrappedStatsUser)user.getWrappedStatsUser();
 
             listenedTimes = userStats.getTopSongs().getOrDefault(song.getName(), 0);
@@ -147,7 +153,7 @@ public class Player {
             listenedTimes = userStats.getTopGenres().getOrDefault(song.getGenre(), 0);
             userStats.getTopGenres().put(song.getGenre(), listenedTimes + 1);
 
-            User artist = library.getUserByUsername(song.getOwner());
+            artist = library.getUserByUsername(song.getOwner());
             WrappedStatsArtist artistStats = (WrappedStatsArtist)artist.getStats();
 
             listenedTimes = artistStats.getTopSongs().getOrDefault(song.getName(), 0);
