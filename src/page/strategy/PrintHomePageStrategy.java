@@ -21,6 +21,8 @@ public class PrintHomePageStrategy implements PrintPageStrategy {
     public String printPage() {
         ArrayList<String> likedSongs = new ArrayList<>();
         ArrayList<String> followedPlaylists = new ArrayList<>();
+        ArrayList<String> recommendedSongs = new ArrayList<>();
+        ArrayList<String> recommendedPlaylists = new ArrayList<>();
 
         class SongComparator implements Comparator<Song> {
             public int compare(final Song song1, final Song song2) {
@@ -49,11 +51,26 @@ public class PrintHomePageStrategy implements PrintPageStrategy {
             followedPlaylists.add(sortedPlaylists.get(i).getName());
         }
 
+        for (int i = 0; i < currentUserLoaded.getRecommendedSongs().size()
+                && i < COUNTMAX; i++) {
+            recommendedSongs.add(currentUserLoaded.getRecommendedSongs().get(i).getName());
+        }
+
+        for (int i = 0; i < currentUserLoaded.getRecommendedPlaylists().size()
+                && i < COUNTMAX; i++) {
+            recommendedPlaylists.add(currentUserLoaded.getRecommendedPlaylists().get(i).getName());
+        }
+
         StringBuilder result = new StringBuilder();
         result.append("Liked songs:\n\t[");
         result = formatArrayList(likedSongs, result);
         result.append("\n\nFollowed playlists:\n\t[");
         result = formatArrayList(followedPlaylists, result);
+        result.append("\n\nSong recommendations:\n\t[");
+        result = formatArrayList(recommendedSongs, result);
+        result.append("\n\nPlaylists recommendations:\n\t[");
+        result = formatArrayList(recommendedPlaylists, result);
+
 
         return result.toString();
     }

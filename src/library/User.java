@@ -17,7 +17,6 @@ import library.user.helper.wrapped.WrappedStatsHost;
 import library.user.helper.wrapped.WrappedStatsUser;
 import page.Page;
 import page.command.ChangePageCommand;
-import page.command.Command;
 import page.command.CommandManager;
 import utils.Errors;
 
@@ -47,6 +46,9 @@ public class User implements Observer, Observable {
     private ArrayList<Observer> subscribers;
     private ArrayList<Notification> notifications;
     private CommandManager commandManager;
+    private ArrayList<Song> recommendedSongs;
+    private ArrayList<Playlist> recommendedPlaylists;
+    private ArrayList<Merch> boughtMerch;
 
     /**
      *
@@ -66,6 +68,9 @@ public class User implements Observer, Observable {
         this.wrappedStatsUser = new WrappedStatsUser();
         this.notifications = new ArrayList<>();
         this.commandManager = new CommandManager();
+        this.recommendedSongs = new ArrayList<>();
+        this.recommendedPlaylists = new ArrayList<>();
+        this.boughtMerch = new ArrayList<>();
     }
 
     public User(final InputCommands inputCommand) {
@@ -83,6 +88,9 @@ public class User implements Observer, Observable {
             this.wrappedStatsUser = new WrappedStatsUser();
             this.notifications = new ArrayList<>();
             this.commandManager = new CommandManager();
+            this.recommendedSongs = new ArrayList<>();
+            this.recommendedPlaylists = new ArrayList<>();
+            this.boughtMerch = new ArrayList<>();
         } else if (userType.equals("artist")) {
             this.albums = new ArrayList<>();
             this.events = new ArrayList<>();
@@ -101,7 +109,7 @@ public class User implements Observer, Observable {
      *
      * @param observer
      */
-    public void addSubscriber(Observer observer) {
+    public void addSubscriber(final Observer observer) {
         subscribers.add(observer);
     }
 
@@ -109,7 +117,7 @@ public class User implements Observer, Observable {
      *
      * @param observer
      */
-    public void removeSubscriber(Observer observer) {
+    public void removeSubscriber(final Observer observer) {
         subscribers.remove(observer);
     }
 
@@ -117,19 +125,19 @@ public class User implements Observer, Observable {
      *
      * @param message
      */
-    public void notifySubscribers(String name, String message) {
+    public void notifySubscribers(final String name, final String message) {
         for (Observer subscriber : subscribers) {
             subscriber.update(name, message);
         }
     }
 
     @Override
-    public void update(String name, String description) {
+    public void update(final String name, final String description) {
         Notification notification = new Notification(name, description);
         notifications.add(notification);
     }
 
-    public int subscribe(InputCommands inputCommand, Library library) {
+    public int subscribe(final InputCommands inputCommand, final Library library) {
         if (!currentPage.getCurrentPageType().equals("Artist") && !currentPage.getCurrentPageType().equals("Host")) {
             return Errors.PAGE_NOT_CORRESPONDENT;
         }
@@ -142,6 +150,77 @@ public class User implements Observer, Observable {
         currentPage.getCurrentUserLoaded().addSubscriber(this);
 
         return Errors.HAS_SUBSCRIBED;
+    }
+
+    public ArrayList<Song> getSongsWithGivenGenre(final String genre) {
+        ArrayList<Song> songsWithGenre = new ArrayList<>();
+        for (int i = 0; i < Library.songs.size(); i++) {
+            if (Library.songs.get(i).getGenre().equals(genre)) {
+                songsWithGenre.add(Library.songs.get(i));
+            }
+        }
+
+        return songsWithGenre;
+    }
+
+    public int updateRecommendations(final InputCommands inputCommand, final Library library) {
+        if (!userType.equals("user")) {
+            return Errors.USER_NOT_NORMAL;
+        }
+
+        if (inputCommand.getRecommendationType().equals("random_song")) {
+            int timePassed = player.getCurrentTime();
+            if (timePassed < 30) {
+                return Errors.NO_NEW_RECOMMANDATION;
+            }
+
+            Song currentSong = (Song)player.getAudioFile();
+            ArrayList<Song> songsWithGenre = getSongsWithGivenGenre(currentSong.getGenre());
+
+            Random random = new Random(timePassed);
+            int randomIndex = random.nextInt(songsWithGenre.size());
+
+            recommendedSongs.add(songsWithGenre.get(randomIndex));
+        } else if (inputCommand.getRecommendationType().equals("fans_playlist")) {
+            Playlist playlist = new Playlist();
+            String currentPlaylistArtist = player.getAudioFile().getOwner();
+
+            playlist.setName(currentPlaylistArtist + " Fan Club recommendations");
+
+            recommendedPlaylists.add(playlist);
+        } else {
+            Playlist playlist = new Playlist();
+
+            playlist.setName(username + "'s recommendations");
+
+            recommendedPlaylists.add(playlist);
+        }
+
+
+        return 0;
+    }
+
+    public int buyMerch(final InputCommands inputCommand) {
+        if (!currentPage.getCurrentPageType().equals("Artist")) {
+            return Errors.PAGE_NOT_CORRESPONDENT;
+        }
+
+        for (int i = 0; i < currentPage.getCurrentUserLoaded().merchItems.size(); i++) {
+            if (currentPage.getCurrentUserLoaded().merchItems.get(i).getName().equals(inputCommand.getName())) {
+                boughtMerch.add(currentPage.getCurrentUserLoaded().merchItems.get(i));
+                return 0;
+            }
+        }
+
+        return Errors.MERCH_NOT_EXIST;
+    }
+
+    public ArrayList<String> seeMerch() {
+        ArrayList<String> merchNames = new ArrayList<>();
+        for (int i = 0; i < boughtMerch.size(); i++) {
+            merchNames.add(boughtMerch.get(i).getName());
+        }
+        return merchNames;
     }
 
     /**
@@ -1098,11 +1177,19 @@ public class User implements Observer, Observable {
         this.wrappedStatsUser = wrappedStatsUser;
     }
 
+    /**
+     *
+     * @return
+     */
     public ArrayList<Observer> getSubscribers() {
         return subscribers;
     }
 
-    public void setSubscribers(ArrayList<Observer> subscribers) {
+    /**
+     *
+     * @param subscribers
+     */
+    public void setSubscribers(final ArrayList<Observer> subscribers) {
         this.subscribers = subscribers;
     }
 
@@ -1110,7 +1197,75 @@ public class User implements Observer, Observable {
         return notifications;
     }
 
-    public void setNotifications(ArrayList<Notification> notifications) {
+    /**
+     *
+     * @param notifications
+     */
+    public void setNotifications(final ArrayList<Notification> notifications) {
         this.notifications = notifications;
+    }
+
+    /**
+     *
+     * @return
+     */
+    public CommandManager getCommandManager() {
+        return commandManager;
+    }
+
+    /**
+     *
+     * @param commandManager
+     */
+    public void setCommandManager(final CommandManager commandManager) {
+        this.commandManager = commandManager;
+    }
+
+    /**
+     *
+     * @return
+     */
+    public ArrayList<Song> getRecommendedSongs() {
+        return recommendedSongs;
+    }
+
+    /**
+     *
+     * @param recommendedSongs
+     */
+    public void setRecommendedSongs(final ArrayList<Song> recommendedSongs) {
+        this.recommendedSongs = recommendedSongs;
+    }
+
+    /**
+     *
+     * @return
+     */
+    public ArrayList<Playlist> getRecommendedPlaylists() {
+        return recommendedPlaylists;
+    }
+
+    /**
+     *
+     * @param recommendedPlaylists
+     */
+    public void setRecommendedPlaylists(final ArrayList<Playlist> recommendedPlaylists) {
+        this.recommendedPlaylists = recommendedPlaylists;
+    }
+
+    /**
+     *
+     * @return
+     */
+    public ArrayList<Merch> getBoughtMerch() {
+        return boughtMerch;
+    }
+
+    /**
+     *
+     * @param boughtMerch
+     */
+    public void setBoughtMerch(final ArrayList<Merch> boughtMerch) {
+        this.boughtMerch = boughtMerch;
     }
 }

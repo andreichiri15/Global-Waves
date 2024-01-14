@@ -116,6 +116,8 @@ public final class CommandRunner {
                 case "previousPage" -> previousPage(myUser, inputCommands[i], myLibrary, results);
                 case "updateRecommendations" -> updateRecommendations(myUser, inputCommands[i],
                         myLibrary, results);
+                case "buyMerch" -> buyMerch(myUser, inputCommands[i], myLibrary, results);
+                case "seeMerch" -> seeMerch(myUser, inputCommands[i], myLibrary, results);
                 case "endProgram" -> endProgram(myUser, inputCommands[i], results);
                 default -> System.out.println("Invalid command");
             }
@@ -829,13 +831,6 @@ public final class CommandRunner {
 
     }
 
-    public void endProgram(final User myUser, final InputCommands inputCommand,
-                           final ArrayList<Result> results) {
-//        Result endProgramResult = new EndProgramResult(inputCommand);
-//        results.add(endProgramResult);
-    }
-
-
     public void subscribe(final User myUser, final InputCommands inputCommand,
                           final Library myLibrary, final ArrayList<Result> results) {
         int returnValue;
@@ -873,10 +868,40 @@ public final class CommandRunner {
         if (myUser == null) {
             returnValue = Errors.USER_NOT_EXIST;
         } else {
-            returnValue = myUser.updateRecommendations();
+            returnValue = myUser.updateRecommendations(inputCommand, myLibrary);
         }
 
         Result updateRecommendationsResult = new UpdateRecommendationsResult(inputCommand, returnValue);
         results.add(updateRecommendationsResult);
+    }
+
+    public void buyMerch(final User myUser, final InputCommands inputCommand,
+                         final Library myLibrary, final ArrayList<Result> results) {
+        int returnValue;
+        if (myUser == null) {
+            returnValue = Errors.USER_NOT_EXIST;
+        } else {
+            returnValue = myUser.buyMerch(inputCommand);
+        }
+
+        Result buyMerchResult = new BuyMerchResult(inputCommand, returnValue);
+        results.add(buyMerchResult);
+    }
+
+    public void seeMerch(final User myUser, final InputCommands inputCommand,
+                         final Library myLibrary, final ArrayList<Result> results) {
+        ArrayList<String> result = null;
+        if (myUser != null) {
+            result = myUser.seeMerch();
+        }
+
+        Result seeMerchResult = new SeeMerchResult(inputCommand, result);
+        results.add(seeMerchResult);
+    }
+
+    public void endProgram(final User myUser, final InputCommands inputCommand,
+                           final ArrayList<Result> results) {
+//        Result endProgramResult = new EndProgramResult(inputCommand);
+//        results.add(endProgramResult);
     }
 }

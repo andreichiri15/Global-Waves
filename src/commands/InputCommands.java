@@ -26,6 +26,7 @@ public class InputCommands {
     private int price;
     private ArrayList<EpisodeInput> episodes;
     private String nextPage;
+    private String recommendationType;
 
     /**
      *
@@ -346,5 +347,21 @@ public class InputCommands {
      */
     public void setNextPage(final String nextPage) {
         this.nextPage = nextPage;
+    }
+
+    /**
+     *
+     * @return
+     */
+    public String getRecommendationType() {
+        return recommendationType;
+    }
+
+    /**
+     *
+     * @param recommendationType
+     */
+    public void setRecommendationType(final String recommendationType) {
+        this.recommendationType = recommendationType;
     }
 }

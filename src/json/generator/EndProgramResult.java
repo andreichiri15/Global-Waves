@@ -9,8 +9,8 @@ public class EndProgramResult extends Result {
     private String command;
     private ArrayList<Map<String, Map<String, Object>>> results;
 
-    public EndProgramResult(InputCommands inputCommand, ArrayList<Map<String, Map<String, Object>>> results) {
-        this.command = inputCommand.getCommand();
+    public EndProgramResult(InputCommands inputCommands, ArrayList<Map<String, Map<String, Object>>> results) {
+        this.command = command;
         this.results = results;
     }
 
