@@ -154,6 +154,12 @@ public class Player {
 
             listenedTimes = artistStats.getListenersHash().getOrDefault(user.getUsername(), 0);
             artistStats.getListenersHash().put(user.getUsername(), listenedTimes + 1);
+
+            artist.getTotalSongsListened().add(album.getSongs().get(currentId));
+
+            if (user.isPremium()) {
+                user.getPremiumSongList().add(album.getSongs().get(currentId));
+            }
         } else if (fileType.equals("song")) {
             currentId = 0;
 
@@ -187,6 +193,12 @@ public class Player {
 
             listenedTimes = artistStats.getListenersHash().getOrDefault(user.getUsername(), 0);
             artistStats.getListenersHash().put(user.getUsername(), listenedTimes + 1);
+
+            artist.getTotalSongsListened().add(song);
+
+            if (user.isPremium()) {
+                user.getPremiumSongList().add(song);
+            }
         }
         paused = false;
         searchBar.setSearchedAudioFiles(null);

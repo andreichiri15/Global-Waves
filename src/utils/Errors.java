@@ -37,6 +37,9 @@ public final class Errors {
     public static final int SUCCES_NEXT = 2;
     public static final int NO_NEW_RECOMMANDATION = -1;
     public static final int MERCH_NOT_EXIST = -2;
+    public static final int USER_ALREADY_SUBSCRIBED = -3;
+    public static final int USER_NOT_SUBSCRIBED = -3;
+    public static final int USER_NOT_PLAYING = -3;
 
     private Errors() {
         throw new UnsupportedOperationException("This is a utility class and "

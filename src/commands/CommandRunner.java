@@ -123,6 +123,10 @@ public final class CommandRunner {
                 case "loadRecommendations" -> loadRecommendations(myUser, inputCommands[i],
                         myLibrary, results);
                 case "seeMerch" -> seeMerch(myUser, inputCommands[i], myLibrary, results);
+                case "buyPremium" -> buyPremium(myUser, inputCommands[i], myLibrary, results);
+                case "cancelPremium" -> cancelPremium(myUser, inputCommands[i], myLibrary,
+                        results);
+                case "adBreak" -> adBreak(myUser, inputCommands[i], myLibrary, results);
                 default -> System.out.println("Invalid command");
             }
         }
@@ -834,7 +838,7 @@ public final class CommandRunner {
         Result wrappedResult;
 
         if (!myUser.getStats().isLoaded()) {
-            wrappedResult = new WrappedNoDataResult(inputCommand);
+            wrappedResult = new WrappedNoDataResult(inputCommand, myUser.getUserType());
         } else {
             wrappedResult = new WrappedResult(inputCommand, result);
         }
@@ -928,10 +932,44 @@ public final class CommandRunner {
         return returnValue;
     }
 
+    public void buyPremium(final User myUser, final InputCommands inputCommand,
+                           final Library myLibrary, final ArrayList<Result> results) {
+        int returnValue;
+        if (myUser == null) {
+            returnValue = Errors.USER_NOT_EXIST;
+        } else {
+            returnValue = myUser.buyPremium();
+        }
+
+        Result buyPremiumResult = new BuyPremiumResult(inputCommand, returnValue);
+        results.add(buyPremiumResult);
+    }
+
+    public void cancelPremium(final User myUser, final InputCommands inputCommand,
+                              final Library myLibrary, final ArrayList<Result> results) {
+        int returnValue;
+        if (myUser == null) {
+            returnValue = Errors.USER_NOT_EXIST;
+        } else {
+            returnValue = myUser.cancelPremium(myLibrary);
+        }
+
+        Result cancelPremiumResult = new CancelPremiumResult(inputCommand, returnValue);
+        results.add(cancelPremiumResult);
+    }
+
     public void endProgram(final ArrayList<Result> results, final Library myLibrary) {
         HashMap<String, RevenueStats> result = myLibrary.endProgram();
         Result endProgramResult = new EndProgramResult(result);
 
         results.add(endProgramResult);
+    }
+
+    public void adBreak(final User myUser, final InputCommands inputCommand,
+                        final Library myLibrary, final ArrayList<Result> results) {
+        int returnValue = myUser.getPlayer().adBreak();
+
+        Result adBreakResult = new AdBreakResult(inputCommand, returnValue);
+        results.add(adBreakResult);
     }
 }

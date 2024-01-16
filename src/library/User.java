@@ -52,6 +52,10 @@ public class User implements Observer, Observable {
     private ArrayList<Merch> boughtMerch;
     private RevenueStats revenueStats;
     private String lastRecommandationType;
+    private boolean isPremium;
+    private ArrayList<Song> premiumSongList;
+    private ArrayList<Song> totalSongsListened;
+    private static final double PREMIUM_CREDITS = Math.pow(10, 6);
 
     /**
      *
@@ -74,6 +78,7 @@ public class User implements Observer, Observable {
         this.recommendedSongs = new ArrayList<>();
         this.recommendedPlaylists = new ArrayList<>();
         this.boughtMerch = new ArrayList<>();
+        this.isPremium = false;
     }
 
     public User(final InputCommands inputCommand) {
@@ -94,6 +99,7 @@ public class User implements Observer, Observable {
             this.recommendedSongs = new ArrayList<>();
             this.recommendedPlaylists = new ArrayList<>();
             this.boughtMerch = new ArrayList<>();
+            this.isPremium = false;
         } else if (userType.equals("artist")) {
             this.albums = new ArrayList<>();
             this.events = new ArrayList<>();
@@ -101,6 +107,7 @@ public class User implements Observer, Observable {
             this.wrappedStatsUser = new WrappedStatsArtist();
             this.subscribers = new ArrayList<>();
             this.revenueStats = new RevenueStats();
+            this.totalSongsListened = new ArrayList<>();
         } else if (userType.equals("host")) {
             this.podcasts = new ArrayList<>();
             this.events = new ArrayList<>();
@@ -154,6 +161,45 @@ public class User implements Observer, Observable {
         currentPage.getCurrentUserLoaded().addSubscriber(this);
 
         return Errors.HAS_SUBSCRIBED;
+    }
+
+    public int buyPremium() {
+        if (isPremium) {
+            return Errors.USER_ALREADY_SUBSCRIBED;
+        }
+
+        isPremium = true;
+
+        premiumSongList = new ArrayList<>();
+
+        return 0;
+    }
+
+    public void paySongs(Library library) {
+        Double revenuePerSong = PREMIUM_CREDITS / premiumSongList.size();
+
+        for (Song song : premiumSongList) {
+            song.setRevenue(song.getRevenue() + revenuePerSong);
+
+            double currentArtistRevenue = library.getUserByUsername(song.getOwner()).
+                    getRevenueStats().getSongRevenue();
+            library.getUserByUsername(song.getOwner()).getRevenueStats().
+                    setSongRevenue(currentArtistRevenue + revenuePerSong);
+        }
+    }
+
+    public int cancelPremium(Library library) {
+        if (!isPremium) {
+            return Errors.USER_NOT_SUBSCRIBED;
+        }
+
+        isPremium = false;
+
+        paySongs(library);
+
+        premiumSongList = null;
+
+        return 0;
     }
 
     public ArrayList<Song> getSongsWithGivenGenre(final String genre) {
@@ -1325,5 +1371,53 @@ public class User implements Observer, Observable {
      */
     public void setLastRecommandationType(final String lastRecommandationType) {
         this.lastRecommandationType = lastRecommandationType;
+    }
+
+    /**
+     *
+     * @return
+     */
+    public boolean isPremium() {
+        return isPremium;
+    }
+
+    /**
+     *
+     * @param premium
+     */
+    public void setPremium(final boolean premium) {
+        isPremium = premium;
+    }
+
+    /**
+     *
+     * @return
+     */
+    public ArrayList<Song> getPremiumSongList() {
+        return premiumSongList;
+    }
+
+    /**
+     *
+     * @param premiumSongList
+     */
+    public void setPremiumSongList(final ArrayList<Song> premiumSongList) {
+        this.premiumSongList = premiumSongList;
+    }
+
+    /**
+     *
+     * @return
+     */
+    public ArrayList<Song> getTotalSongsListened() {
+        return totalSongsListened;
+    }
+
+    /**
+     *
+     * @param totalSongsListened
+     */
+    public void setTotalSongsListened(final ArrayList<Song> totalSongsListened) {
+        this.totalSongsListened = totalSongsListened;
     }
 }

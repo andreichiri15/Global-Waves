@@ -285,6 +285,12 @@ public class Library {
         listenedTimes = wrappedStatsArtist.getListenersHash().
                 getOrDefault(currUser.getUsername(), 0);
         wrappedStatsArtist.getListenersHash().put(currUser.getUsername(), listenedTimes + 1);
+
+        artist.getTotalSongsListened().add(album.getSongs().get(player.getCurrentId()));
+
+        if (currUser.isPremium()){
+            currUser.getPremiumSongList().add(album.getSongs().get(player.getCurrentId()));
+        }
     }
 
     /**
@@ -600,7 +606,7 @@ public class Library {
         return 0;
     }
 
-    public static HashMap<String, RevenueStats> sortByRevenue(HashMap<String, RevenueStats> statsHash) {
+    public static HashMap<String, RevenueStats> sortByRevenue(final HashMap<String, RevenueStats> statsHash) {
         List<Map.Entry<String, RevenueStats>> entryList = new ArrayList<>(statsHash.entrySet());
 
         entryList.sort((entry1, entry2) -> {
@@ -627,6 +633,12 @@ public class Library {
     public HashMap<String, RevenueStats> endProgram() {
         HashMap<String, RevenueStats> artistsStatsMap = new HashMap<>();
 
+        for (User user : users) {
+            if (user.isPremium()) {
+                user.paySongs(this);
+            }
+        }
+
         for (int i = 0; i < users.size(); i++) {
             if (users.get(i).getUserType().equals("artist") && users.get(i).getRevenueStats().
                     isArtistLoaded()) {
@@ -639,6 +651,30 @@ public class Library {
         int ranking = sortedStatsMap.size();
         for (Map.Entry<String, RevenueStats> entry : sortedStatsMap.entrySet()) {
             entry.getValue().setRanking(ranking--);
+            entry.getValue().setSongRevenue(Math.round(entry.getValue().
+                    getSongRevenue() * 100.0) / 100.0);
+        }
+
+        for (Map.Entry<String, RevenueStats> entry : sortedStatsMap.entrySet()) {
+            User artist = getUserByUsername(entry.getKey());
+
+            Double maxRevenue = 0.0;
+            String maxRevenueSong = "";
+
+            for (Song song : artist.getTotalSongsListened()) {
+                if (song.getRevenue() > maxRevenue) {
+                    maxRevenue = song.getRevenue();
+                    maxRevenueSong = song.getName();
+                } else if (Double.compare(song.getRevenue(), maxRevenue) == 0) {
+                    if (song.getName().compareTo(maxRevenueSong) < 0) {
+                        maxRevenueSong = song.getName();
+                    }
+                }
+            }
+
+            if (maxRevenue > 0) {
+                entry.getValue().setMostProfitableSong(maxRevenueSong);
+            }
         }
 
         return sortedStatsMap;

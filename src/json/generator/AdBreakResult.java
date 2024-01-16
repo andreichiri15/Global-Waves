@@ -1,23 +1,24 @@
 package json.generator;
 
 import commands.InputCommands;
+import utils.Errors;
 
-public class WrappedNoDataResult extends Result {
+public class AdBreakResult extends Result {
     private String user;
     private String message;
 
-    public WrappedNoDataResult(final InputCommands inputCommand, final String userType) {
+    public AdBreakResult(InputCommands inputCommand, int returnValue) {
         this.user = inputCommand.getUsername();
-        this.timestamp = inputCommand.getTimestamp();
         this.command = inputCommand.getCommand();
-        if (userType.equals("user")) {
-            this.message = "No data to show for user " + user + ".";
-        } else if (userType.equals("artist")) {
-            this.message = "No data to show for artist " + user + ".";
-        } else {
-            this.message = "No data to show for host " + user + ".";
-        }
+        this.timestamp = inputCommand.getTimestamp();
 
+        if (returnValue == Errors.USER_NOT_EXIST) {
+            this.message = "The username " + user + " doesn't exist.";
+        } else if (returnValue == Errors.USER_NOT_PLAYING) {
+            this.message = user + " is not playing any music.";
+        } else {
+            this.message = "Ad inserted successfully.";
+        }
     }
 
     /**

@@ -11,8 +11,9 @@ public class Song extends AudioFile {
     private String lyrics;
     private String genre;
     private Integer releaseYear;
-//    private String artist;
     private int nrLikes;
+    private Double revenue;
+
 
     /**
      *
@@ -28,6 +29,7 @@ public class Song extends AudioFile {
         this.releaseYear = songInput.getReleaseYear();
 //        this.artist = songInput.getArtist();
         this.owner = songInput.getArtist();
+        this.revenue = 0.0;
     }
 
     /**
@@ -171,5 +173,21 @@ public class Song extends AudioFile {
      */
     public void setNrLikes(final int nrLikes) {
         this.nrLikes = nrLikes;
+    }
+
+    /**
+     *
+     * @return
+     */
+    public Double getRevenue() {
+        return revenue;
+    }
+
+    /**
+     *
+     * @param revenue
+     */
+    public void setRevenue(final Double revenue) {
+        this.revenue = revenue;
     }
 }
