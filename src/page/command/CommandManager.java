@@ -9,8 +9,9 @@ public class CommandManager {
     LinkedList<Command> undoCommands = new LinkedList<>();
 
     public void changePage(Command command) {
-        commands.add(command);
+        commands.push(command);
         command.execute();
+        undoCommands.clear();
     }
 
     public int undo() {
@@ -20,7 +21,7 @@ public class CommandManager {
 
         Command command = commands.pop();
         if (command != null) {
-            undoCommands.add(command);
+            undoCommands.push(command);
             command.undo();
         }
 
@@ -35,6 +36,7 @@ public class CommandManager {
 
         Command command = undoCommands.pop();
         if (command != null) {
+            command.redo();
         }
 
         return Errors.SUCCES_NEXT;

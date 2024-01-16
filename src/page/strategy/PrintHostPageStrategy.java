@@ -46,7 +46,7 @@ public class PrintHostPageStrategy implements PrintPageStrategy {
                 result.append(", ");
             }
         }
-        result.append("\n]");
+        result.append("]");
 
         return result.toString();
     }

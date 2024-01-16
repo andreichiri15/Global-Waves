@@ -576,18 +576,13 @@ public class User implements Observer, Observable {
 //                equals("LikedContent")) {
 //            return -1;
 //        }
-        if (inputCommand.getNextPage().equals("Host")) {
-            return -1;
-        }
-
         User userLoaded = this;
         if (inputCommand.getNextPage().equals("Artist") || inputCommand.getNextPage().
                 equals("Host")) {
             userLoaded = library.getUserByUsername(this.getPlayer().getAudioFile().getOwner());
         }
 
-        currentPage = new Page(userLoaded, inputCommand.getNextPage());
-        Page newPage = new Page(this, inputCommand.getNextPage());
+        Page newPage = new Page(userLoaded, inputCommand.getNextPage());
         commandManager.changePage(new ChangePageCommand(this, newPage));
 
         return 0;
@@ -877,7 +872,7 @@ public class User implements Observer, Observable {
             WrappedStatsArtist sortedWrappedStats = new WrappedStatsArtist();
             sortedWrappedStats.setTopSongs(topSongs);
             sortedWrappedStats.setTopAlbums(topAlbums);
-            sortedWrappedStats.setListeners(listenersHash.size());
+            sortedWrappedStats.setListeners(((WrappedStatsArtist) wrappedStatsUser).getListenersHash().size());
             ArrayList<String> keySet = new ArrayList<>(listenersHash.keySet().stream().toList());
             sortedWrappedStats.setTopFans(keySet);
             return sortedWrappedStats;

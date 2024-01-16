@@ -7,7 +7,7 @@ public class PreviousNextPageResult extends Result {
     private String user;
     private String message;
 
-    public PreviousNextPageResult(InputCommands inputCommand, int returnValue) {
+    public PreviousNextPageResult(final InputCommands inputCommand, final int returnValue) {
         this.user = inputCommand.getUsername();
         this.command = inputCommand.getCommand();
         this.timestamp = inputCommand.getTimestamp();
@@ -28,7 +28,7 @@ public class PreviousNextPageResult extends Result {
         return user;
     }
 
-    public void setUser(String user) {
+    public void setUser(final String user) {
         this.user = user;
     }
 
@@ -36,7 +36,7 @@ public class PreviousNextPageResult extends Result {
         return message;
     }
 
-    public void setMessage(String message) {
+    public void setMessage(final String message) {
         this.message = message;
     }
 }

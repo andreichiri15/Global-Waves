@@ -1,104 +1,206 @@
 [ {
+  "command" : "addAlbum",
+  "timestamp" : 1,
+  "user" : "Pink Floyd",
+  "message" : "The username Pink Floyd doesn't exist."
+}, {
   "command" : "addUser",
+  "timestamp" : 10,
+  "user" : "TED-X",
+  "message" : "The username TED-X has been added successfully."
+}, {
+  "command" : "addPodcast",
   "timestamp" : 15,
-  "user" : "Elton John",
-  "message" : "The username Elton John has been added successfully."
+  "user" : "TED-X",
+  "message" : "TED-X has added new podcast successfully."
+}, {
+  "command" : "addUser",
+  "timestamp" : 20,
+  "user" : "Queen",
+  "message" : "The username Queen has been added successfully."
 }, {
   "command" : "addAlbum",
-  "timestamp" : 20,
-  "user" : "Elton John",
-  "message" : "Elton John has added new album successfully."
+  "timestamp" : 25,
+  "user" : "Queen",
+  "message" : "Queen has added new album successfully."
 }, {
   "command" : "addUser",
-  "timestamp" : 35,
-  "user" : "david101",
-  "message" : "The username david101 has been added successfully."
-}, {
-  "command" : "addUser",
-  "timestamp" : 45,
-  "user" : "carmenzz",
-  "message" : "The username carmenzz has been added successfully."
+  "timestamp" : 40,
+  "user" : "ghiu",
+  "message" : "The username ghiu has been added successfully."
 }, {
   "command" : "search",
-  "timestamp" : 55,
-  "user" : "david101",
+  "timestamp" : 45,
+  "user" : "ghiu",
   "message" : "Search returned 1 results",
-  "results" : [ "Goodbye Yellow Brick Road" ]
+  "results" : [ "Auditory Adventures" ]
 }, {
   "command" : "select",
-  "timestamp" : 60,
-  "user" : "david101",
-  "message" : "Successfully selected Goodbye Yellow Brick Road."
+  "timestamp" : 50,
+  "user" : "ghiu",
+  "message" : "Successfully selected Auditory Adventures."
 }, {
   "command" : "load",
-  "timestamp" : 65,
-  "user" : "david101",
+  "timestamp" : 55,
+  "user" : "ghiu",
   "message" : "Playback loaded successfully."
 }, {
-  "command" : "like",
+  "command" : "changePage",
+  "timestamp" : 60,
+  "user" : "ghiu",
+  "message" : "ghiu accessed LikedContent successfully."
+}, {
+  "command" : "printCurrentPage",
+  "timestamp" : 65,
+  "user" : "ghiu",
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
+}, {
+  "command" : "status",
+  "timestamp" : 70,
+  "user" : "ghiu",
+  "stats" : {
+    "name" : "Exploring Sonic Landscapes",
+    "remainedTime" : 2685,
+    "repeat" : "No Repeat",
+    "shuffle" : false,
+    "paused" : false
+  }
+}, {
+  "command" : "changePage",
   "timestamp" : 75,
-  "user" : "david101",
-  "message" : "Like registered successfully."
+  "user" : "ghiu",
+  "message" : "ghiu accessed Host successfully."
+}, {
+  "command" : "printCurrentPage",
+  "timestamp" : 85,
+  "user" : "ghiu",
+  "message" : "Podcasts:\n\t[Auditory Adventures:\n\t[Exploring Sonic Landscapes - Journey through the world's most unique auditory experiences., The Future of Music Technology - A look into the innovations shaping the future of music production and listening., Cultural Beats - An exploration of how different cultures influence music genres.]\n]\n\nAnnouncements:\n\t[]"
 }, {
   "command" : "search",
   "timestamp" : 90,
-  "user" : "carmenzz",
+  "user" : "ghiu",
   "message" : "Search returned 1 results",
-  "results" : [ "Rocket Man" ]
+  "results" : [ "Bohemian Rhapsody" ]
 }, {
   "command" : "select",
-  "timestamp" : 95,
-  "user" : "carmenzz",
-  "message" : "Successfully selected Rocket Man."
-}, {
-  "command" : "load",
   "timestamp" : 100,
-  "user" : "carmenzz",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "like",
-  "timestamp" : 110,
-  "user" : "carmenzz",
-  "message" : "Like registered successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 115,
-  "user" : "carmenzz",
-  "message" : "Search returned 1 results",
-  "results" : [ "Your Song" ]
-}, {
-  "command" : "select",
-  "timestamp" : 120,
-  "user" : "carmenzz",
-  "message" : "Successfully selected Your Song."
+  "user" : "ghiu",
+  "message" : "Successfully selected Bohemian Rhapsody."
 }, {
   "command" : "load",
-  "timestamp" : 130,
-  "user" : "carmenzz",
+  "timestamp" : 105,
+  "user" : "ghiu",
   "message" : "Playback loaded successfully."
 }, {
+  "command" : "status",
+  "timestamp" : 115,
+  "user" : "ghiu",
+  "stats" : {
+    "name" : "Bohemian Rhapsody",
+    "remainedTime" : 340,
+    "repeat" : "No Repeat",
+    "shuffle" : false,
+    "paused" : false
+  }
+}, {
   "command" : "like",
-  "timestamp" : 135,
-  "user" : "carmenzz",
+  "timestamp" : 130,
+  "user" : "ghiu",
   "message" : "Like registered successfully."
 }, {
-  "command" : "printCurrentPage",
-  "timestamp" : 155,
-  "user" : "carmenzz",
-  "message" : "Liked songs:\n\t[Rocket Man, Your Song]\n\nFollowed playlists:\n\t[]"
+  "command" : "updateRecommendations",
+  "timestamp" : 152,
+  "user" : "ghiu",
+  "message" : "The recommendations for user ghiu have been updated successfully."
 }, {
-  "command" : "changePage",
+  "command" : "loadRecommendations",
+  "timestamp" : 155,
+  "user" : "ghiu",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "status",
   "timestamp" : 165,
-  "user" : "carmenzz",
-  "message" : "carmenzz accessed LikedContent successfully."
+  "user" : "ghiu",
+  "stats" : {
+    "name" : "Seven Seas of Rhye",
+    "remainedTime" : 69,
+    "repeat" : "No Repeat",
+    "shuffle" : false,
+    "paused" : false
+  }
 }, {
   "command" : "changePage",
   "timestamp" : 175,
-  "user" : "carmenzz",
-  "message" : "carmenzz accessed Artist successfully."
+  "user" : "ghiu",
+  "message" : "ghiu accessed Artist successfully."
+}, {
+  "command" : "like",
+  "timestamp" : 195,
+  "user" : "ghiu",
+  "message" : "Like registered successfully."
+}, {
+  "command" : "changePage",
+  "timestamp" : 200,
+  "user" : "ghiu",
+  "message" : "ghiu accessed Home successfully."
 }, {
   "command" : "printCurrentPage",
-  "timestamp" : 185,
-  "user" : "carmenzz",
+  "timestamp" : 205,
+  "user" : "ghiu",
+  "message" : "Liked songs:\n\t[Bohemian Rhapsody, Seven Seas of Rhye]\n\nFollowed playlists:\n\t[]\n\nSong recommendations:\n\t[Seven Seas of Rhye]\n\nPlaylists recommendations:\n\t[]"
+}, {
+  "command" : "previousPage",
+  "timestamp" : 210,
+  "user" : "ghiu",
+  "message" : "The user ghiu has navigated successfully to the previous page."
+}, {
+  "command" : "previousPage",
+  "timestamp" : 215,
+  "user" : "ghiu",
+  "message" : "The user ghiu has navigated successfully to the previous page."
+}, {
+  "command" : "previousPage",
+  "timestamp" : 220,
+  "user" : "ghiu",
+  "message" : "The user ghiu has navigated successfully to the previous page."
+}, {
+  "command" : "nextPage",
+  "timestamp" : 235,
+  "user" : "ghiu",
+  "message" : "The user ghiu has navigated successfully to the next page."
+}, {
+  "command" : "printCurrentPage",
+  "timestamp" : 240,
+  "user" : "ghiu",
+  "message" : "Podcasts:\n\t[Auditory Adventures:\n\t[Exploring Sonic Landscapes - Journey through the world's most unique auditory experiences., The Future of Music Technology - A look into the innovations shaping the future of music production and listening., Cultural Beats - An exploration of how different cultures influence music genres.]\n]\n\nAnnouncements:\n\t[]"
+}, {
+  "command" : "changePage",
+  "timestamp" : 245,
+  "user" : "ghiu",
+  "message" : "ghiu accessed Home successfully."
+}, {
+  "command" : "nextPage",
+  "timestamp" : 255,
+  "user" : "ghiu",
+  "message" : "The user ghiu has navigated successfully to the next page."
+}, {
+  "command" : "printCurrentPage",
+  "timestamp" : 265,
+  "user" : "ghiu",
   "message" : "Albums:\n\t[Greatest Hits]\n\nMerch:\n\t[]\n\nEvents:\n\t[]"
+}, {
+  "command" : "nextPage",
+  "timestamp" : 275,
+  "user" : "ghiu",
+  "message" : "The user ghiu has navigated successfully to the next page."
+}, {
+  "command" : "endProgram",
+  "result" : {
+    "Queen" : {
+      "merchRevenue" : 0.0,
+      "mostProfitableSong" : "N/A",
+      "ranking" : 1,
+      "songRevenue" : 0.0
+    }
+  }
 } ]
