@@ -87,6 +87,11 @@ public class Player {
         audioFile = searchBar.getSelectedAudioFile();
         fileType = searchBar.getType();
 
+        user.getStats().setLoaded(true);
+        if (library.getUserByUsername(audioFile.getOwner()) != null) {
+            library.getUserByUsername(audioFile.getOwner()).getStats().setLoaded(true);
+        }
+
         if (fileType.equals("playlist")) {
             currentId = 0;
         } else if (fileType.equals("podcast")) {

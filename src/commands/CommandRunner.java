@@ -831,10 +831,15 @@ public final class CommandRunner {
     public void wrapped(final User myUser, final InputCommands inputCommand,
                         final ArrayList<Result> results) {
         WrappedStats result = myUser.getWrappedStats();
+        Result wrappedResult;
 
-        Result wrappedResult = new WrappedResult(inputCommand, result);
+        if (!myUser.getStats().isLoaded()) {
+            wrappedResult = new WrappedNoDataResult(inputCommand);
+        } else {
+            wrappedResult = new WrappedResult(inputCommand, result);
+        }
+
         results.add(wrappedResult);
-
     }
 
     public void subscribe(final User myUser, final InputCommands inputCommand,

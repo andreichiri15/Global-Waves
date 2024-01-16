@@ -14,6 +14,7 @@ public class WrappedStatsHost extends WrappedStats {
         topEpisodes = new HashMap<>();
         listeners = 0;
         listenersHash = new HashMap<>();
+
     }
 
     public HashMap<String, Integer> getTopEpisodes() {
