@@ -14,7 +14,7 @@ public class BuyPremiumResult extends Result {
 
         if (returnValue == Errors.USER_NOT_EXIST) {
             this.message = "The username " + user + " doesn't exist.";
-        } else if (returnValue == Errors.USER_ALREADY_SUBSCRIBED){
+        } else if (returnValue == Errors.USER_ALREADY_SUBSCRIBED) {
             this.message = user +  " is already a premium user.";
         } else {
             this.message = user + " bought the subscription successfully.";

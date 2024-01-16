@@ -4,24 +4,40 @@ public class Notification {
     private String name;
     private String description;
 
-    public Notification(String name, String description) {
+    public Notification(final String name, final String description) {
         this.name = name;
         this.description = description;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
+    /**
+     *
+     * @param name
+     */
+    public void setName(final String name) {
         this.name = name;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getDescription() {
         return description;
     }
 
-    public void setDescription(String description) {
+    /**
+     *
+     * @param description
+     */
+    public void setDescription(final String description) {
         this.description = description;
     }
 }

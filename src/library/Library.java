@@ -24,6 +24,7 @@ public class Library {
     static ArrayList<Album> albumList;
     private static final int COUNTMAX = 5;
     private static Library instance = null;
+    private static final double HUNDRED = 100.0;
 
     /**
      * constructor for library
@@ -88,7 +89,8 @@ public class Library {
                     }
                 } else if (player.getFileType().equals("podcast")) {
                     Podcast podcast = (Podcast) player.getAudioFile();
-                    while (player.getCurrentTime() >= podcast.getEpisodes().get(player.getCurrentId()).getDuration()) {
+                    while (player.getCurrentTime() >= podcast.getEpisodes().get(player.
+                            getCurrentId()).getDuration()) {
                         int currentTime = player.getCurrentTime();
                         int episodeDuration = podcast.getEpisodes().get(player.getCurrentId()).
                                 getDuration();
@@ -100,7 +102,8 @@ public class Library {
                             continue;
                         }
 
-                        updatePodcastWrappedStats(users.get(i), podcast, player, player.getCurrentId());
+                        updatePodcastWrappedStats(users.get(i), podcast, player,
+                                player.getCurrentId());
                     }
 
                     if (player.getCurrentId() == podcast.getEpisodes().size()) {
@@ -223,6 +226,13 @@ public class Library {
         }
     }
 
+    /**
+     * method that updates the wrapped stats of both user and host
+     * @param currUser current user
+     * @param podcast current podcast
+     * @param player user's player
+     * @param currentId current id
+     */
     public void updatePodcastWrappedStats(final User currUser, final Podcast podcast,
                                           final Player player, final int currentId) {
         WrappedStatsUser wrappedStatsUser = (WrappedStatsUser) currUser.
@@ -249,6 +259,12 @@ public class Library {
         wrappedStatsHost.getListenersHash().put(currUser.getUsername(), listenedTimes + 1);
     }
 
+    /**
+     * method that updates the wrapped stats of both user and artist when an album is listened to
+     * @param currUser current user
+     * @param album current album
+     * @param player user's player
+     */
     public void updateAlbumWrappedStats(final User currUser, final Album album,
                                         final Player player) {
         WrappedStatsUser wrappedStatsUser = (WrappedStatsUser) currUser.
@@ -288,7 +304,7 @@ public class Library {
 
         artist.getTotalSongsListened().add(album.getSongs().get(player.getCurrentId()));
 
-        if (currUser.isPremium()){
+        if (currUser.isPremium()) {
             currUser.getPremiumSongList().add(album.getSongs().get(player.getCurrentId()));
         }
     }
@@ -606,7 +622,13 @@ public class Library {
         return 0;
     }
 
-    public static HashMap<String, RevenueStats> sortByRevenue(final HashMap<String, RevenueStats> statsHash) {
+    /**
+     * method that sorts the hashmap of artists by their total revenue
+     * @param statsHash the hashmap of artists
+     * @return the sorted hashmap
+     */
+    public static HashMap<String, RevenueStats> sortByRevenue(
+            final HashMap<String, RevenueStats> statsHash) {
         List<Map.Entry<String, RevenueStats>> entryList = new ArrayList<>(statsHash.entrySet());
 
         entryList.sort((entry1, entry2) -> {
@@ -630,6 +652,11 @@ public class Library {
         return sortedMap;
     }
 
+    /**
+     * method that gets called before the ending of the program, calculating the revenue of
+     * each artist and returning
+     * @return the hashmap of artists and their revenue stats
+     */
     public HashMap<String, RevenueStats> endProgram() {
         HashMap<String, RevenueStats> artistsStatsMap = new HashMap<>();
 
@@ -652,7 +679,7 @@ public class Library {
         for (Map.Entry<String, RevenueStats> entry : sortedStatsMap.entrySet()) {
             entry.getValue().setRanking(ranking--);
             entry.getValue().setSongRevenue(Math.round(entry.getValue().
-                    getSongRevenue() * 100.0) / 100.0);
+                    getSongRevenue() * HUNDRED) / HUNDRED);
         }
 
         for (Map.Entry<String, RevenueStats> entry : sortedStatsMap.entrySet()) {

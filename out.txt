@@ -221,2647 +221,3014 @@
 }, {
   "command" : "addAlbum",
   "timestamp" : 1,
-  "user" : "James Brown",
-  "message" : "James Brown has added new album successfully."
+  "user" : "Stevie Wonder",
+  "message" : "Stevie Wonder has added new album successfully."
 }, {
   "command" : "addAlbum",
   "timestamp" : 1,
-  "user" : "James Brown",
-  "message" : "James Brown has added new album successfully."
+  "user" : "Stevie Wonder",
+  "message" : "Stevie Wonder has added new album successfully."
 }, {
   "command" : "addAlbum",
   "timestamp" : 1,
-  "user" : "James Brown",
-  "message" : "James Brown has added new album successfully."
+  "user" : "Stevie Wonder",
+  "message" : "Stevie Wonder has added new album successfully."
 }, {
   "command" : "addAlbum",
   "timestamp" : 1,
-  "user" : "Pink Floyd",
-  "message" : "Pink Floyd has added new album successfully."
+  "user" : "Stevie Wonder",
+  "message" : "Stevie Wonder has added new album successfully."
 }, {
   "command" : "addAlbum",
   "timestamp" : 1,
-  "user" : "Pink Floyd",
-  "message" : "Pink Floyd has added new album successfully."
+  "user" : "Prince",
+  "message" : "Prince has added new album successfully."
 }, {
   "command" : "addAlbum",
   "timestamp" : 1,
-  "user" : "Pink Floyd",
-  "message" : "Pink Floyd has added new album successfully."
+  "user" : "Prince",
+  "message" : "Prince has added new album successfully."
 }, {
   "command" : "addAlbum",
   "timestamp" : 1,
-  "user" : "Pink Floyd",
-  "message" : "Pink Floyd has added new album successfully."
+  "user" : "Prince",
+  "message" : "Prince has added new album successfully."
 }, {
   "command" : "addAlbum",
   "timestamp" : 1,
-  "user" : "Aretha Franklin",
-  "message" : "Aretha Franklin has added new album successfully."
-}, {
-  "command" : "buyPremium",
-  "timestamp" : 5,
-  "user" : "henry26",
-  "message" : "henry26 bought the subscription successfully."
-}, {
-  "command" : "buyPremium",
-  "timestamp" : 5,
-  "user" : "grace25",
-  "message" : "grace25 bought the subscription successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 10,
-  "user" : "carol19",
-  "message" : "Search returned 1 results",
-  "results" : [ "The 50th Anniversary Collection" ]
-}, {
-  "command" : "select",
-  "timestamp" : 10,
-  "user" : "carol19",
-  "message" : "Successfully selected The 50th Anniversary Collection."
-}, {
-  "command" : "load",
-  "timestamp" : 10,
-  "user" : "carol19",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 10,
-  "user" : "jack29",
-  "message" : "Search returned 1 results",
-  "results" : [ "Out of Sight" ]
-}, {
-  "command" : "select",
-  "timestamp" : 10,
-  "user" : "jack29",
-  "message" : "Successfully selected Out of Sight."
-}, {
-  "command" : "load",
-  "timestamp" : 10,
-  "user" : "jack29",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 10,
-  "user" : "grace25",
-  "message" : "Search returned 1 results",
-  "results" : [ "20 All-Time Greatest Hits!" ]
-}, {
-  "command" : "select",
-  "timestamp" : 10,
-  "user" : "grace25",
-  "message" : "Successfully selected 20 All-Time Greatest Hits!."
-}, {
-  "command" : "load",
-  "timestamp" : 10,
-  "user" : "grace25",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 10,
-  "user" : "henry26",
-  "message" : "Search returned 1 results",
-  "results" : [ "I Got Ants In My Pants" ]
-}, {
-  "command" : "select",
-  "timestamp" : 10,
-  "user" : "henry26",
-  "message" : "Successfully selected I Got Ants In My Pants."
-}, {
-  "command" : "load",
-  "timestamp" : 10,
-  "user" : "henry26",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 191,
-  "user" : "henry26",
-  "message" : "Search returned 1 results",
-  "results" : [ "I Don't Want Nobody To Give Me Nothing (Open Up The Door I'll Get It Myself)" ]
-}, {
-  "command" : "select",
-  "timestamp" : 191,
-  "user" : "henry26",
-  "message" : "Successfully selected I Don't Want Nobody To Give Me Nothing (Open Up The Door I'll Get It Myself)."
-}, {
-  "command" : "load",
-  "timestamp" : 191,
-  "user" : "henry26",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "cancelPremium",
-  "timestamp" : 482,
-  "user" : "henry26",
-  "message" : "henry26 cancelled the subscription successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 482,
-  "user" : "henry26",
-  "message" : "Search returned 1 results",
-  "results" : [ "I Got You (I Feel Good) (Original 1964 Album)" ]
-}, {
-  "command" : "select",
-  "timestamp" : 482,
-  "user" : "henry26",
-  "message" : "Successfully selected I Got You (I Feel Good) (Original 1964 Album)."
-}, {
-  "command" : "load",
-  "timestamp" : 482,
-  "user" : "henry26",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 629,
-  "user" : "henry26",
-  "message" : "Search returned 1 results",
-  "results" : [ "Night Train - Single Version" ]
-}, {
-  "command" : "select",
-  "timestamp" : 629,
-  "user" : "henry26",
-  "message" : "Successfully selected Night Train - Single Version."
-}, {
-  "command" : "load",
-  "timestamp" : 629,
-  "user" : "henry26",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 734,
-  "user" : "henry26",
-  "message" : "Search returned 1 results",
-  "results" : [ "Maybe The Last Time (Single Version)" ]
-}, {
-  "command" : "select",
-  "timestamp" : 734,
-  "user" : "henry26",
-  "message" : "Successfully selected Maybe The Last Time (Single Version)."
-}, {
-  "command" : "load",
-  "timestamp" : 734,
-  "user" : "henry26",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "cancelPremium",
-  "timestamp" : 823,
-  "user" : "henry26",
-  "message" : "henry26 is not a premium user."
-}, {
-  "command" : "search",
-  "timestamp" : 823,
-  "user" : "henry26",
-  "message" : "Search returned 3 results",
-  "results" : [ "I Got You (I Feel Good)", "I Got You (I Feel Good) (Original 1964 Album)", "I Got You (I Feel Good)" ]
-}, {
-  "command" : "select",
-  "timestamp" : 823,
-  "user" : "henry26",
-  "message" : "Successfully selected I Got You (I Feel Good)."
-}, {
-  "command" : "load",
-  "timestamp" : 823,
-  "user" : "henry26",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 907,
-  "user" : "henry26",
-  "message" : "Search returned 1 results",
-  "results" : [ "Wish You Were Here" ]
-}, {
-  "command" : "select",
-  "timestamp" : 907,
-  "user" : "henry26",
-  "message" : "Successfully selected Wish You Were Here."
-}, {
-  "command" : "load",
-  "timestamp" : 907,
-  "user" : "henry26",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 952,
-  "user" : "jack29",
-  "message" : "Search returned 1 results",
-  "results" : [ "There Was A Time - Live At The Apollo Theater/1967" ]
-}, {
-  "command" : "select",
-  "timestamp" : 952,
-  "user" : "jack29",
-  "message" : "Successfully selected There Was A Time - Live At The Apollo Theater/1967."
-}, {
-  "command" : "load",
-  "timestamp" : 952,
-  "user" : "jack29",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 1059,
-  "user" : "jack29",
-  "message" : "Search returned 1 results",
-  "results" : [ "I Wanna Be Around (feat. New York Studio Orchestra & Chorus)" ]
-}, {
-  "command" : "select",
-  "timestamp" : 1059,
-  "user" : "jack29",
-  "message" : "Successfully selected I Wanna Be Around (feat. New York Studio Orchestra & Chorus)."
-}, {
-  "command" : "load",
-  "timestamp" : 1059,
-  "user" : "jack29",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "buyPremium",
-  "timestamp" : 1132,
-  "user" : "jack29",
-  "message" : "jack29 bought the subscription successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 1132,
-  "user" : "jack29",
-  "message" : "Search returned 2 results",
-  "results" : [ "Out Of Sight - Single Version", "Out Of Sight - Single Version" ]
-}, {
-  "command" : "select",
-  "timestamp" : 1132,
-  "user" : "jack29",
-  "message" : "Successfully selected Out Of Sight - Single Version."
-}, {
-  "command" : "load",
-  "timestamp" : 1132,
-  "user" : "jack29",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "buyPremium",
-  "timestamp" : 1203,
-  "user" : "jack29",
-  "message" : "jack29 is already a premium user."
-}, {
-  "command" : "search",
-  "timestamp" : 1203,
-  "user" : "jack29",
-  "message" : "Search returned 1 results",
-  "results" : [ "Get Up, Get Into It, Get Involved" ]
-}, {
-  "command" : "select",
-  "timestamp" : 1203,
-  "user" : "jack29",
-  "message" : "Successfully selected Get Up, Get Into It, Get Involved."
-}, {
-  "command" : "load",
-  "timestamp" : 1203,
-  "user" : "jack29",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 1266,
-  "user" : "jack29",
-  "message" : "Search returned 1 results",
-  "results" : [ "Prisoner Of Love" ]
-}, {
-  "command" : "select",
-  "timestamp" : 1266,
-  "user" : "jack29",
-  "message" : "Successfully selected Prisoner Of Love."
-}, {
-  "command" : "load",
-  "timestamp" : 1266,
-  "user" : "jack29",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 1490,
-  "user" : "jack29",
-  "message" : "Search returned 1 results",
-  "results" : [ "Doing It To Death, Pt. 1 - AM DJ Version" ]
-}, {
-  "command" : "select",
-  "timestamp" : 1490,
-  "user" : "jack29",
-  "message" : "Successfully selected Doing It To Death, Pt. 1 - AM DJ Version."
-}, {
-  "command" : "load",
-  "timestamp" : 1490,
-  "user" : "jack29",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 1581,
-  "user" : "jack29",
-  "message" : "Search returned 1 results",
-  "results" : [ "Nature Boy" ]
-}, {
-  "command" : "select",
-  "timestamp" : 1581,
-  "user" : "jack29",
-  "message" : "Successfully selected Nature Boy."
-}, {
-  "command" : "load",
-  "timestamp" : 1581,
-  "user" : "jack29",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 1653,
-  "user" : "jack29",
-  "message" : "Search returned 1 results",
-  "results" : [ "Try Me - Single Version / Mono" ]
-}, {
-  "command" : "select",
-  "timestamp" : 1653,
-  "user" : "jack29",
-  "message" : "Successfully selected Try Me - Single Version / Mono."
-}, {
-  "command" : "load",
-  "timestamp" : 1653,
-  "user" : "jack29",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 1729,
-  "user" : "jack29",
-  "message" : "Search returned 1 results",
-  "results" : [ "Come Rain Or Come Shine" ]
-}, {
-  "command" : "select",
-  "timestamp" : 1729,
-  "user" : "jack29",
-  "message" : "Successfully selected Come Rain Or Come Shine."
-}, {
-  "command" : "load",
-  "timestamp" : 1729,
-  "user" : "jack29",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 1798,
-  "user" : "jack29",
-  "message" : "Search returned 1 results",
-  "results" : [ "Please, Please, Please (Single Version)" ]
-}, {
-  "command" : "select",
-  "timestamp" : 1798,
-  "user" : "jack29",
-  "message" : "Successfully selected Please, Please, Please (Single Version)."
-}, {
-  "command" : "load",
-  "timestamp" : 1798,
-  "user" : "jack29",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 1880,
-  "user" : "jack29",
-  "message" : "Search returned 2 results",
-  "results" : [ "Get On The Good Foot", "Get On The Good Foot" ]
-}, {
-  "command" : "select",
-  "timestamp" : 1880,
-  "user" : "jack29",
-  "message" : "Successfully selected Get On The Good Foot."
-}, {
-  "command" : "load",
-  "timestamp" : 1880,
-  "user" : "jack29",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 1978,
-  "user" : "jack29",
-  "message" : "Search returned 3 results",
-  "results" : [ "I Got You (I Feel Good)", "I Got You (I Feel Good) (Original 1964 Album)", "I Got You (I Feel Good)" ]
-}, {
-  "command" : "select",
-  "timestamp" : 1978,
-  "user" : "jack29",
-  "message" : "Successfully selected I Got You (I Feel Good)."
-}, {
-  "command" : "load",
-  "timestamp" : 1978,
-  "user" : "jack29",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 2053,
-  "user" : "grace25",
-  "message" : "Search returned 1 results",
-  "results" : [ "Give It Up Or Turnit A Loose - Single Version" ]
-}, {
-  "command" : "select",
-  "timestamp" : 2053,
-  "user" : "grace25",
-  "message" : "Successfully selected Give It Up Or Turnit A Loose - Single Version."
-}, {
-  "command" : "load",
-  "timestamp" : 2053,
-  "user" : "grace25",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 2062,
-  "user" : "jack29",
-  "message" : "Search returned 3 results",
-  "results" : [ "I Got You (I Feel Good)", "I Got You (I Feel Good) (Original 1964 Album)", "I Got You (I Feel Good)" ]
-}, {
-  "command" : "select",
-  "timestamp" : 2062,
-  "user" : "jack29",
-  "message" : "Successfully selected I Got You (I Feel Good)."
-}, {
-  "command" : "load",
-  "timestamp" : 2062,
-  "user" : "jack29",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 2146,
-  "user" : "jack29",
-  "message" : "Search returned 1 results",
-  "results" : [ "Till Then" ]
-}, {
-  "command" : "select",
-  "timestamp" : 2146,
-  "user" : "jack29",
-  "message" : "Successfully selected Till Then."
-}, {
-  "command" : "load",
-  "timestamp" : 2146,
-  "user" : "jack29",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 2226,
-  "user" : "jack29",
-  "message" : "Search returned 1 results",
-  "results" : [ "Young Lust" ]
-}, {
-  "command" : "select",
-  "timestamp" : 2226,
-  "user" : "jack29",
-  "message" : "Successfully selected Young Lust."
-}, {
-  "command" : "load",
-  "timestamp" : 2226,
-  "user" : "jack29",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "buyPremium",
-  "timestamp" : 2320,
-  "user" : "jack29",
-  "message" : "jack29 is already a premium user."
-}, {
-  "command" : "search",
-  "timestamp" : 2320,
-  "user" : "jack29",
-  "message" : "Search returned 1 results",
-  "results" : [ "Have a Cigar" ]
-}, {
-  "command" : "select",
-  "timestamp" : 2320,
-  "user" : "jack29",
-  "message" : "Successfully selected Have a Cigar."
-}, {
-  "command" : "load",
-  "timestamp" : 2320,
-  "user" : "jack29",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 2391,
-  "user" : "grace25",
-  "message" : "Search returned 1 results",
-  "results" : [ "I Wanna Be Around (feat. New York Studio Orchestra & Chorus)" ]
-}, {
-  "command" : "select",
-  "timestamp" : 2391,
-  "user" : "grace25",
-  "message" : "Successfully selected I Wanna Be Around (feat. New York Studio Orchestra & Chorus)."
-}, {
-  "command" : "load",
-  "timestamp" : 2391,
-  "user" : "grace25",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 2464,
-  "user" : "grace25",
-  "message" : "Search returned 2 results",
-  "results" : [ "Make It Funky, Pt. 1", "Make It Funky, Pt. 1" ]
-}, {
-  "command" : "select",
-  "timestamp" : 2464,
-  "user" : "grace25",
-  "message" : "Successfully selected Make It Funky, Pt. 1."
-}, {
-  "command" : "load",
-  "timestamp" : 2464,
-  "user" : "grace25",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 2483,
-  "user" : "jack29",
-  "message" : "Search returned 1 results",
-  "results" : [ "Shine On You Crazy Diamond (Part Two)" ]
-}, {
-  "command" : "select",
-  "timestamp" : 2483,
-  "user" : "jack29",
-  "message" : "Successfully selected Shine On You Crazy Diamond (Part Two)."
-}, {
-  "command" : "load",
-  "timestamp" : 2483,
-  "user" : "jack29",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 2561,
-  "user" : "grace25",
-  "message" : "Search returned 1 results",
-  "results" : [ "Bring It Up - Single Version" ]
-}, {
-  "command" : "select",
-  "timestamp" : 2561,
-  "user" : "grace25",
-  "message" : "Successfully selected Bring It Up - Single Version."
-}, {
-  "command" : "load",
-  "timestamp" : 2561,
-  "user" : "grace25",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 2642,
-  "user" : "grace25",
-  "message" : "Search returned 1 results",
-  "results" : [ "Get It Together - Part 1" ]
-}, {
-  "command" : "select",
-  "timestamp" : 2642,
-  "user" : "grace25",
-  "message" : "Successfully selected Get It Together - Part 1."
-}, {
-  "command" : "load",
-  "timestamp" : 2642,
-  "user" : "grace25",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 2756,
-  "user" : "grace25",
-  "message" : "Search returned 1 results",
-  "results" : [ "Try Me (Single Version) [Mono]" ]
-}, {
-  "command" : "select",
-  "timestamp" : 2756,
-  "user" : "grace25",
-  "message" : "Successfully selected Try Me (Single Version) [Mono]."
-}, {
-  "command" : "load",
-  "timestamp" : 2756,
-  "user" : "grace25",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 2832,
-  "user" : "grace25",
-  "message" : "Search returned 1 results",
-  "results" : [ "Nature Boy" ]
-}, {
-  "command" : "select",
-  "timestamp" : 2832,
-  "user" : "grace25",
-  "message" : "Successfully selected Nature Boy."
-}, {
-  "command" : "load",
-  "timestamp" : 2832,
-  "user" : "grace25",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 2904,
-  "user" : "grace25",
-  "message" : "Search returned 2 results",
-  "results" : [ "Out Of Sight - Single Version", "Out Of Sight - Single Version" ]
-}, {
-  "command" : "select",
-  "timestamp" : 2904,
-  "user" : "grace25",
-  "message" : "Successfully selected Out Of Sight - Single Version."
-}, {
-  "command" : "load",
-  "timestamp" : 2904,
-  "user" : "grace25",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 3046,
-  "user" : "grace25",
-  "message" : "Search returned 2 results",
-  "results" : [ "Papa Don't Take No Mess", "Papa Don't Take No Mess" ]
-}, {
-  "command" : "select",
-  "timestamp" : 3046,
-  "user" : "grace25",
-  "message" : "Successfully selected Papa Don't Take No Mess."
-}, {
-  "command" : "load",
-  "timestamp" : 3046,
-  "user" : "grace25",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 3180,
-  "user" : "grace25",
-  "message" : "Search returned 1 results",
-  "results" : [ "I Got You (I Feel Good) (Original 1964 Album)" ]
-}, {
-  "command" : "select",
-  "timestamp" : 3180,
-  "user" : "grace25",
-  "message" : "Successfully selected I Got You (I Feel Good) (Original 1964 Album)."
-}, {
-  "command" : "load",
-  "timestamp" : 3180,
-  "user" : "grace25",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 3225,
-  "user" : "jack29",
-  "message" : "Search returned 1 results",
-  "results" : [ "Money" ]
-}, {
-  "command" : "select",
-  "timestamp" : 3225,
-  "user" : "jack29",
-  "message" : "Successfully selected Money."
-}, {
-  "command" : "load",
-  "timestamp" : 3225,
-  "user" : "jack29",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 3253,
-  "user" : "grace25",
-  "message" : "Search returned 1 results",
-  "results" : [ "Please, Please, Please (Single Version)" ]
-}, {
-  "command" : "select",
-  "timestamp" : 3253,
-  "user" : "grace25",
-  "message" : "Successfully selected Please, Please, Please (Single Version)."
-}, {
-  "command" : "load",
-  "timestamp" : 3253,
-  "user" : "grace25",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 3335,
-  "user" : "grace25",
-  "message" : "Search returned 2 results",
-  "results" : [ "The Payback - Part 1", "The Payback" ]
-}, {
-  "command" : "select",
-  "timestamp" : 3335,
-  "user" : "grace25",
-  "message" : "Successfully selected The Payback - Part 1."
-}, {
-  "command" : "load",
-  "timestamp" : 3335,
-  "user" : "grace25",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 3397,
-  "user" : "henry26",
-  "message" : "Search returned 1 results",
-  "results" : [ "The Wall" ]
-}, {
-  "command" : "select",
-  "timestamp" : 3397,
-  "user" : "henry26",
-  "message" : "Successfully selected The Wall."
-}, {
-  "command" : "load",
-  "timestamp" : 3397,
-  "user" : "henry26",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 3485,
-  "user" : "jack29",
-  "message" : "Search returned 1 results",
-  "results" : [ "The Great Gig in the Sky" ]
-}, {
-  "command" : "select",
-  "timestamp" : 3485,
-  "user" : "jack29",
-  "message" : "Successfully selected The Great Gig in the Sky."
-}, {
-  "command" : "load",
-  "timestamp" : 3485,
-  "user" : "jack29",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 3559,
-  "user" : "grace25",
-  "message" : "Search returned 1 results",
-  "results" : [ "Super Bad, Pt. 1 & 2" ]
-}, {
-  "command" : "select",
-  "timestamp" : 3559,
-  "user" : "grace25",
-  "message" : "Successfully selected Super Bad, Pt. 1 & 2."
-}, {
-  "command" : "load",
-  "timestamp" : 3559,
-  "user" : "grace25",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 3690,
-  "user" : "jack29",
-  "message" : "Search returned 2 results",
-  "results" : [ "In the Flesh?", "In the Flesh" ]
-}, {
-  "command" : "select",
-  "timestamp" : 3690,
-  "user" : "jack29",
-  "message" : "Successfully selected In the Flesh?."
-}, {
-  "command" : "load",
-  "timestamp" : 3690,
-  "user" : "jack29",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 3709,
-  "user" : "grace25",
-  "message" : "Search returned 1 results",
-  "results" : [ "The Division Bell" ]
-}, {
-  "command" : "select",
-  "timestamp" : 3709,
-  "user" : "grace25",
-  "message" : "Successfully selected The Division Bell."
-}, {
-  "command" : "load",
-  "timestamp" : 3709,
-  "user" : "grace25",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 3808,
-  "user" : "jack29",
-  "message" : "Search returned 1 results",
-  "results" : [ "Vera" ]
-}, {
-  "command" : "select",
-  "timestamp" : 3808,
-  "user" : "jack29",
-  "message" : "Successfully selected Vera."
-}, {
-  "command" : "load",
-  "timestamp" : 3808,
-  "user" : "jack29",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 3929,
-  "user" : "jack29",
-  "message" : "Search returned 1 results",
-  "results" : [ "Outside the Wall" ]
-}, {
-  "command" : "select",
-  "timestamp" : 3929,
-  "user" : "jack29",
-  "message" : "Successfully selected Outside the Wall."
-}, {
-  "command" : "load",
-  "timestamp" : 3929,
-  "user" : "jack29",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 4191,
-  "user" : "jack29",
-  "message" : "Search returned 1 results",
-  "results" : [ "Breathe (In the Air)" ]
-}, {
-  "command" : "select",
-  "timestamp" : 4191,
-  "user" : "jack29",
-  "message" : "Successfully selected Breathe (In the Air)."
-}, {
-  "command" : "load",
-  "timestamp" : 4191,
-  "user" : "jack29",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 4276,
-  "user" : "jack29",
-  "message" : "Search returned 1 results",
-  "results" : [ "The Great Gig in the Sky" ]
-}, {
-  "command" : "select",
-  "timestamp" : 4276,
-  "user" : "jack29",
-  "message" : "Successfully selected The Great Gig in the Sky."
-}, {
-  "command" : "load",
-  "timestamp" : 4276,
-  "user" : "jack29",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 4481,
-  "user" : "jack29",
-  "message" : "Search returned 1 results",
-  "results" : [ "Any Colour You Like" ]
-}, {
-  "command" : "select",
-  "timestamp" : 4481,
-  "user" : "jack29",
-  "message" : "Successfully selected Any Colour You Like."
-}, {
-  "command" : "load",
-  "timestamp" : 4481,
-  "user" : "jack29",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 4726,
-  "user" : "jack29",
-  "message" : "Search returned 1 results",
-  "results" : [ "Wish You Were Here" ]
-}, {
-  "command" : "select",
-  "timestamp" : 4726,
-  "user" : "jack29",
-  "message" : "Successfully selected Wish You Were Here."
-}, {
-  "command" : "load",
-  "timestamp" : 4726,
-  "user" : "jack29",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 4870,
-  "user" : "jack29",
-  "message" : "Search returned 1 results",
-  "results" : [ "Have a Cigar" ]
-}, {
-  "command" : "select",
-  "timestamp" : 4870,
-  "user" : "jack29",
-  "message" : "Successfully selected Have a Cigar."
-}, {
-  "command" : "load",
-  "timestamp" : 4870,
-  "user" : "jack29",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 5033,
-  "user" : "jack29",
-  "message" : "Search returned 1 results",
-  "results" : [ "The Thin Ice" ]
-}, {
-  "command" : "select",
-  "timestamp" : 5033,
-  "user" : "jack29",
-  "message" : "Successfully selected The Thin Ice."
-}, {
-  "command" : "load",
-  "timestamp" : 5033,
-  "user" : "jack29",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 5114,
-  "user" : "carol19",
-  "message" : "Search returned 1 results",
-  "results" : [ "Good Rockin' Tonight" ]
-}, {
-  "command" : "select",
-  "timestamp" : 5114,
-  "user" : "carol19",
-  "message" : "Successfully selected Good Rockin' Tonight."
-}, {
-  "command" : "load",
-  "timestamp" : 5114,
-  "user" : "carol19",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 5129,
-  "user" : "jack29",
-  "message" : "Search returned 1 results",
-  "results" : [ "Brain Damage" ]
-}, {
-  "command" : "select",
-  "timestamp" : 5129,
-  "user" : "jack29",
-  "message" : "Successfully selected Brain Damage."
-}, {
-  "command" : "load",
-  "timestamp" : 5129,
-  "user" : "jack29",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 5186,
-  "user" : "carol19",
-  "message" : "Search returned 1 results",
-  "results" : [ "Give It Up Or Turnit A Loose - Extended Version" ]
-}, {
-  "command" : "select",
-  "timestamp" : 5186,
-  "user" : "carol19",
-  "message" : "Successfully selected Give It Up Or Turnit A Loose - Extended Version."
-}, {
-  "command" : "load",
-  "timestamp" : 5186,
-  "user" : "carol19",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 5240,
-  "user" : "jack29",
-  "message" : "Search returned 1 results",
-  "results" : [ "Baby, Baby, Baby" ]
-}, {
-  "command" : "select",
-  "timestamp" : 5240,
-  "user" : "jack29",
-  "message" : "Successfully selected Baby, Baby, Baby."
-}, {
-  "command" : "load",
-  "timestamp" : 5240,
-  "user" : "jack29",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 5324,
-  "user" : "jack29",
-  "message" : "Search returned 1 results",
-  "results" : [ "I Take What I Want" ]
-}, {
-  "command" : "select",
-  "timestamp" : 5324,
-  "user" : "jack29",
-  "message" : "Successfully selected I Take What I Want."
-}, {
-  "command" : "load",
-  "timestamp" : 5324,
-  "user" : "jack29",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 5355,
-  "user" : "carol19",
-  "message" : "Search returned 2 results",
-  "results" : [ "Super Bad, Pt. 1", "Super Bad, Pt. 1 & 2" ]
-}, {
-  "command" : "select",
-  "timestamp" : 5355,
-  "user" : "carol19",
-  "message" : "Successfully selected Super Bad, Pt. 1."
-}, {
-  "command" : "load",
-  "timestamp" : 5355,
-  "user" : "carol19",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 5441,
-  "user" : "carol19",
-  "message" : "Search returned 1 results",
-  "results" : [ "Good Good Lovin' - Single Version" ]
-}, {
-  "command" : "select",
-  "timestamp" : 5441,
-  "user" : "carol19",
-  "message" : "Successfully selected Good Good Lovin' - Single Version."
-}, {
-  "command" : "load",
-  "timestamp" : 5441,
-  "user" : "carol19",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 5474,
-  "user" : "jack29",
-  "message" : "Search returned 1 results",
-  "results" : [ "Never Let Me Go" ]
-}, {
-  "command" : "select",
-  "timestamp" : 5474,
-  "user" : "jack29",
-  "message" : "Successfully selected Never Let Me Go."
-}, {
-  "command" : "load",
-  "timestamp" : 5474,
-  "user" : "jack29",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 5508,
-  "user" : "jack29",
-  "message" : "Search returned 1 results",
-  "results" : [ "April Fools" ]
-}, {
-  "command" : "select",
-  "timestamp" : 5508,
-  "user" : "jack29",
-  "message" : "Successfully selected April Fools."
-}, {
-  "command" : "load",
-  "timestamp" : 5508,
-  "user" : "jack29",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "buyPremium",
-  "timestamp" : 5509,
-  "user" : "carol19",
-  "message" : "carol19 bought the subscription successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 5509,
-  "user" : "carol19",
-  "message" : "Search returned 2 results",
-  "results" : [ "Make It Funky, Pt. 1", "Make It Funky, Pt. 1" ]
-}, {
-  "command" : "select",
-  "timestamp" : 5509,
-  "user" : "carol19",
-  "message" : "Successfully selected Make It Funky, Pt. 1."
-}, {
-  "command" : "load",
-  "timestamp" : 5509,
-  "user" : "carol19",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 5542,
-  "user" : "jack29",
-  "message" : "Search returned 1 results",
-  "results" : [ "You're All I Need to Get By" ]
-}, {
-  "command" : "select",
-  "timestamp" : 5542,
-  "user" : "jack29",
-  "message" : "Successfully selected You're All I Need to Get By."
-}, {
-  "command" : "load",
-  "timestamp" : 5542,
-  "user" : "jack29",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 5606,
-  "user" : "carol19",
-  "message" : "Search returned 1 results",
-  "results" : [ "Till Then" ]
-}, {
-  "command" : "select",
-  "timestamp" : 5606,
-  "user" : "carol19",
-  "message" : "Successfully selected Till Then."
-}, {
-  "command" : "load",
-  "timestamp" : 5606,
-  "user" : "carol19",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 5649,
-  "user" : "jack29",
-  "message" : "Search returned 1 results",
-  "results" : [ "Border Song (Holy Moses)" ]
-}, {
-  "command" : "select",
-  "timestamp" : 5649,
-  "user" : "jack29",
-  "message" : "Successfully selected Border Song (Holy Moses)."
-}, {
-  "command" : "load",
-  "timestamp" : 5649,
-  "user" : "jack29",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "buyPremium",
-  "timestamp" : 5683,
-  "user" : "jack29",
-  "message" : "jack29 is already a premium user."
-}, {
-  "command" : "search",
-  "timestamp" : 5683,
-  "user" : "jack29",
-  "message" : "Search returned 1 results",
-  "results" : [ "Until You Come Back to Me (That's What I'm Gonna Do)" ]
-}, {
-  "command" : "select",
-  "timestamp" : 5683,
-  "user" : "jack29",
-  "message" : "Successfully selected Until You Come Back to Me (That's What I'm Gonna Do)."
-}, {
-  "command" : "load",
-  "timestamp" : 5683,
-  "user" : "jack29",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 5767,
-  "user" : "carol19",
-  "message" : "Search returned 2 results",
-  "results" : [ "It's A Man's, Man's, Man's World - Single Version / Mono", "It's A Man's, Man's, Man's World - Single Version / Mono" ]
-}, {
-  "command" : "select",
-  "timestamp" : 5767,
-  "user" : "carol19",
-  "message" : "Successfully selected It's A Man's, Man's, Man's World - Single Version / Mono."
-}, {
-  "command" : "load",
-  "timestamp" : 5767,
-  "user" : "carol19",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 5785,
-  "user" : "jack29",
-  "message" : "Search returned 1 results",
-  "results" : [ "Respect" ]
-}, {
-  "command" : "select",
-  "timestamp" : 5785,
-  "user" : "jack29",
-  "message" : "Successfully selected Respect."
-}, {
-  "command" : "load",
-  "timestamp" : 5785,
-  "user" : "jack29",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 5850,
-  "user" : "carol19",
-  "message" : "Search returned 2 results",
-  "results" : [ "The Payback - Part 1", "The Payback" ]
-}, {
-  "command" : "select",
-  "timestamp" : 5850,
-  "user" : "carol19",
-  "message" : "Successfully selected The Payback - Part 1."
-}, {
-  "command" : "load",
-  "timestamp" : 5850,
-  "user" : "carol19",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 5857,
-  "user" : "jack29",
-  "message" : "Search returned 1 results",
-  "results" : [ "Night Life" ]
-}, {
-  "command" : "select",
-  "timestamp" : 5857,
-  "user" : "jack29",
-  "message" : "Successfully selected Night Life."
-}, {
-  "command" : "load",
-  "timestamp" : 5857,
-  "user" : "jack29",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 5926,
-  "user" : "jack29",
-  "message" : "Search returned 1 results",
-  "results" : [ "Save Me" ]
-}, {
-  "command" : "select",
-  "timestamp" : 5926,
-  "user" : "jack29",
-  "message" : "Successfully selected Save Me."
-}, {
-  "command" : "load",
-  "timestamp" : 5926,
-  "user" : "jack29",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 5995,
-  "user" : "jack29",
-  "message" : "Search returned 1 results",
-  "results" : [ "Respect" ]
-}, {
-  "command" : "select",
-  "timestamp" : 5995,
-  "user" : "jack29",
-  "message" : "Successfully selected Respect."
-}, {
-  "command" : "load",
-  "timestamp" : 5995,
-  "user" : "jack29",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 6067,
-  "user" : "jack29",
-  "message" : "Search returned 1 results",
-  "results" : [ "Dr. Feelgood (Love Is a Serious Business)" ]
-}, {
-  "command" : "select",
-  "timestamp" : 6067,
-  "user" : "jack29",
-  "message" : "Successfully selected Dr. Feelgood (Love Is a Serious Business)."
-}, {
-  "command" : "load",
-  "timestamp" : 6067,
-  "user" : "jack29",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 6172,
-  "user" : "henry26",
-  "message" : "Search returned 1 results",
-  "results" : [ "Welcome to the Machine" ]
-}, {
-  "command" : "select",
-  "timestamp" : 6172,
-  "user" : "henry26",
-  "message" : "Successfully selected Welcome to the Machine."
-}, {
-  "command" : "load",
-  "timestamp" : 6172,
-  "user" : "henry26",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "wrapped",
-  "timestamp" : 6201,
-  "user" : "jack29",
-  "result" : {
-    "topSongs" : {
-      "Come Rain Or Come Shine" : 2,
-      "Have a Cigar" : 2,
-      "I Got You (I Feel Good)" : 2,
-      "I Wanna Be Around (feat. New York Studio Orchestra & Chorus)" : 2,
-      "Nature Boy" : 2
-    },
-    "topAlbums" : {
-      "Soul Queen" : 12,
-      "Out of Sight" : 11,
-      "The 50th Anniversary Collection" : 9,
-      "The Dark Side of the Moon" : 6,
-      "The Wall" : 5
-    },
-    "topArtists" : {
-      "James Brown" : 21,
-      "Pink Floyd" : 15,
-      "Aretha Franklin" : 12
-    },
-    "topGenres" : {
-      "funk" : 21,
-      "progressive rock" : 15,
-      "soul" : 12
-    },
-    "topEpisodes" : { }
-  }
-}, {
-  "command" : "search",
-  "timestamp" : 6298,
-  "user" : "carol19",
-  "message" : "Search returned 1 results",
-  "results" : [ "I Got You (I Feel Good) (Original 1964 Album)" ]
-}, {
-  "command" : "select",
-  "timestamp" : 6298,
-  "user" : "carol19",
-  "message" : "Successfully selected I Got You (I Feel Good) (Original 1964 Album)."
-}, {
-  "command" : "load",
-  "timestamp" : 6298,
-  "user" : "carol19",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 6418,
-  "user" : "henry26",
-  "message" : "Search returned 1 results",
-  "results" : [ "Have a Cigar" ]
-}, {
-  "command" : "select",
-  "timestamp" : 6418,
-  "user" : "henry26",
-  "message" : "Successfully selected Have a Cigar."
-}, {
-  "command" : "load",
-  "timestamp" : 6418,
-  "user" : "henry26",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 6445,
-  "user" : "carol19",
-  "message" : "Search returned 1 results",
-  "results" : [ "Ain't It Funky Now" ]
-}, {
-  "command" : "select",
-  "timestamp" : 6445,
-  "user" : "carol19",
-  "message" : "Successfully selected Ain't It Funky Now."
-}, {
-  "command" : "load",
-  "timestamp" : 6445,
-  "user" : "carol19",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 6581,
-  "user" : "henry26",
-  "message" : "Search returned 1 results",
-  "results" : [ "Comfortably Numb" ]
-}, {
-  "command" : "select",
-  "timestamp" : 6581,
-  "user" : "henry26",
-  "message" : "Successfully selected Comfortably Numb."
-}, {
-  "command" : "load",
-  "timestamp" : 6581,
-  "user" : "henry26",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 6743,
-  "user" : "carol19",
-  "message" : "Search returned 2 results",
-  "results" : [ "It's A Man's, Man's, Man's World - Single Version / Mono", "It's A Man's, Man's, Man's World - Single Version / Mono" ]
-}, {
-  "command" : "select",
-  "timestamp" : 6743,
-  "user" : "carol19",
-  "message" : "Successfully selected It's A Man's, Man's, Man's World - Single Version / Mono."
-}, {
-  "command" : "load",
-  "timestamp" : 6743,
-  "user" : "carol19",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 6772,
-  "user" : "henry26",
-  "message" : "Search returned 1 results",
-  "results" : [ "Poles Apart" ]
-}, {
-  "command" : "select",
-  "timestamp" : 6772,
-  "user" : "henry26",
-  "message" : "Successfully selected Poles Apart."
-}, {
-  "command" : "load",
-  "timestamp" : 6772,
-  "user" : "henry26",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 6826,
-  "user" : "carol19",
-  "message" : "Search returned 1 results",
-  "results" : [ "Come Rain Or Come Shine" ]
-}, {
-  "command" : "select",
-  "timestamp" : 6826,
-  "user" : "carol19",
-  "message" : "Successfully selected Come Rain Or Come Shine."
-}, {
-  "command" : "load",
-  "timestamp" : 6826,
-  "user" : "carol19",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 6895,
-  "user" : "carol19",
-  "message" : "Search returned 1 results",
-  "results" : [ "Come Rain Or Come Shine" ]
-}, {
-  "command" : "select",
-  "timestamp" : 6895,
-  "user" : "carol19",
-  "message" : "Successfully selected Come Rain Or Come Shine."
-}, {
-  "command" : "load",
-  "timestamp" : 6895,
-  "user" : "carol19",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "wrapped",
-  "timestamp" : 7034,
-  "user" : "James Brown",
-  "result" : {
-    "listeners" : 4,
-    "topSongs" : {
-      "I Got You (I Feel Good)" : 5,
-      "Come Rain Or Come Shine" : 4,
-      "I Got You (I Feel Good) (Original 1964 Album)" : 4,
-      "It's A Man's, Man's, Man's World - Single Version / Mono" : 4,
-      "Out Of Sight - Single Version" : 4
-    },
-    "topAlbums" : {
-      "The 50th Anniversary Collection" : 54,
-      "Out of Sight" : 21,
-      "20 All-Time Greatest Hits!" : 17
-    },
-    "topFans" : [ "carol19", "grace25", "jack29", "henry26" ]
-  }
-}, {
-  "command" : "search",
-  "timestamp" : 7034,
-  "user" : "carol19",
-  "message" : "Search returned 1 results",
-  "results" : [ "Have a Cigar" ]
-}, {
-  "command" : "select",
-  "timestamp" : 7034,
-  "user" : "carol19",
-  "message" : "Successfully selected Have a Cigar."
-}, {
-  "command" : "load",
-  "timestamp" : 7034,
-  "user" : "carol19",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 7120,
-  "user" : "henry26",
-  "message" : "Search returned 1 results",
-  "results" : [ "Speak to Me" ]
-}, {
-  "command" : "select",
-  "timestamp" : 7120,
-  "user" : "henry26",
-  "message" : "Successfully selected Speak to Me."
-}, {
-  "command" : "load",
-  "timestamp" : 7120,
-  "user" : "henry26",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 7197,
-  "user" : "carol19",
-  "message" : "Search returned 2 results",
-  "results" : [ "Shine on You Crazy Diamond", "Shine On You Crazy Diamond (Part Two)" ]
-}, {
-  "command" : "select",
-  "timestamp" : 7197,
-  "user" : "carol19",
-  "message" : "Successfully selected Shine on You Crazy Diamond."
-}, {
-  "command" : "load",
-  "timestamp" : 7197,
-  "user" : "carol19",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 7285,
-  "user" : "henry26",
-  "message" : "Search returned 1 results",
-  "results" : [ "Marooned" ]
-}, {
-  "command" : "select",
-  "timestamp" : 7285,
-  "user" : "henry26",
-  "message" : "Successfully selected Marooned."
-}, {
-  "command" : "load",
-  "timestamp" : 7285,
-  "user" : "henry26",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 7517,
-  "user" : "carol19",
-  "message" : "Search returned 1 results",
-  "results" : [ "Time" ]
-}, {
-  "command" : "select",
-  "timestamp" : 7517,
-  "user" : "carol19",
-  "message" : "Successfully selected Time."
-}, {
-  "command" : "load",
-  "timestamp" : 7517,
-  "user" : "carol19",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 7563,
-  "user" : "henry26",
-  "message" : "Search returned 1 results",
-  "results" : [ "Brain Damage" ]
-}, {
-  "command" : "select",
-  "timestamp" : 7563,
-  "user" : "henry26",
-  "message" : "Successfully selected Brain Damage."
-}, {
-  "command" : "load",
-  "timestamp" : 7563,
-  "user" : "henry26",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 7712,
-  "user" : "carol19",
-  "message" : "Search returned 1 results",
-  "results" : [ "Have a Cigar" ]
-}, {
-  "command" : "select",
-  "timestamp" : 7712,
-  "user" : "carol19",
-  "message" : "Successfully selected Have a Cigar."
-}, {
-  "command" : "load",
-  "timestamp" : 7712,
-  "user" : "carol19",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 7786,
-  "user" : "henry26",
-  "message" : "Search returned 1 results",
-  "results" : [ "Another Brick in the Wall Part 2" ]
-}, {
-  "command" : "select",
-  "timestamp" : 7786,
-  "user" : "henry26",
-  "message" : "Successfully selected Another Brick in the Wall Part 2."
-}, {
-  "command" : "load",
-  "timestamp" : 7786,
-  "user" : "henry26",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 7875,
-  "user" : "carol19",
-  "message" : "Search returned 1 results",
-  "results" : [ "On the Run" ]
-}, {
-  "command" : "select",
-  "timestamp" : 7875,
-  "user" : "carol19",
-  "message" : "Successfully selected On the Run."
-}, {
-  "command" : "load",
-  "timestamp" : 7875,
-  "user" : "carol19",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 7900,
-  "user" : "henry26",
-  "message" : "Search returned 1 results",
-  "results" : [ "Bring the Boys Back Home" ]
-}, {
-  "command" : "select",
-  "timestamp" : 7900,
-  "user" : "henry26",
-  "message" : "Successfully selected Bring the Boys Back Home."
-}, {
-  "command" : "load",
-  "timestamp" : 7900,
-  "user" : "henry26",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 7991,
-  "user" : "henry26",
-  "message" : "Search returned 1 results",
-  "results" : [ "Waiting for the Worms" ]
-}, {
-  "command" : "select",
-  "timestamp" : 7991,
-  "user" : "henry26",
-  "message" : "Successfully selected Waiting for the Worms."
-}, {
-  "command" : "load",
-  "timestamp" : 7991,
-  "user" : "henry26",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 8029,
-  "user" : "carol19",
-  "message" : "Search returned 1 results",
-  "results" : [ "Brain Damage" ]
-}, {
-  "command" : "select",
-  "timestamp" : 8029,
-  "user" : "carol19",
-  "message" : "Successfully selected Brain Damage."
-}, {
-  "command" : "load",
-  "timestamp" : 8029,
-  "user" : "carol19",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 8064,
-  "user" : "henry26",
-  "message" : "Search returned 1 results",
-  "results" : [ "Another Brick in the Wall Part 1" ]
-}, {
-  "command" : "select",
-  "timestamp" : 8064,
-  "user" : "henry26",
-  "message" : "Successfully selected Another Brick in the Wall Part 1."
-}, {
-  "command" : "load",
-  "timestamp" : 8064,
-  "user" : "henry26",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 8098,
-  "user" : "henry26",
-  "message" : "Search returned 1 results",
-  "results" : [ "Cluster One" ]
-}, {
-  "command" : "select",
-  "timestamp" : 8098,
-  "user" : "henry26",
-  "message" : "Successfully selected Cluster One."
-}, {
-  "command" : "load",
-  "timestamp" : 8098,
-  "user" : "henry26",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 8140,
-  "user" : "carol19",
-  "message" : "Search returned 1 results",
-  "results" : [ "Welcome to the Machine" ]
-}, {
-  "command" : "select",
-  "timestamp" : 8140,
-  "user" : "carol19",
-  "message" : "Successfully selected Welcome to the Machine."
-}, {
-  "command" : "load",
-  "timestamp" : 8140,
-  "user" : "carol19",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 8320,
-  "user" : "henry26",
-  "message" : "Search returned 1 results",
-  "results" : [ "Wish You Were Here" ]
-}, {
-  "command" : "select",
-  "timestamp" : 8320,
-  "user" : "henry26",
-  "message" : "Successfully selected Wish You Were Here."
-}, {
-  "command" : "load",
-  "timestamp" : 8320,
-  "user" : "henry26",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 8609,
-  "user" : "henry26",
-  "message" : "Search returned 1 results",
-  "results" : [ "Don't Play That Song (You Lied)" ]
-}, {
-  "command" : "select",
-  "timestamp" : 8609,
-  "user" : "henry26",
-  "message" : "Successfully selected Don't Play That Song (You Lied)."
-}, {
-  "command" : "load",
-  "timestamp" : 8609,
-  "user" : "henry26",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 8632,
-  "user" : "carol19",
-  "message" : "Search returned 1 results",
-  "results" : [ "Speak to Me" ]
-}, {
-  "command" : "select",
-  "timestamp" : 8632,
-  "user" : "carol19",
-  "message" : "Successfully selected Speak to Me."
-}, {
-  "command" : "load",
-  "timestamp" : 8632,
-  "user" : "carol19",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 8696,
-  "user" : "henry26",
-  "message" : "Search returned 1 results",
-  "results" : [ "My Song" ]
-}, {
-  "command" : "select",
-  "timestamp" : 8696,
-  "user" : "henry26",
-  "message" : "Successfully selected My Song."
-}, {
-  "command" : "load",
-  "timestamp" : 8696,
-  "user" : "henry26",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 8797,
-  "user" : "carol19",
-  "message" : "Search returned 1 results",
-  "results" : [ "Eclipse" ]
-}, {
-  "command" : "select",
-  "timestamp" : 8797,
-  "user" : "carol19",
-  "message" : "Successfully selected Eclipse."
-}, {
-  "command" : "load",
-  "timestamp" : 8797,
-  "user" : "carol19",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "cancelPremium",
-  "timestamp" : 8797,
-  "user" : "henry26",
-  "message" : "henry26 is not a premium user."
-}, {
-  "command" : "search",
-  "timestamp" : 8797,
-  "user" : "henry26",
-  "message" : "Search returned 1 results",
-  "results" : [ "Save Me" ]
-}, {
-  "command" : "select",
-  "timestamp" : 8797,
-  "user" : "henry26",
-  "message" : "Successfully selected Save Me."
-}, {
-  "command" : "load",
-  "timestamp" : 8797,
-  "user" : "henry26",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 8818,
-  "user" : "grace25",
-  "message" : "Search returned 1 results",
-  "results" : [ "The Dark Side of the Moon" ]
-}, {
-  "command" : "select",
-  "timestamp" : 8818,
-  "user" : "grace25",
-  "message" : "Successfully selected The Dark Side of the Moon."
-}, {
-  "command" : "load",
-  "timestamp" : 8818,
-  "user" : "grace25",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 8866,
-  "user" : "henry26",
-  "message" : "Search returned 1 results",
-  "results" : [ "You And Me" ]
-}, {
-  "command" : "select",
-  "timestamp" : 8866,
-  "user" : "henry26",
-  "message" : "Successfully selected You And Me."
-}, {
-  "command" : "load",
-  "timestamp" : 8866,
-  "user" : "henry26",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "cancelPremium",
-  "timestamp" : 8900,
-  "user" : "henry26",
-  "message" : "henry26 is not a premium user."
-}, {
-  "command" : "search",
-  "timestamp" : 8900,
-  "user" : "henry26",
-  "message" : "Search returned 1 results",
-  "results" : [ "Every Natural Thing" ]
-}, {
-  "command" : "select",
-  "timestamp" : 8900,
-  "user" : "henry26",
-  "message" : "Successfully selected Every Natural Thing."
-}, {
-  "command" : "load",
-  "timestamp" : 8900,
-  "user" : "henry26",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 8936,
-  "user" : "carol19",
-  "message" : "Search returned 1 results",
-  "results" : [ "Wholy Holy" ]
-}, {
-  "command" : "select",
-  "timestamp" : 8936,
-  "user" : "carol19",
-  "message" : "Successfully selected Wholy Holy."
-}, {
-  "command" : "load",
-  "timestamp" : 8936,
-  "user" : "carol19",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 8978,
-  "user" : "henry26",
-  "message" : "Search returned 1 results",
-  "results" : [ "Tracks Of My Tears" ]
-}, {
-  "command" : "select",
-  "timestamp" : 8978,
-  "user" : "henry26",
-  "message" : "Successfully selected Tracks Of My Tears."
-}, {
-  "command" : "load",
-  "timestamp" : 8978,
-  "user" : "henry26",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 9064,
-  "user" : "henry26",
-  "message" : "Search returned 1 results",
-  "results" : [ "Tracks Of My Tears" ]
-}, {
-  "command" : "select",
-  "timestamp" : 9064,
-  "user" : "henry26",
-  "message" : "Successfully selected Tracks Of My Tears."
-}, {
-  "command" : "load",
-  "timestamp" : 9064,
-  "user" : "henry26",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 9109,
-  "user" : "carol19",
-  "message" : "Search returned 1 results",
-  "results" : [ "Spanish Harlem" ]
-}, {
-  "command" : "select",
-  "timestamp" : 9109,
-  "user" : "carol19",
-  "message" : "Successfully selected Spanish Harlem."
-}, {
-  "command" : "load",
-  "timestamp" : 9109,
-  "user" : "carol19",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 9214,
-  "user" : "carol19",
-  "message" : "Search returned 1 results",
-  "results" : [ "I'm in Love" ]
-}, {
-  "command" : "select",
-  "timestamp" : 9214,
-  "user" : "carol19",
-  "message" : "Successfully selected I'm in Love."
-}, {
-  "command" : "load",
-  "timestamp" : 9214,
-  "user" : "carol19",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 9237,
-  "user" : "henry26",
-  "message" : "Search returned 1 results",
-  "results" : [ "Come Back Baby" ]
-}, {
-  "command" : "select",
-  "timestamp" : 9237,
-  "user" : "henry26",
-  "message" : "Successfully selected Come Back Baby."
-}, {
-  "command" : "load",
-  "timestamp" : 9237,
-  "user" : "henry26",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 9299,
-  "user" : "carol19",
-  "message" : "Search returned 1 results",
-  "results" : [ "All The King's Horses" ]
-}, {
-  "command" : "select",
-  "timestamp" : 9299,
-  "user" : "carol19",
-  "message" : "Successfully selected All The King's Horses."
-}, {
-  "command" : "load",
-  "timestamp" : 9299,
-  "user" : "carol19",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 9306,
-  "user" : "henry26",
-  "message" : "Search returned 1 results",
-  "results" : [ "Dark End of the Street" ]
-}, {
-  "command" : "select",
-  "timestamp" : 9306,
-  "user" : "henry26",
-  "message" : "Successfully selected Dark End of the Street."
-}, {
-  "command" : "load",
-  "timestamp" : 9306,
-  "user" : "henry26",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 9340,
-  "user" : "henry26",
-  "message" : "Search returned 1 results",
-  "results" : [ "Angel" ]
-}, {
-  "command" : "select",
-  "timestamp" : 9340,
-  "user" : "henry26",
-  "message" : "Successfully selected Angel."
-}, {
-  "command" : "load",
-  "timestamp" : 9340,
-  "user" : "henry26",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 9415,
-  "user" : "carol19",
-  "message" : "Search returned 1 results",
-  "results" : [ "Night Life" ]
-}, {
-  "command" : "select",
-  "timestamp" : 9415,
-  "user" : "carol19",
-  "message" : "Successfully selected Night Life."
-}, {
-  "command" : "load",
-  "timestamp" : 9415,
-  "user" : "carol19",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 9449,
-  "user" : "carol19",
-  "message" : "Search returned 1 results",
-  "results" : [ "Angel" ]
-}, {
-  "command" : "select",
-  "timestamp" : 9449,
-  "user" : "carol19",
-  "message" : "Successfully selected Angel."
-}, {
-  "command" : "load",
-  "timestamp" : 9449,
-  "user" : "carol19",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 9473,
-  "user" : "henry26",
-  "message" : "Search returned 1 results",
-  "results" : [ "Spanish Harlem" ]
-}, {
-  "command" : "select",
-  "timestamp" : 9473,
-  "user" : "henry26",
-  "message" : "Successfully selected Spanish Harlem."
-}, {
-  "command" : "load",
-  "timestamp" : 9473,
-  "user" : "henry26",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 9578,
-  "user" : "henry26",
-  "message" : "Search returned 1 results",
-  "results" : [ "Drown in My Own Tears" ]
-}, {
-  "command" : "select",
-  "timestamp" : 9578,
-  "user" : "henry26",
-  "message" : "Successfully selected Drown in My Own Tears."
-}, {
-  "command" : "load",
-  "timestamp" : 9578,
-  "user" : "henry26",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 9582,
-  "user" : "carol19",
-  "message" : "Search returned 1 results",
-  "results" : [ "Dr. Feelgood (Love Is a Serious Business)" ]
-}, {
-  "command" : "select",
-  "timestamp" : 9582,
-  "user" : "carol19",
-  "message" : "Successfully selected Dr. Feelgood (Love Is a Serious Business)."
-}, {
-  "command" : "load",
-  "timestamp" : 9582,
-  "user" : "carol19",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 9616,
-  "user" : "carol19",
-  "message" : "Search returned 1 results",
-  "results" : [ "You're A Sweet Sweet Man" ]
-}, {
-  "command" : "select",
-  "timestamp" : 9616,
-  "user" : "carol19",
-  "message" : "Successfully selected You're A Sweet Sweet Man."
-}, {
-  "command" : "load",
-  "timestamp" : 9616,
-  "user" : "carol19",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "wrapped",
-  "timestamp" : 9712,
-  "user" : "henry26",
-  "result" : {
-    "topSongs" : {
-      "Another Brick in the Wall Part 1" : 2,
-      "Another Brick in the Wall Part 2" : 2,
-      "Have a Cigar" : 2,
-      "Tracks Of My Tears" : 2,
-      "Welcome to the Machine" : 2
-    },
-    "topAlbums" : {
-      "The Wall" : 20,
-      "Soul Queen" : 12,
-      "Wish You Were Here" : 8,
-      "The 50th Anniversary Collection" : 4,
-      "The Division Bell" : 3
-    },
-    "topArtists" : {
-      "Pink Floyd" : 33,
-      "Aretha Franklin" : 12,
-      "James Brown" : 6
-    },
-    "topGenres" : {
-      "progressive rock" : 33,
-      "soul" : 12,
-      "funk" : 6
-    },
-    "topEpisodes" : { }
-  }
-}, {
-  "command" : "wrapped",
-  "timestamp" : 9750,
-  "user" : "carol19",
-  "result" : {
-    "topSongs" : {
-      "It's A Man's, Man's, Man's World - Single Version / Mono" : 3,
-      "Ain't It Funky Now" : 2,
-      "Come Rain Or Come Shine" : 2,
-      "Good Good Lovin' - Single Version" : 2,
-      "Have a Cigar" : 2
-    },
-    "topAlbums" : {
-      "The 50th Anniversary Collection" : 34,
-      "Soul Queen" : 8,
-      "Out of Sight" : 5,
-      "The Dark Side of the Moon" : 5,
-      "Wish You Were Here" : 4
-    },
-    "topArtists" : {
-      "James Brown" : 40,
-      "Pink Floyd" : 9,
-      "Aretha Franklin" : 8
-    },
-    "topGenres" : {
-      "funk" : 40,
-      "progressive rock" : 9,
-      "soul" : 8
-    },
-    "topEpisodes" : { }
-  }
-}, {
-  "command" : "search",
-  "timestamp" : 12124,
-  "user" : "grace25",
-  "message" : "Search returned 1 results",
-  "results" : [ "High Hopes" ]
-}, {
-  "command" : "select",
-  "timestamp" : 12124,
-  "user" : "grace25",
-  "message" : "Successfully selected High Hopes."
-}, {
-  "command" : "load",
-  "timestamp" : 12124,
-  "user" : "grace25",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 12364,
-  "user" : "grace25",
-  "message" : "Search returned 1 results",
-  "results" : [ "Shine On You Crazy Diamond (Part Two)" ]
-}, {
-  "command" : "select",
-  "timestamp" : 12364,
-  "user" : "grace25",
-  "message" : "Successfully selected Shine On You Crazy Diamond (Part Two)."
-}, {
-  "command" : "load",
-  "timestamp" : 12364,
-  "user" : "grace25",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 12735,
-  "user" : "grace25",
-  "message" : "Search returned 1 results",
-  "results" : [ "Have a Cigar" ]
-}, {
-  "command" : "select",
-  "timestamp" : 12735,
-  "user" : "grace25",
-  "message" : "Successfully selected Have a Cigar."
-}, {
-  "command" : "load",
-  "timestamp" : 12735,
-  "user" : "grace25",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 13062,
-  "user" : "grace25",
-  "message" : "Search returned 1 results",
-  "results" : [ "Speak to Me" ]
-}, {
-  "command" : "select",
-  "timestamp" : 13062,
-  "user" : "grace25",
-  "message" : "Successfully selected Speak to Me."
-}, {
-  "command" : "load",
-  "timestamp" : 13062,
-  "user" : "grace25",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 13144,
-  "user" : "grace25",
-  "message" : "Search returned 1 results",
-  "results" : [ "Lost for Words" ]
-}, {
-  "command" : "select",
-  "timestamp" : 13144,
-  "user" : "grace25",
-  "message" : "Successfully selected Lost for Words."
-}, {
-  "command" : "load",
-  "timestamp" : 13144,
-  "user" : "grace25",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 13314,
-  "user" : "grace25",
-  "message" : "Search returned 1 results",
-  "results" : [ "Welcome to the Machine" ]
-}, {
-  "command" : "select",
-  "timestamp" : 13314,
-  "user" : "grace25",
-  "message" : "Successfully selected Welcome to the Machine."
-}, {
-  "command" : "load",
-  "timestamp" : 13314,
-  "user" : "grace25",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 13806,
-  "user" : "grace25",
-  "message" : "Search returned 1 results",
-  "results" : [ "Wearing the Inside Out" ]
-}, {
-  "command" : "select",
-  "timestamp" : 13806,
-  "user" : "grace25",
-  "message" : "Successfully selected Wearing the Inside Out."
-}, {
-  "command" : "load",
-  "timestamp" : 13806,
-  "user" : "grace25",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 14078,
-  "user" : "grace25",
-  "message" : "Search returned 1 results",
-  "results" : [ "Cluster One" ]
-}, {
-  "command" : "select",
-  "timestamp" : 14078,
-  "user" : "grace25",
-  "message" : "Successfully selected Cluster One."
-}, {
-  "command" : "load",
-  "timestamp" : 14078,
-  "user" : "grace25",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 14523,
-  "user" : "grace25",
-  "message" : "Search returned 1 results",
-  "results" : [ "Coming Back to Life" ]
-}, {
-  "command" : "select",
-  "timestamp" : 14523,
-  "user" : "grace25",
-  "message" : "Successfully selected Coming Back to Life."
-}, {
-  "command" : "load",
-  "timestamp" : 14523,
-  "user" : "grace25",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "wrapped",
-  "timestamp" : 14712,
-  "user" : "Pink Floyd",
-  "result" : {
-    "listeners" : 4,
-    "topSongs" : {
-      "Have a Cigar" : 7,
-      "Brain Damage" : 4,
-      "Speak to Me" : 4,
-      "Welcome to the Machine" : 4,
-      "Cluster One" : 3
-    },
-    "topAlbums" : {
-      "The Wall" : 25,
-      "The Dark Side of the Moon" : 24,
-      "The Division Bell" : 19,
-      "Wish You Were Here" : 19
-    },
-    "topFans" : [ "henry26", "grace25", "jack29", "carol19" ]
-  }
-}, {
-  "command" : "search",
-  "timestamp" : 14712,
-  "user" : "grace25",
-  "message" : "Search returned 1 results",
-  "results" : [ "Soul Queen" ]
-}, {
-  "command" : "select",
-  "timestamp" : 14712,
-  "user" : "grace25",
-  "message" : "Successfully selected Soul Queen."
-}, {
-  "command" : "load",
-  "timestamp" : 14712,
-  "user" : "grace25",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 19638,
-  "user" : "grace25",
-  "message" : "Search returned 1 results",
-  "results" : [ "I Say a Little Prayer" ]
-}, {
-  "command" : "select",
-  "timestamp" : 19638,
-  "user" : "grace25",
-  "message" : "Successfully selected I Say a Little Prayer."
-}, {
-  "command" : "load",
-  "timestamp" : 19638,
-  "user" : "grace25",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 19744,
-  "user" : "grace25",
-  "message" : "Search returned 1 results",
-  "results" : [ "Do Right Woman, Do Right Man" ]
-}, {
-  "command" : "select",
-  "timestamp" : 19744,
-  "user" : "grace25",
-  "message" : "Successfully selected Do Right Woman, Do Right Man."
-}, {
-  "command" : "load",
-  "timestamp" : 19744,
-  "user" : "grace25",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 19939,
-  "user" : "grace25",
-  "message" : "Search returned 1 results",
-  "results" : [ "Eleanor Rigby" ]
-}, {
-  "command" : "select",
-  "timestamp" : 19939,
-  "user" : "grace25",
-  "message" : "Successfully selected Eleanor Rigby."
-}, {
-  "command" : "load",
-  "timestamp" : 19939,
-  "user" : "grace25",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 20016,
-  "user" : "grace25",
-  "message" : "Search returned 1 results",
-  "results" : [ "Gentle On My Mind" ]
-}, {
-  "command" : "select",
-  "timestamp" : 20016,
-  "user" : "grace25",
-  "message" : "Successfully selected Gentle On My Mind."
-}, {
-  "command" : "load",
-  "timestamp" : 20016,
-  "user" : "grace25",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 20090,
-  "user" : "grace25",
-  "message" : "Search returned 1 results",
-  "results" : [ "The House That Jack Built" ]
-}, {
-  "command" : "select",
-  "timestamp" : 20090,
-  "user" : "grace25",
-  "message" : "Successfully selected The House That Jack Built."
-}, {
-  "command" : "load",
-  "timestamp" : 20090,
-  "user" : "grace25",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 20159,
-  "user" : "grace25",
-  "message" : "Search returned 1 results",
-  "results" : [ "Baby, Baby, Baby" ]
-}, {
-  "command" : "select",
-  "timestamp" : 20159,
-  "user" : "grace25",
-  "message" : "Successfully selected Baby, Baby, Baby."
-}, {
-  "command" : "load",
-  "timestamp" : 20159,
-  "user" : "grace25",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 20243,
-  "user" : "grace25",
-  "message" : "Search returned 1 results",
-  "results" : [ "Master Of Eyes (The Deepness Of Your Eyes)" ]
-}, {
-  "command" : "select",
-  "timestamp" : 20243,
-  "user" : "grace25",
-  "message" : "Successfully selected Master Of Eyes (The Deepness Of Your Eyes)."
-}, {
-  "command" : "load",
-  "timestamp" : 20243,
-  "user" : "grace25",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 20345,
-  "user" : "grace25",
-  "message" : "Search returned 1 results",
-  "results" : [ "Ain't No Way" ]
-}, {
-  "command" : "select",
-  "timestamp" : 20345,
-  "user" : "grace25",
-  "message" : "Successfully selected Ain't No Way."
-}, {
-  "command" : "load",
-  "timestamp" : 20345,
-  "user" : "grace25",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 20471,
-  "user" : "grace25",
-  "message" : "Search returned 1 results",
-  "results" : [ "Ain't Nothing Like The Real Thing" ]
-}, {
-  "command" : "select",
-  "timestamp" : 20471,
-  "user" : "grace25",
-  "message" : "Successfully selected Ain't Nothing Like The Real Thing."
-}, {
-  "command" : "load",
-  "timestamp" : 20471,
-  "user" : "grace25",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 20584,
-  "user" : "grace25",
-  "message" : "Search returned 1 results",
-  "results" : [ "Wholy Holy" ]
-}, {
-  "command" : "select",
-  "timestamp" : 20584,
-  "user" : "grace25",
-  "message" : "Successfully selected Wholy Holy."
-}, {
-  "command" : "load",
-  "timestamp" : 20584,
-  "user" : "grace25",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 20757,
-  "user" : "grace25",
-  "message" : "Search returned 1 results",
-  "results" : [ "You And Me" ]
-}, {
-  "command" : "select",
-  "timestamp" : 20757,
-  "user" : "grace25",
-  "message" : "Successfully selected You And Me."
-}, {
-  "command" : "load",
-  "timestamp" : 20757,
-  "user" : "grace25",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 20791,
-  "user" : "grace25",
-  "message" : "Search returned 1 results",
-  "results" : [ "Baby I Love You" ]
-}, {
-  "command" : "select",
-  "timestamp" : 20791,
-  "user" : "grace25",
-  "message" : "Successfully selected Baby I Love You."
-}, {
-  "command" : "load",
-  "timestamp" : 20791,
-  "user" : "grace25",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 20869,
-  "user" : "grace25",
-  "message" : "Search returned 1 results",
-  "results" : [ "I Say a Little Prayer" ]
-}, {
-  "command" : "select",
-  "timestamp" : 20869,
-  "user" : "grace25",
-  "message" : "Successfully selected I Say a Little Prayer."
-}, {
-  "command" : "load",
-  "timestamp" : 20869,
-  "user" : "grace25",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "search",
-  "timestamp" : 20975,
-  "user" : "grace25",
-  "message" : "Search returned 1 results",
-  "results" : [ "My Song" ]
-}, {
-  "command" : "select",
-  "timestamp" : 20975,
-  "user" : "grace25",
-  "message" : "Successfully selected My Song."
-}, {
-  "command" : "load",
-  "timestamp" : 20975,
-  "user" : "grace25",
-  "message" : "Playback loaded successfully."
-}, {
-  "command" : "wrapped",
-  "timestamp" : 21076,
-  "user" : "Aretha Franklin",
-  "result" : {
-    "listeners" : 4,
-    "topSongs" : {
-      "Baby, Baby, Baby" : 3,
-      "Dr. Feelgood (Love Is a Serious Business)" : 3,
-      "I Say a Little Prayer" : 3,
-      "My Song" : 3,
-      "Night Life" : 3
-    },
-    "topAlbums" : {
-      "Soul Queen" : 81
-    },
-    "topFans" : [ "grace25", "henry26", "jack29", "carol19" ]
-  }
-}, {
-  "command" : "wrapped",
-  "timestamp" : 21076,
+  "user" : "Prince",
+  "message" : "Prince has added new album successfully."
+}, {
+  "command" : "addAlbum",
+  "timestamp" : 1,
   "user" : "The Rolling Stones",
-  "message" : "No data to show for artist The Rolling Stones."
+  "message" : "The Rolling Stones has added new album successfully."
+}, {
+  "command" : "addAlbum",
+  "timestamp" : 1,
+  "user" : "The Rolling Stones",
+  "message" : "The Rolling Stones has added new album successfully."
+}, {
+  "command" : "addAlbum",
+  "timestamp" : 1,
+  "user" : "The Rolling Stones",
+  "message" : "The Rolling Stones has added new album successfully."
+}, {
+  "command" : "addAlbum",
+  "timestamp" : 1,
+  "user" : "The Rolling Stones",
+  "message" : "The Rolling Stones has added new album successfully."
+}, {
+  "command" : "addAlbum",
+  "timestamp" : 1,
+  "user" : "Joni Mitchell",
+  "message" : "Joni Mitchell has added new album successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 10,
+  "user" : "grace25",
+  "message" : "Search returned 1 results",
+  "results" : [ "The Definitive Collection" ]
+}, {
+  "command" : "select",
+  "timestamp" : 10,
+  "user" : "grace25",
+  "message" : "Successfully selected The Definitive Collection."
+}, {
+  "command" : "load",
+  "timestamp" : 10,
+  "user" : "grace25",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 10,
+  "user" : "irene33",
+  "message" : "Search returned 1 results",
+  "results" : [ "Talking Book" ]
+}, {
+  "command" : "select",
+  "timestamp" : 10,
+  "user" : "irene33",
+  "message" : "Successfully selected Talking Book."
+}, {
+  "command" : "load",
+  "timestamp" : 10,
+  "user" : "irene33",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 10,
+  "user" : "david27",
+  "message" : "Search returned 1 results",
+  "results" : [ "Songs in the Key of Life" ]
+}, {
+  "command" : "select",
+  "timestamp" : 10,
+  "user" : "david27",
+  "message" : "Successfully selected Songs in the Key of Life."
+}, {
+  "command" : "load",
+  "timestamp" : 10,
+  "user" : "david27",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "adBreak",
+  "timestamp" : 1368,
+  "user" : "irene33",
+  "message" : "Ad inserted successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 1388,
+  "user" : "irene33",
+  "message" : "Search returned 2 results",
+  "results" : [ "You Are The Sunshine Of My Life - Single Version With Horns", "You Are the Sunshine of My Life" ]
+}, {
+  "command" : "select",
+  "timestamp" : 1388,
+  "user" : "irene33",
+  "message" : "Successfully selected You Are The Sunshine Of My Life - Single Version With Horns."
+}, {
+  "command" : "load",
+  "timestamp" : 1388,
+  "user" : "irene33",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 1540,
+  "user" : "irene33",
+  "message" : "Search returned 1 results",
+  "results" : [ "Hey Love" ]
+}, {
+  "command" : "select",
+  "timestamp" : 1540,
+  "user" : "irene33",
+  "message" : "Successfully selected Hey Love."
+}, {
+  "command" : "load",
+  "timestamp" : 1540,
+  "user" : "irene33",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 1622,
+  "user" : "irene33",
+  "message" : "Search returned 1 results",
+  "results" : [ "Joy Inside My Tears" ]
+}, {
+  "command" : "select",
+  "timestamp" : 1622,
+  "user" : "irene33",
+  "message" : "Successfully selected Joy Inside My Tears."
+}, {
+  "command" : "load",
+  "timestamp" : 1622,
+  "user" : "irene33",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 1817,
+  "user" : "irene33",
+  "message" : "Search returned 2 results",
+  "results" : [ "You Are The Sunshine Of My Life - Single Version With Horns", "You Are the Sunshine of My Life" ]
+}, {
+  "command" : "select",
+  "timestamp" : 1817,
+  "user" : "irene33",
+  "message" : "Successfully selected You Are The Sunshine Of My Life - Single Version With Horns."
+}, {
+  "command" : "load",
+  "timestamp" : 1817,
+  "user" : "irene33",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "adBreak",
+  "timestamp" : 2112,
+  "user" : "irene33",
+  "message" : "irene33 is not playing any music."
+}, {
+  "command" : "search",
+  "timestamp" : 2132,
+  "user" : "irene33",
+  "message" : "Search returned 1 results",
+  "results" : [ "Hey Love" ]
+}, {
+  "command" : "select",
+  "timestamp" : 2132,
+  "user" : "irene33",
+  "message" : "Successfully selected Hey Love."
+}, {
+  "command" : "load",
+  "timestamp" : 2132,
+  "user" : "irene33",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "adBreak",
+  "timestamp" : 2286,
+  "user" : "irene33",
+  "message" : "Ad inserted successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 2300,
+  "user" : "grace25",
+  "message" : "Search returned 1 results",
+  "results" : [ "Innervisions" ]
+}, {
+  "command" : "select",
+  "timestamp" : 2300,
+  "user" : "grace25",
+  "message" : "Successfully selected Innervisions."
+}, {
+  "command" : "load",
+  "timestamp" : 2300,
+  "user" : "grace25",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 2306,
+  "user" : "irene33",
+  "message" : "Search returned 1 results",
+  "results" : [ "Visions" ]
+}, {
+  "command" : "select",
+  "timestamp" : 2306,
+  "user" : "irene33",
+  "message" : "Successfully selected Visions."
+}, {
+  "command" : "load",
+  "timestamp" : 2306,
+  "user" : "irene33",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 2467,
+  "user" : "irene33",
+  "message" : "Search returned 1 results",
+  "results" : [ "He's Misstra Know It All" ]
+}, {
+  "command" : "select",
+  "timestamp" : 2467,
+  "user" : "irene33",
+  "message" : "Successfully selected He's Misstra Know It All."
+}, {
+  "command" : "load",
+  "timestamp" : 2467,
+  "user" : "irene33",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 2634,
+  "user" : "irene33",
+  "message" : "Search returned 1 results",
+  "results" : [ "I Was Made to Love Her" ]
+}, {
+  "command" : "select",
+  "timestamp" : 2634,
+  "user" : "irene33",
+  "message" : "Successfully selected I Was Made to Love Her."
+}, {
+  "command" : "load",
+  "timestamp" : 2634,
+  "user" : "irene33",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 2712,
+  "user" : "irene33",
+  "message" : "Search returned 1 results",
+  "results" : [ "My Cherie Amour" ]
+}, {
+  "command" : "select",
+  "timestamp" : 2712,
+  "user" : "irene33",
+  "message" : "Successfully selected My Cherie Amour."
+}, {
+  "command" : "load",
+  "timestamp" : 2712,
+  "user" : "irene33",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "adBreak",
+  "timestamp" : 2787,
+  "user" : "irene33",
+  "message" : "Ad inserted successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 2807,
+  "user" : "irene33",
+  "message" : "Search returned 1 results",
+  "results" : [ "I Just Called To Say I Love You - Single Version" ]
+}, {
+  "command" : "select",
+  "timestamp" : 2807,
+  "user" : "irene33",
+  "message" : "Successfully selected I Just Called To Say I Love You - Single Version."
+}, {
+  "command" : "load",
+  "timestamp" : 2807,
+  "user" : "irene33",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "adBreak",
+  "timestamp" : 2839,
+  "user" : "david27",
+  "message" : "Ad inserted successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 2859,
+  "user" : "david27",
+  "message" : "Search returned 2 results",
+  "results" : [ "Higher Ground - Single Version", "Higher Ground" ]
+}, {
+  "command" : "select",
+  "timestamp" : 2859,
+  "user" : "david27",
+  "message" : "Successfully selected Higher Ground - Single Version."
+}, {
+  "command" : "load",
+  "timestamp" : 2859,
+  "user" : "david27",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "adBreak",
+  "timestamp" : 2928,
+  "user" : "irene33",
+  "message" : "Ad inserted successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 2948,
+  "user" : "irene33",
+  "message" : "Search returned 1 results",
+  "results" : [ "Another Star" ]
+}, {
+  "command" : "select",
+  "timestamp" : 2948,
+  "user" : "irene33",
+  "message" : "Successfully selected Another Star."
+}, {
+  "command" : "load",
+  "timestamp" : 2948,
+  "user" : "irene33",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 2954,
+  "user" : "david27",
+  "message" : "Search returned 2 results",
+  "results" : [ "Living for the City", "Living for the City" ]
+}, {
+  "command" : "select",
+  "timestamp" : 2954,
+  "user" : "david27",
+  "message" : "Successfully selected Living for the City."
+}, {
+  "command" : "load",
+  "timestamp" : 2954,
+  "user" : "david27",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 3064,
+  "user" : "david27",
+  "message" : "Search returned 1 results",
+  "results" : [ "Higher Ground - Single Version" ]
+}, {
+  "command" : "select",
+  "timestamp" : 3064,
+  "user" : "david27",
+  "message" : "Successfully selected Higher Ground - Single Version."
+}, {
+  "command" : "load",
+  "timestamp" : 3064,
+  "user" : "david27",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 3107,
+  "user" : "irene33",
+  "message" : "Search returned 1 results",
+  "results" : [ "Too High" ]
+}, {
+  "command" : "select",
+  "timestamp" : 3107,
+  "user" : "irene33",
+  "message" : "Successfully selected Too High."
+}, {
+  "command" : "load",
+  "timestamp" : 3107,
+  "user" : "irene33",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "adBreak",
+  "timestamp" : 3235,
+  "user" : "irene33",
+  "message" : "Ad inserted successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 3251,
+  "user" : "david27",
+  "message" : "Search returned 1 results",
+  "results" : [ "Visions" ]
+}, {
+  "command" : "select",
+  "timestamp" : 3251,
+  "user" : "david27",
+  "message" : "Successfully selected Visions."
+}, {
+  "command" : "load",
+  "timestamp" : 3251,
+  "user" : "david27",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 3255,
+  "user" : "irene33",
+  "message" : "Search returned 1 results",
+  "results" : [ "Village Ghetto Land" ]
+}, {
+  "command" : "select",
+  "timestamp" : 3255,
+  "user" : "irene33",
+  "message" : "Successfully selected Village Ghetto Land."
+}, {
+  "command" : "load",
+  "timestamp" : 3255,
+  "user" : "irene33",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 3357,
+  "user" : "irene33",
+  "message" : "Search returned 1 results",
+  "results" : [ "Blame It on the Sun" ]
+}, {
+  "command" : "select",
+  "timestamp" : 3357,
+  "user" : "irene33",
+  "message" : "Successfully selected Blame It on the Sun."
+}, {
+  "command" : "load",
+  "timestamp" : 3357,
+  "user" : "irene33",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 3378,
+  "user" : "grace25",
+  "message" : "Search returned 1 results",
+  "results" : [ "Golden Lady" ]
+}, {
+  "command" : "select",
+  "timestamp" : 3378,
+  "user" : "grace25",
+  "message" : "Successfully selected Golden Lady."
+}, {
+  "command" : "load",
+  "timestamp" : 3378,
+  "user" : "grace25",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 3412,
+  "user" : "david27",
+  "message" : "Search returned 1 results",
+  "results" : [ "Tuesday Heartbreak" ]
+}, {
+  "command" : "select",
+  "timestamp" : 3412,
+  "user" : "david27",
+  "message" : "Successfully selected Tuesday Heartbreak."
+}, {
+  "command" : "load",
+  "timestamp" : 3412,
+  "user" : "david27",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 3461,
+  "user" : "irene33",
+  "message" : "Search returned 1 results",
+  "results" : [ "Big Brother" ]
+}, {
+  "command" : "select",
+  "timestamp" : 3461,
+  "user" : "irene33",
+  "message" : "Successfully selected Big Brother."
+}, {
+  "command" : "load",
+  "timestamp" : 3461,
+  "user" : "irene33",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 3506,
+  "user" : "david27",
+  "message" : "Search returned 1 results",
+  "results" : [ "He's Misstra Know It All" ]
+}, {
+  "command" : "select",
+  "timestamp" : 3506,
+  "user" : "david27",
+  "message" : "Successfully selected He's Misstra Know It All."
+}, {
+  "command" : "load",
+  "timestamp" : 3506,
+  "user" : "david27",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "adBreak",
+  "timestamp" : 3516,
+  "user" : "grace25",
+  "message" : "Ad inserted successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 3536,
+  "user" : "grace25",
+  "message" : "Search returned 1 results",
+  "results" : [ "You and I" ]
+}, {
+  "command" : "select",
+  "timestamp" : 3536,
+  "user" : "grace25",
+  "message" : "Successfully selected You and I."
+}, {
+  "command" : "load",
+  "timestamp" : 3536,
+  "user" : "grace25",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "adBreak",
+  "timestamp" : 3558,
+  "user" : "irene33",
+  "message" : "Ad inserted successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 3578,
+  "user" : "irene33",
+  "message" : "Search returned 1 results",
+  "results" : [ "Ebony Eyes" ]
+}, {
+  "command" : "select",
+  "timestamp" : 3578,
+  "user" : "irene33",
+  "message" : "Successfully selected Ebony Eyes."
+}, {
+  "command" : "load",
+  "timestamp" : 3578,
+  "user" : "irene33",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 3673,
+  "user" : "david27",
+  "message" : "Search returned 1 results",
+  "results" : [ "Big Brother" ]
+}, {
+  "command" : "select",
+  "timestamp" : 3673,
+  "user" : "david27",
+  "message" : "Successfully selected Big Brother."
+}, {
+  "command" : "load",
+  "timestamp" : 3673,
+  "user" : "david27",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 3675,
+  "user" : "grace25",
+  "message" : "Search returned 1 results",
+  "results" : [ "You've Got It Bad Girl" ]
+}, {
+  "command" : "select",
+  "timestamp" : 3675,
+  "user" : "grace25",
+  "message" : "Successfully selected You've Got It Bad Girl."
+}, {
+  "command" : "load",
+  "timestamp" : 3675,
+  "user" : "grace25",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 3703,
+  "user" : "irene33",
+  "message" : "Search returned 1 results",
+  "results" : [ "Blame It on the Sun" ]
+}, {
+  "command" : "select",
+  "timestamp" : 3703,
+  "user" : "irene33",
+  "message" : "Successfully selected Blame It on the Sun."
+}, {
+  "command" : "load",
+  "timestamp" : 3703,
+  "user" : "irene33",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 3780,
+  "user" : "david27",
+  "message" : "Search returned 1 results",
+  "results" : [ "Maybe Your Baby" ]
+}, {
+  "command" : "select",
+  "timestamp" : 3780,
+  "user" : "david27",
+  "message" : "Successfully selected Maybe Your Baby."
+}, {
+  "command" : "load",
+  "timestamp" : 3780,
+  "user" : "david27",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 3807,
+  "user" : "irene33",
+  "message" : "Search returned 1 results",
+  "results" : [ "The Very Best of Prince" ]
+}, {
+  "command" : "select",
+  "timestamp" : 3807,
+  "user" : "irene33",
+  "message" : "Successfully selected The Very Best of Prince."
+}, {
+  "command" : "load",
+  "timestamp" : 3807,
+  "user" : "irene33",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 3822,
+  "user" : "grace25",
+  "message" : "Search returned 1 results",
+  "results" : [ "Don't You Worry 'Bout a Thing" ]
+}, {
+  "command" : "select",
+  "timestamp" : 3822,
+  "user" : "grace25",
+  "message" : "Successfully selected Don't You Worry 'Bout a Thing."
+}, {
+  "command" : "load",
+  "timestamp" : 3822,
+  "user" : "grace25",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "adBreak",
+  "timestamp" : 3972,
+  "user" : "david27",
+  "message" : "Ad inserted successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 3992,
+  "user" : "david27",
+  "message" : "Search returned 1 results",
+  "results" : [ "All in Love Is Fair" ]
+}, {
+  "command" : "select",
+  "timestamp" : 3992,
+  "user" : "david27",
+  "message" : "Successfully selected All in Love Is Fair."
+}, {
+  "command" : "load",
+  "timestamp" : 3992,
+  "user" : "david27",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "adBreak",
+  "timestamp" : 4039,
+  "user" : "grace25",
+  "message" : "Ad inserted successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 4059,
+  "user" : "grace25",
+  "message" : "Search returned 1 results",
+  "results" : [ "He's Misstra Know It All" ]
+}, {
+  "command" : "select",
+  "timestamp" : 4059,
+  "user" : "grace25",
+  "message" : "Successfully selected He's Misstra Know It All."
+}, {
+  "command" : "load",
+  "timestamp" : 4059,
+  "user" : "grace25",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "adBreak",
+  "timestamp" : 4092,
+  "user" : "david27",
+  "message" : "Ad inserted successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 4112,
+  "user" : "david27",
+  "message" : "Search returned 1 results",
+  "results" : [ "All in Love Is Fair" ]
+}, {
+  "command" : "select",
+  "timestamp" : 4112,
+  "user" : "david27",
+  "message" : "Successfully selected All in Love Is Fair."
+}, {
+  "command" : "load",
+  "timestamp" : 4112,
+  "user" : "david27",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "adBreak",
+  "timestamp" : 4216,
+  "user" : "grace25",
+  "message" : "Ad inserted successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 4222,
+  "user" : "david27",
+  "message" : "Search returned 1 results",
+  "results" : [ "1999" ]
+}, {
+  "command" : "select",
+  "timestamp" : 4222,
+  "user" : "david27",
+  "message" : "Successfully selected 1999."
+}, {
+  "command" : "load",
+  "timestamp" : 4222,
+  "user" : "david27",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 4236,
+  "user" : "grace25",
+  "message" : "Search returned 1 results",
+  "results" : [ "All Day Sucker" ]
+}, {
+  "command" : "select",
+  "timestamp" : 4236,
+  "user" : "grace25",
+  "message" : "Successfully selected All Day Sucker."
+}, {
+  "command" : "load",
+  "timestamp" : 4236,
+  "user" : "grace25",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 4542,
+  "user" : "grace25",
+  "message" : "Search returned 1 results",
+  "results" : [ "Maybe Your Baby" ]
+}, {
+  "command" : "select",
+  "timestamp" : 4542,
+  "user" : "grace25",
+  "message" : "Successfully selected Maybe Your Baby."
+}, {
+  "command" : "load",
+  "timestamp" : 4542,
+  "user" : "grace25",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 4744,
+  "user" : "grace25",
+  "message" : "Search returned 1 results",
+  "results" : [ "Have a Talk with God" ]
+}, {
+  "command" : "select",
+  "timestamp" : 4744,
+  "user" : "grace25",
+  "message" : "Successfully selected Have a Talk with God."
+}, {
+  "command" : "load",
+  "timestamp" : 4744,
+  "user" : "grace25",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 4825,
+  "user" : "grace25",
+  "message" : "Search returned 1 results",
+  "results" : [ "You Haven't Done Nothin'" ]
+}, {
+  "command" : "select",
+  "timestamp" : 4825,
+  "user" : "grace25",
+  "message" : "Successfully selected You Haven't Done Nothin'."
+}, {
+  "command" : "load",
+  "timestamp" : 4825,
+  "user" : "grace25",
+  "message" : "Playback loaded successfully."
 }, {
   "command" : "wrapped",
-  "timestamp" : 21076,
-  "user" : "Frank Sinatra",
-  "message" : "No data to show for artist Frank Sinatra."
+  "timestamp" : 4927,
+  "user" : "Stevie Wonder",
+  "result" : {
+    "listeners" : 3,
+    "topSongs" : {
+      "He's Misstra Know It All" : 3,
+      "Hey Love" : 3,
+      "Higher Ground - Single Version" : 3,
+      "Living for the City" : 3,
+      "Maybe Your Baby" : 3
+    },
+    "topAlbums" : {
+      "The Definitive Collection" : 24,
+      "Songs in the Key of Life" : 18,
+      "Innervisions" : 14,
+      "Talking Book" : 14
+    },
+    "topFans" : [ "grace25", "david27", "irene33" ]
+  }
+}, {
+  "command" : "search",
+  "timestamp" : 4927,
+  "user" : "grace25",
+  "message" : "Search returned 1 results",
+  "results" : [ "Parade - Music From the Motion Picture Under the Cherry Moon" ]
+}, {
+  "command" : "select",
+  "timestamp" : 4927,
+  "user" : "grace25",
+  "message" : "Successfully selected Parade - Music From the Motion Picture Under the Cherry Moon."
+}, {
+  "command" : "load",
+  "timestamp" : 4927,
+  "user" : "grace25",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "adBreak",
+  "timestamp" : 5584,
+  "user" : "grace25",
+  "message" : "Ad inserted successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 5604,
+  "user" : "grace25",
+  "message" : "Search returned 1 results",
+  "results" : [ "God - Vocal Version" ]
+}, {
+  "command" : "select",
+  "timestamp" : 5604,
+  "user" : "grace25",
+  "message" : "Successfully selected God - Vocal Version."
+}, {
+  "command" : "load",
+  "timestamp" : 5604,
+  "user" : "grace25",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 5847,
+  "user" : "grace25",
+  "message" : "Search returned 1 results",
+  "results" : [ "Under the Cherry Moon" ]
+}, {
+  "command" : "select",
+  "timestamp" : 5847,
+  "user" : "grace25",
+  "message" : "Successfully selected Under the Cherry Moon."
+}, {
+  "command" : "load",
+  "timestamp" : 5847,
+  "user" : "grace25",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 5881,
+  "user" : "grace25",
+  "message" : "Search returned 1 results",
+  "results" : [ "Automatic" ]
+}, {
+  "command" : "select",
+  "timestamp" : 5881,
+  "user" : "grace25",
+  "message" : "Successfully selected Automatic."
+}, {
+  "command" : "load",
+  "timestamp" : 5881,
+  "user" : "grace25",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 6163,
+  "user" : "grace25",
+  "message" : "Search returned 2 results",
+  "results" : [ "Purple Rain", "Purple Rain" ]
+}, {
+  "command" : "select",
+  "timestamp" : 6163,
+  "user" : "grace25",
+  "message" : "Successfully selected Purple Rain."
+}, {
+  "command" : "load",
+  "timestamp" : 6163,
+  "user" : "grace25",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 6322,
+  "user" : "grace25",
+  "message" : "Search returned 1 results",
+  "results" : [ "All The Critics Love U In New York" ]
+}, {
+  "command" : "select",
+  "timestamp" : 6322,
+  "user" : "grace25",
+  "message" : "Successfully selected All The Critics Love U In New York."
+}, {
+  "command" : "load",
+  "timestamp" : 6322,
+  "user" : "grace25",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 6677,
+  "user" : "grace25",
+  "message" : "Search returned 2 results",
+  "results" : [ "Little Red Corvette [Explicit]", "Little Red Corvette" ]
+}, {
+  "command" : "select",
+  "timestamp" : 6677,
+  "user" : "grace25",
+  "message" : "Successfully selected Little Red Corvette [Explicit]."
+}, {
+  "command" : "load",
+  "timestamp" : 6677,
+  "user" : "grace25",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 6713,
+  "user" : "irene33",
+  "message" : "Search returned 1 results",
+  "results" : [ "Purple Rain" ]
+}, {
+  "command" : "select",
+  "timestamp" : 6713,
+  "user" : "irene33",
+  "message" : "Successfully selected Purple Rain."
+}, {
+  "command" : "load",
+  "timestamp" : 6713,
+  "user" : "irene33",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 6982,
+  "user" : "grace25",
+  "message" : "Search returned 1 results",
+  "results" : [ "Lady Cab Driver" ]
+}, {
+  "command" : "select",
+  "timestamp" : 6982,
+  "user" : "grace25",
+  "message" : "Successfully selected Lady Cab Driver."
+}, {
+  "command" : "load",
+  "timestamp" : 6982,
+  "user" : "grace25",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "adBreak",
+  "timestamp" : 7218,
+  "user" : "grace25",
+  "message" : "Ad inserted successfully."
+}, {
+  "command" : "adBreak",
+  "timestamp" : 7219,
+  "user" : "irene33",
+  "message" : "Ad inserted successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 7238,
+  "user" : "grace25",
+  "message" : "Search returned 1 results",
+  "results" : [ "God - Love Theme From Purple Rain 12\" Instrumental Version" ]
+}, {
+  "command" : "select",
+  "timestamp" : 7238,
+  "user" : "grace25",
+  "message" : "Successfully selected God - Love Theme From Purple Rain 12\" Instrumental Version."
+}, {
+  "command" : "load",
+  "timestamp" : 7238,
+  "user" : "grace25",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 7239,
+  "user" : "irene33",
+  "message" : "Search returned 1 results",
+  "results" : [ "Free" ]
+}, {
+  "command" : "select",
+  "timestamp" : 7239,
+  "user" : "irene33",
+  "message" : "Successfully selected Free."
+}, {
+  "command" : "load",
+  "timestamp" : 7239,
+  "user" : "irene33",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "adBreak",
+  "timestamp" : 7379,
+  "user" : "irene33",
+  "message" : "Ad inserted successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 7399,
+  "user" : "irene33",
+  "message" : "Search returned 1 results",
+  "results" : [ "Thieves in the Temple" ]
+}, {
+  "command" : "select",
+  "timestamp" : 7399,
+  "user" : "irene33",
+  "message" : "Successfully selected Thieves in the Temple."
+}, {
+  "command" : "load",
+  "timestamp" : 7399,
+  "user" : "irene33",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 7473,
+  "user" : "grace25",
+  "message" : "Search returned 1 results",
+  "results" : [ "Christopher Tracy's Parade" ]
+}, {
+  "command" : "select",
+  "timestamp" : 7473,
+  "user" : "grace25",
+  "message" : "Successfully selected Christopher Tracy's Parade."
+}, {
+  "command" : "load",
+  "timestamp" : 7473,
+  "user" : "grace25",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 7499,
+  "user" : "irene33",
+  "message" : "Search returned 1 results",
+  "results" : [ "U Got The Look" ]
+}, {
+  "command" : "select",
+  "timestamp" : 7499,
+  "user" : "irene33",
+  "message" : "Successfully selected U Got The Look."
+}, {
+  "command" : "load",
+  "timestamp" : 7499,
+  "user" : "irene33",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "adBreak",
+  "timestamp" : 7523,
+  "user" : "grace25",
+  "message" : "Ad inserted successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 7543,
+  "user" : "grace25",
+  "message" : "Search returned 2 results",
+  "results" : [ "Little Red Corvette [Explicit]", "Little Red Corvette" ]
+}, {
+  "command" : "select",
+  "timestamp" : 7543,
+  "user" : "grace25",
+  "message" : "Successfully selected Little Red Corvette [Explicit]."
+}, {
+  "command" : "load",
+  "timestamp" : 7543,
+  "user" : "grace25",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 7615,
+  "user" : "irene33",
+  "message" : "Search returned 1 results",
+  "results" : [ "Christopher Tracy's Parade" ]
+}, {
+  "command" : "select",
+  "timestamp" : 7615,
+  "user" : "irene33",
+  "message" : "Successfully selected Christopher Tracy's Parade."
+}, {
+  "command" : "load",
+  "timestamp" : 7615,
+  "user" : "irene33",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 7675,
+  "user" : "irene33",
+  "message" : "Search returned 1 results",
+  "results" : [ "God - Love Theme From Purple Rain 12\" Instrumental Version" ]
+}, {
+  "command" : "select",
+  "timestamp" : 7675,
+  "user" : "irene33",
+  "message" : "Successfully selected God - Love Theme From Purple Rain 12\" Instrumental Version."
+}, {
+  "command" : "load",
+  "timestamp" : 7675,
+  "user" : "irene33",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 7695,
+  "user" : "grace25",
+  "message" : "Search returned 2 results",
+  "results" : [ "Kiss", "Kiss" ]
+}, {
+  "command" : "select",
+  "timestamp" : 7695,
+  "user" : "grace25",
+  "message" : "Successfully selected Kiss."
+}, {
+  "command" : "load",
+  "timestamp" : 7695,
+  "user" : "grace25",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "adBreak",
+  "timestamp" : 7789,
+  "user" : "grace25",
+  "message" : "Ad inserted successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 7809,
+  "user" : "grace25",
+  "message" : "Search returned 1 results",
+  "results" : [ "Anotherloverholenyohead" ]
+}, {
+  "command" : "select",
+  "timestamp" : 7809,
+  "user" : "grace25",
+  "message" : "Successfully selected Anotherloverholenyohead."
+}, {
+  "command" : "load",
+  "timestamp" : 7809,
+  "user" : "grace25",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 7843,
+  "user" : "grace25",
+  "message" : "Search returned 1 results",
+  "results" : [ "Rolled Gold" ]
+}, {
+  "command" : "select",
+  "timestamp" : 7843,
+  "user" : "grace25",
+  "message" : "Successfully selected Rolled Gold."
+}, {
+  "command" : "load",
+  "timestamp" : 7843,
+  "user" : "grace25",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 7910,
+  "user" : "irene33",
+  "message" : "Search returned 1 results",
+  "results" : [ "Little Red Corvette [Explicit]" ]
+}, {
+  "command" : "select",
+  "timestamp" : 7910,
+  "user" : "irene33",
+  "message" : "Successfully selected Little Red Corvette [Explicit]."
+}, {
+  "command" : "load",
+  "timestamp" : 7910,
+  "user" : "irene33",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 7944,
+  "user" : "irene33",
+  "message" : "Search returned 1 results",
+  "results" : [ "D.M.S.R." ]
+}, {
+  "command" : "select",
+  "timestamp" : 7944,
+  "user" : "irene33",
+  "message" : "Successfully selected D.M.S.R.."
+}, {
+  "command" : "load",
+  "timestamp" : 7944,
+  "user" : "irene33",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 8061,
+  "user" : "david27",
+  "message" : "Search returned 1 results",
+  "results" : [ "God - Love Theme From Purple Rain 12\" Instrumental Version" ]
+}, {
+  "command" : "select",
+  "timestamp" : 8061,
+  "user" : "david27",
+  "message" : "Successfully selected God - Love Theme From Purple Rain 12\" Instrumental Version."
+}, {
+  "command" : "load",
+  "timestamp" : 8061,
+  "user" : "david27",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 8200,
+  "user" : "irene33",
+  "message" : "Search returned 1 results",
+  "results" : [ "1999 [Edit]" ]
+}, {
+  "command" : "select",
+  "timestamp" : 8200,
+  "user" : "irene33",
+  "message" : "Successfully selected 1999 [Edit]."
+}, {
+  "command" : "load",
+  "timestamp" : 8200,
+  "user" : "irene33",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 8296,
+  "user" : "david27",
+  "message" : "Search returned 1 results",
+  "results" : [ "Venus de Milo" ]
+}, {
+  "command" : "select",
+  "timestamp" : 8296,
+  "user" : "david27",
+  "message" : "Successfully selected Venus de Milo."
+}, {
+  "command" : "load",
+  "timestamp" : 8296,
+  "user" : "david27",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 8307,
+  "user" : "irene33",
+  "message" : "Search returned 2 results",
+  "results" : [ "Purple Rain", "Purple Rain" ]
+}, {
+  "command" : "select",
+  "timestamp" : 8307,
+  "user" : "irene33",
+  "message" : "Successfully selected Purple Rain."
+}, {
+  "command" : "load",
+  "timestamp" : 8307,
+  "user" : "irene33",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 8323,
+  "user" : "david27",
+  "message" : "Search returned 1 results",
+  "results" : [ "International Lover" ]
+}, {
+  "command" : "select",
+  "timestamp" : 8323,
+  "user" : "david27",
+  "message" : "Successfully selected International Lover."
+}, {
+  "command" : "load",
+  "timestamp" : 8323,
+  "user" : "david27",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 8625,
+  "user" : "irene33",
+  "message" : "Search returned 1 results",
+  "results" : [ "Let's Go Crazy [Explicit]" ]
+}, {
+  "command" : "select",
+  "timestamp" : 8625,
+  "user" : "irene33",
+  "message" : "Successfully selected Let's Go Crazy [Explicit]."
+}, {
+  "command" : "load",
+  "timestamp" : 8625,
+  "user" : "irene33",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 8659,
+  "user" : "irene33",
+  "message" : "Search returned 1 results",
+  "results" : [ "Venus de Milo" ]
+}, {
+  "command" : "select",
+  "timestamp" : 8659,
+  "user" : "irene33",
+  "message" : "Successfully selected Venus de Milo."
+}, {
+  "command" : "load",
+  "timestamp" : 8659,
+  "user" : "irene33",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 8686,
+  "user" : "irene33",
+  "message" : "Search returned 1 results",
+  "results" : [ "Sign 'O' The Times" ]
+}, {
+  "command" : "select",
+  "timestamp" : 8686,
+  "user" : "irene33",
+  "message" : "Successfully selected Sign 'O' The Times."
+}, {
+  "command" : "load",
+  "timestamp" : 8686,
+  "user" : "irene33",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "adBreak",
+  "timestamp" : 8708,
+  "user" : "david27",
+  "message" : "Ad inserted successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 8728,
+  "user" : "david27",
+  "message" : "Search returned 1 results",
+  "results" : [ "Let's Pretend We're Married" ]
+}, {
+  "command" : "select",
+  "timestamp" : 8728,
+  "user" : "david27",
+  "message" : "Successfully selected Let's Pretend We're Married."
+}, {
+  "command" : "load",
+  "timestamp" : 8728,
+  "user" : "david27",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "adBreak",
+  "timestamp" : 8830,
+  "user" : "david27",
+  "message" : "Ad inserted successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 8842,
+  "user" : "irene33",
+  "message" : "Search returned 1 results",
+  "results" : [ "D.M.S.R." ]
+}, {
+  "command" : "select",
+  "timestamp" : 8842,
+  "user" : "irene33",
+  "message" : "Successfully selected D.M.S.R.."
+}, {
+  "command" : "load",
+  "timestamp" : 8842,
+  "user" : "irene33",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 8850,
+  "user" : "david27",
+  "message" : "Search returned 1 results",
+  "results" : [ "All The Critics Love U In New York" ]
+}, {
+  "command" : "select",
+  "timestamp" : 8850,
+  "user" : "david27",
+  "message" : "Successfully selected All The Critics Love U In New York."
+}, {
+  "command" : "load",
+  "timestamp" : 8850,
+  "user" : "david27",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "adBreak",
+  "timestamp" : 9195,
+  "user" : "david27",
+  "message" : "Ad inserted successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 9215,
+  "user" : "david27",
+  "message" : "Search returned 1 results",
+  "results" : [ "U Got The Look" ]
+}, {
+  "command" : "select",
+  "timestamp" : 9215,
+  "user" : "david27",
+  "message" : "Successfully selected U Got The Look."
+}, {
+  "command" : "load",
+  "timestamp" : 9215,
+  "user" : "david27",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 9331,
+  "user" : "david27",
+  "message" : "Search returned 1 results",
+  "results" : [ "D.M.S.R." ]
+}, {
+  "command" : "select",
+  "timestamp" : 9331,
+  "user" : "david27",
+  "message" : "Successfully selected D.M.S.R.."
+}, {
+  "command" : "load",
+  "timestamp" : 9331,
+  "user" : "david27",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 9355,
+  "user" : "irene33",
+  "message" : "Search returned 1 results",
+  "results" : [ "Aftermath" ]
+}, {
+  "command" : "select",
+  "timestamp" : 9355,
+  "user" : "irene33",
+  "message" : "Successfully selected Aftermath."
+}, {
+  "command" : "load",
+  "timestamp" : 9355,
+  "user" : "irene33",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 9587,
+  "user" : "david27",
+  "message" : "Search returned 1 results",
+  "results" : [ "All The Critics Love U In New York" ]
+}, {
+  "command" : "select",
+  "timestamp" : 9587,
+  "user" : "david27",
+  "message" : "Successfully selected All The Critics Love U In New York."
+}, {
+  "command" : "load",
+  "timestamp" : 9587,
+  "user" : "david27",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "adBreak",
+  "timestamp" : 9754,
+  "user" : "david27",
+  "message" : "Ad inserted successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 9774,
+  "user" : "david27",
+  "message" : "Search returned 1 results",
+  "results" : [ "Alphabet St. [Explicit]" ]
+}, {
+  "command" : "select",
+  "timestamp" : 9774,
+  "user" : "david27",
+  "message" : "Successfully selected Alphabet St. [Explicit]."
+}, {
+  "command" : "load",
+  "timestamp" : 9774,
+  "user" : "david27",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "adBreak",
+  "timestamp" : 9833,
+  "user" : "david27",
+  "message" : "Ad inserted successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 9853,
+  "user" : "david27",
+  "message" : "Search returned 1 results",
+  "results" : [ "Lady Cab Driver" ]
+}, {
+  "command" : "select",
+  "timestamp" : 9853,
+  "user" : "david27",
+  "message" : "Successfully selected Lady Cab Driver."
+}, {
+  "command" : "load",
+  "timestamp" : 9853,
+  "user" : "david27",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 10099,
+  "user" : "david27",
+  "message" : "Search returned 1 results",
+  "results" : [ "D.M.S.R." ]
+}, {
+  "command" : "select",
+  "timestamp" : 10099,
+  "user" : "david27",
+  "message" : "Successfully selected D.M.S.R.."
+}, {
+  "command" : "load",
+  "timestamp" : 10099,
+  "user" : "david27",
+  "message" : "Playback loaded successfully."
 }, {
   "command" : "wrapped",
-  "timestamp" : 21176,
+  "timestamp" : 10355,
+  "user" : "Prince",
+  "result" : {
+    "listeners" : 3,
+    "topSongs" : {
+      "D.M.S.R." : 5,
+      "All The Critics Love U In New York" : 4,
+      "God - Love Theme From Purple Rain 12\" Instrumental Version" : 4,
+      "Little Red Corvette [Explicit]" : 4,
+      "Purple Rain" : 4
+    },
+    "topAlbums" : {
+      "The Very Best of Prince" : 30,
+      "1999" : 24,
+      "Parade - Music From the Motion Picture Under the Cherry Moon" : 14,
+      "Purple Rain" : 6
+    },
+    "topFans" : [ "irene33", "david27", "grace25" ]
+  }
+}, {
+  "command" : "search",
+  "timestamp" : 10355,
+  "user" : "david27",
+  "message" : "Search returned 1 results",
+  "results" : [ "Some Girls" ]
+}, {
+  "command" : "select",
+  "timestamp" : 10355,
+  "user" : "david27",
+  "message" : "Successfully selected Some Girls."
+}, {
+  "command" : "load",
+  "timestamp" : 10355,
+  "user" : "david27",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 10632,
+  "user" : "irene33",
+  "message" : "Search returned 2 results",
+  "results" : [ "Lady Jane", "Lady Jane" ]
+}, {
+  "command" : "select",
+  "timestamp" : 10632,
+  "user" : "irene33",
+  "message" : "Successfully selected Lady Jane."
+}, {
+  "command" : "load",
+  "timestamp" : 10632,
+  "user" : "irene33",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 10716,
+  "user" : "grace25",
+  "message" : "Search returned 1 results",
+  "results" : [ "Let It Bleed" ]
+}, {
+  "command" : "select",
+  "timestamp" : 10716,
+  "user" : "grace25",
+  "message" : "Successfully selected Let It Bleed."
+}, {
+  "command" : "load",
+  "timestamp" : 10716,
+  "user" : "grace25",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 10821,
+  "user" : "irene33",
+  "message" : "Search returned 1 results",
+  "results" : [ "The Last Time" ]
+}, {
+  "command" : "select",
+  "timestamp" : 10821,
+  "user" : "irene33",
+  "message" : "Successfully selected The Last Time."
+}, {
+  "command" : "load",
+  "timestamp" : 10821,
+  "user" : "irene33",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 10920,
+  "user" : "irene33",
+  "message" : "Search returned 1 results",
+  "results" : [ "Just My Imagination (Running Away With Me)" ]
+}, {
+  "command" : "select",
+  "timestamp" : 10920,
+  "user" : "irene33",
+  "message" : "Successfully selected Just My Imagination (Running Away With Me)."
+}, {
+  "command" : "load",
+  "timestamp" : 10920,
+  "user" : "irene33",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 11120,
+  "user" : "irene33",
+  "message" : "Search returned 1 results",
+  "results" : [ "Live With Me" ]
+}, {
+  "command" : "select",
+  "timestamp" : 11120,
+  "user" : "irene33",
+  "message" : "Successfully selected Live With Me."
+}, {
+  "command" : "load",
+  "timestamp" : 11120,
+  "user" : "irene33",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 11255,
+  "user" : "irene33",
+  "message" : "Search returned 1 results",
+  "results" : [ "Flight 505" ]
+}, {
+  "command" : "select",
+  "timestamp" : 11255,
+  "user" : "irene33",
+  "message" : "Successfully selected Flight 505."
+}, {
+  "command" : "load",
+  "timestamp" : 11255,
+  "user" : "irene33",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 11359,
+  "user" : "irene33",
+  "message" : "Search returned 2 results",
+  "results" : [ "Lady Jane", "Lady Jane" ]
+}, {
+  "command" : "select",
+  "timestamp" : 11359,
+  "user" : "irene33",
+  "message" : "Successfully selected Lady Jane."
+}, {
+  "command" : "load",
+  "timestamp" : 11359,
+  "user" : "irene33",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 11453,
+  "user" : "irene33",
+  "message" : "Search returned 1 results",
+  "results" : [ "Shattered" ]
+}, {
+  "command" : "select",
+  "timestamp" : 11453,
+  "user" : "irene33",
+  "message" : "Successfully selected Shattered."
+}, {
+  "command" : "load",
+  "timestamp" : 11453,
+  "user" : "irene33",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 11567,
+  "user" : "irene33",
+  "message" : "Search returned 2 results",
+  "results" : [ "Lady Jane", "Lady Jane" ]
+}, {
+  "command" : "select",
+  "timestamp" : 11567,
+  "user" : "irene33",
+  "message" : "Successfully selected Lady Jane."
+}, {
+  "command" : "load",
+  "timestamp" : 11567,
+  "user" : "irene33",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 11661,
+  "user" : "irene33",
+  "message" : "Search returned 1 results",
+  "results" : [ "Rainy Night House" ]
+}, {
+  "command" : "select",
+  "timestamp" : 11661,
+  "user" : "irene33",
+  "message" : "Successfully selected Rainy Night House."
+}, {
+  "command" : "load",
+  "timestamp" : 11661,
+  "user" : "irene33",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 11783,
+  "user" : "irene33",
+  "message" : "Search returned 1 results",
+  "results" : [ "The Arrangement" ]
+}, {
+  "command" : "select",
+  "timestamp" : 11783,
+  "user" : "irene33",
+  "message" : "Successfully selected The Arrangement."
+}, {
+  "command" : "load",
+  "timestamp" : 11783,
+  "user" : "irene33",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 11817,
+  "user" : "irene33",
+  "message" : "Search returned 1 results",
+  "results" : [ "The Circle Game" ]
+}, {
+  "command" : "select",
+  "timestamp" : 11817,
+  "user" : "irene33",
+  "message" : "Successfully selected The Circle Game."
+}, {
+  "command" : "load",
+  "timestamp" : 11817,
+  "user" : "irene33",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 11844,
+  "user" : "david27",
+  "message" : "Search returned 1 results",
+  "results" : [ "Respectable" ]
+}, {
+  "command" : "select",
+  "timestamp" : 11844,
+  "user" : "david27",
+  "message" : "Successfully selected Respectable."
+}, {
+  "command" : "load",
+  "timestamp" : 11844,
+  "user" : "david27",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 11932,
+  "user" : "david27",
+  "message" : "Search returned 1 results",
+  "results" : [ "It's Not Easy" ]
+}, {
+  "command" : "select",
+  "timestamp" : 11932,
+  "user" : "david27",
+  "message" : "Successfully selected It's Not Easy."
+}, {
+  "command" : "load",
+  "timestamp" : 11932,
+  "user" : "david27",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 11962,
+  "user" : "irene33",
+  "message" : "Search returned 1 results",
+  "results" : [ "Ladies of the Canyon" ]
+}, {
+  "command" : "select",
+  "timestamp" : 11962,
+  "user" : "irene33",
+  "message" : "Successfully selected Ladies of the Canyon."
+}, {
+  "command" : "load",
+  "timestamp" : 11962,
+  "user" : "irene33",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 12108,
+  "user" : "david27",
+  "message" : "Search returned 1 results",
+  "results" : [ "Beast of Burden" ]
+}, {
+  "command" : "select",
+  "timestamp" : 12108,
+  "user" : "david27",
+  "message" : "Successfully selected Beast of Burden."
+}, {
+  "command" : "load",
+  "timestamp" : 12108,
+  "user" : "david27",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 12141,
+  "user" : "irene33",
+  "message" : "Search returned 1 results",
+  "results" : [ "The Arrangement" ]
+}, {
+  "command" : "select",
+  "timestamp" : 12141,
+  "user" : "irene33",
+  "message" : "Successfully selected The Arrangement."
+}, {
+  "command" : "load",
+  "timestamp" : 12141,
+  "user" : "irene33",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 12157,
+  "user" : "grace25",
+  "message" : "Search returned 2 results",
+  "results" : [ "Gimme Shelter", "Gimme Shelter" ]
+}, {
+  "command" : "select",
+  "timestamp" : 12157,
+  "user" : "grace25",
+  "message" : "Successfully selected Gimme Shelter."
+}, {
+  "command" : "load",
+  "timestamp" : 12157,
+  "user" : "grace25",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 12175,
+  "user" : "irene33",
+  "message" : "Search returned 1 results",
+  "results" : [ "Willy" ]
+}, {
+  "command" : "select",
+  "timestamp" : 12175,
+  "user" : "irene33",
+  "message" : "Successfully selected Willy."
+}, {
+  "command" : "load",
+  "timestamp" : 12175,
+  "user" : "irene33",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 12284,
+  "user" : "irene33",
+  "message" : "Search returned 1 results",
+  "results" : [ "Big Yellow Taxi" ]
+}, {
+  "command" : "select",
+  "timestamp" : 12284,
+  "user" : "irene33",
+  "message" : "Successfully selected Big Yellow Taxi."
+}, {
+  "command" : "load",
+  "timestamp" : 12284,
+  "user" : "irene33",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 12296,
+  "user" : "grace25",
+  "message" : "Search returned 1 results",
+  "results" : [ "Respectable" ]
+}, {
+  "command" : "select",
+  "timestamp" : 12296,
+  "user" : "grace25",
+  "message" : "Successfully selected Respectable."
+}, {
+  "command" : "load",
+  "timestamp" : 12296,
+  "user" : "grace25",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "adBreak",
+  "timestamp" : 12299,
+  "user" : "david27",
+  "message" : "Ad inserted successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 12319,
+  "user" : "david27",
+  "message" : "Search returned 1 results",
+  "results" : [ "Love in Vain" ]
+}, {
+  "command" : "select",
+  "timestamp" : 12319,
+  "user" : "david27",
+  "message" : "Successfully selected Love in Vain."
+}, {
+  "command" : "load",
+  "timestamp" : 12319,
+  "user" : "david27",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "adBreak",
+  "timestamp" : 12374,
+  "user" : "grace25",
+  "message" : "Ad inserted successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 12394,
+  "user" : "grace25",
+  "message" : "Search returned 1 results",
+  "results" : [ "Mother's Little Helper" ]
+}, {
+  "command" : "select",
+  "timestamp" : 12394,
+  "user" : "grace25",
+  "message" : "Successfully selected Mother's Little Helper."
+}, {
+  "command" : "load",
+  "timestamp" : 12394,
+  "user" : "grace25",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 12419,
+  "user" : "irene33",
+  "message" : "Search returned 1 results",
+  "results" : [ "Rainy Night House" ]
+}, {
+  "command" : "select",
+  "timestamp" : 12419,
+  "user" : "irene33",
+  "message" : "Successfully selected Rainy Night House."
+}, {
+  "command" : "load",
+  "timestamp" : 12419,
+  "user" : "irene33",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 12477,
+  "user" : "david27",
+  "message" : "Search returned 2 results",
+  "results" : [ "Lady Jane", "Lady Jane" ]
+}, {
+  "command" : "select",
+  "timestamp" : 12477,
+  "user" : "david27",
+  "message" : "Successfully selected Lady Jane."
+}, {
+  "command" : "load",
+  "timestamp" : 12477,
+  "user" : "david27",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "adBreak",
+  "timestamp" : 12549,
+  "user" : "grace25",
+  "message" : "Ad inserted successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 12569,
+  "user" : "grace25",
+  "message" : "Search returned 2 results",
+  "results" : [ "Out of Time", "Out of Time" ]
+}, {
+  "command" : "select",
+  "timestamp" : 12569,
+  "user" : "grace25",
+  "message" : "Successfully selected Out of Time."
+}, {
+  "command" : "load",
+  "timestamp" : 12569,
+  "user" : "grace25",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 12571,
+  "user" : "david27",
+  "message" : "Search returned 1 results",
+  "results" : [ "Little Red Rooster" ]
+}, {
+  "command" : "select",
+  "timestamp" : 12571,
+  "user" : "david27",
+  "message" : "Successfully selected Little Red Rooster."
+}, {
+  "command" : "load",
+  "timestamp" : 12571,
+  "user" : "david27",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "wrapped",
+  "timestamp" : 12641,
+  "user" : "irene33",
+  "result" : {
+    "topSongs" : {
+      "Lady Jane" : 4,
+      "Purple Rain" : 3,
+      "1999 [Edit]" : 2,
+      "Blame It on the Sun" : 2,
+      "D.M.S.R." : 2
+    },
+    "topAlbums" : {
+      "The Very Best of Prince" : 24,
+      "Aftermath" : 8,
+      "Ladies of the Canyon" : 8,
+      "Talking Book" : 8,
+      "The Definitive Collection" : 7
+    },
+    "topArtists" : {
+      "Prince" : 32,
+      "Stevie Wonder" : 22,
+      "The Rolling Stones" : 15,
+      "Joni Mitchell" : 8
+    },
+    "topGenres" : {
+      "80s" : 30,
+      "soul" : 22,
+      "classic rock" : 15,
+      "folk" : 8,
+      "rnb" : 2
+    },
+    "topEpisodes" : { }
+  }
+}, {
+  "command" : "adBreak",
+  "timestamp" : 12659,
+  "user" : "grace25",
+  "message" : "Ad inserted successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 12663,
+  "user" : "david27",
+  "message" : "Search returned 1 results",
+  "results" : [ "Let It Bleed" ]
+}, {
+  "command" : "select",
+  "timestamp" : 12663,
+  "user" : "david27",
+  "message" : "Successfully selected Let It Bleed."
+}, {
+  "command" : "load",
+  "timestamp" : 12663,
+  "user" : "david27",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 12679,
+  "user" : "grace25",
+  "message" : "Search returned 1 results",
+  "results" : [ "Some Girls" ]
+}, {
+  "command" : "select",
+  "timestamp" : 12679,
+  "user" : "grace25",
+  "message" : "Successfully selected Some Girls."
+}, {
+  "command" : "load",
+  "timestamp" : 12679,
+  "user" : "grace25",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 12826,
+  "user" : "grace25",
+  "message" : "Search returned 1 results",
+  "results" : [ "Mother's Little Helper" ]
+}, {
+  "command" : "select",
+  "timestamp" : 12826,
+  "user" : "grace25",
+  "message" : "Successfully selected Mother's Little Helper."
+}, {
+  "command" : "load",
+  "timestamp" : 12826,
+  "user" : "grace25",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "adBreak",
+  "timestamp" : 12845,
+  "user" : "david27",
+  "message" : "Ad inserted successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 12865,
+  "user" : "david27",
+  "message" : "Search returned 1 results",
+  "results" : [ "Shattered" ]
+}, {
+  "command" : "select",
+  "timestamp" : 12865,
+  "user" : "david27",
+  "message" : "Successfully selected Shattered."
+}, {
+  "command" : "load",
+  "timestamp" : 12865,
+  "user" : "david27",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 12908,
+  "user" : "grace25",
+  "message" : "Search returned 1 results",
+  "results" : [ "Going Home" ]
+}, {
+  "command" : "select",
+  "timestamp" : 12908,
+  "user" : "grace25",
+  "message" : "Successfully selected Going Home."
+}, {
+  "command" : "load",
+  "timestamp" : 12908,
+  "user" : "grace25",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 12979,
+  "user" : "david27",
+  "message" : "Search returned 1 results",
+  "results" : [ "Monkey Man" ]
+}, {
+  "command" : "select",
+  "timestamp" : 12979,
+  "user" : "david27",
+  "message" : "Successfully selected Monkey Man."
+}, {
+  "command" : "load",
+  "timestamp" : 12979,
+  "user" : "david27",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "adBreak",
+  "timestamp" : 13004,
+  "user" : "grace25",
+  "message" : "Ad inserted successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 13024,
+  "user" : "grace25",
+  "message" : "Search returned 1 results",
+  "results" : [ "Live With Me" ]
+}, {
+  "command" : "select",
+  "timestamp" : 13024,
+  "user" : "grace25",
+  "message" : "Successfully selected Live With Me."
+}, {
+  "command" : "load",
+  "timestamp" : 13024,
+  "user" : "grace25",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "adBreak",
+  "timestamp" : 13095,
+  "user" : "david27",
+  "message" : "Ad inserted successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 13115,
+  "user" : "david27",
+  "message" : "Search returned 2 results",
+  "results" : [ "Gimme Shelter", "Gimme Shelter" ]
+}, {
+  "command" : "select",
+  "timestamp" : 13115,
+  "user" : "david27",
+  "message" : "Successfully selected Gimme Shelter."
+}, {
+  "command" : "load",
+  "timestamp" : 13115,
+  "user" : "david27",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 13159,
+  "user" : "grace25",
+  "message" : "Search returned 1 results",
+  "results" : [ "Stupid Girl" ]
+}, {
+  "command" : "select",
+  "timestamp" : 13159,
+  "user" : "grace25",
+  "message" : "Successfully selected Stupid Girl."
+}, {
+  "command" : "load",
+  "timestamp" : 13159,
+  "user" : "grace25",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 13247,
+  "user" : "grace25",
+  "message" : "Search returned 1 results",
+  "results" : [ "You Got the Silver" ]
+}, {
+  "command" : "select",
+  "timestamp" : 13247,
+  "user" : "grace25",
+  "message" : "Successfully selected You Got the Silver."
+}, {
+  "command" : "load",
+  "timestamp" : 13247,
+  "user" : "grace25",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 13254,
+  "user" : "david27",
+  "message" : "Search returned 1 results",
+  "results" : [ "High and Dry" ]
+}, {
+  "command" : "select",
+  "timestamp" : 13254,
+  "user" : "david27",
+  "message" : "Successfully selected High and Dry."
+}, {
+  "command" : "load",
+  "timestamp" : 13254,
+  "user" : "david27",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "adBreak",
+  "timestamp" : 13338,
+  "user" : "david27",
+  "message" : "Ad inserted successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 13358,
+  "user" : "david27",
+  "message" : "Search returned 1 results",
+  "results" : [ "Not Fade Away" ]
+}, {
+  "command" : "select",
+  "timestamp" : 13358,
+  "user" : "david27",
+  "message" : "Successfully selected Not Fade Away."
+}, {
+  "command" : "load",
+  "timestamp" : 13358,
+  "user" : "david27",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 13374,
+  "user" : "grace25",
+  "message" : "Search returned 1 results",
+  "results" : [ "Flight 505" ]
+}, {
+  "command" : "select",
+  "timestamp" : 13374,
+  "user" : "grace25",
+  "message" : "Successfully selected Flight 505."
+}, {
+  "command" : "load",
+  "timestamp" : 13374,
+  "user" : "grace25",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "adBreak",
+  "timestamp" : 13403,
+  "user" : "david27",
+  "message" : "Ad inserted successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 13423,
+  "user" : "david27",
+  "message" : "Search returned 1 results",
+  "results" : [ "Miss You" ]
+}, {
+  "command" : "select",
+  "timestamp" : 13423,
+  "user" : "david27",
+  "message" : "Successfully selected Miss You."
+}, {
+  "command" : "load",
+  "timestamp" : 13423,
+  "user" : "david27",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 13582,
+  "user" : "grace25",
+  "message" : "Search returned 2 results",
+  "results" : [ "Out of Time", "Out of Time" ]
+}, {
+  "command" : "select",
+  "timestamp" : 13582,
+  "user" : "grace25",
+  "message" : "Successfully selected Out of Time."
+}, {
+  "command" : "load",
+  "timestamp" : 13582,
+  "user" : "grace25",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "adBreak",
+  "timestamp" : 13643,
+  "user" : "david27",
+  "message" : "Ad inserted successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 13663,
+  "user" : "david27",
+  "message" : "Search returned 2 results",
+  "results" : [ "Out of Time", "Out of Time" ]
+}, {
+  "command" : "select",
+  "timestamp" : 13663,
+  "user" : "david27",
+  "message" : "Successfully selected Out of Time."
+}, {
+  "command" : "load",
+  "timestamp" : 13663,
+  "user" : "david27",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 13682,
+  "user" : "grace25",
+  "message" : "Search returned 1 results",
+  "results" : [ "Blue Boy" ]
+}, {
+  "command" : "select",
+  "timestamp" : 13682,
+  "user" : "grace25",
+  "message" : "Successfully selected Blue Boy."
+}, {
+  "command" : "load",
+  "timestamp" : 13682,
+  "user" : "grace25",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "adBreak",
+  "timestamp" : 13706,
+  "user" : "grace25",
+  "message" : "Ad inserted successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 13726,
+  "user" : "grace25",
+  "message" : "Search returned 1 results",
+  "results" : [ "The Circle Game" ]
+}, {
+  "command" : "select",
+  "timestamp" : 13726,
+  "user" : "grace25",
+  "message" : "Successfully selected The Circle Game."
+}, {
+  "command" : "load",
+  "timestamp" : 13726,
+  "user" : "grace25",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 13763,
+  "user" : "david27",
+  "message" : "Search returned 1 results",
+  "results" : [ "Honky Tonk Women" ]
+}, {
+  "command" : "select",
+  "timestamp" : 13763,
+  "user" : "david27",
+  "message" : "Successfully selected Honky Tonk Women."
+}, {
+  "command" : "load",
+  "timestamp" : 13763,
+  "user" : "david27",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 13856,
+  "user" : "david27",
+  "message" : "Search returned 1 results",
+  "results" : [ "You Can't Always Get What You Want" ]
+}, {
+  "command" : "select",
+  "timestamp" : 13856,
+  "user" : "david27",
+  "message" : "Successfully selected You Can't Always Get What You Want."
+}, {
+  "command" : "load",
+  "timestamp" : 13856,
+  "user" : "david27",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 13871,
+  "user" : "grace25",
+  "message" : "Search returned 1 results",
+  "results" : [ "The Arrangement" ]
+}, {
+  "command" : "select",
+  "timestamp" : 13871,
+  "user" : "grace25",
+  "message" : "Successfully selected The Arrangement."
+}, {
+  "command" : "load",
+  "timestamp" : 13871,
+  "user" : "grace25",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 13905,
+  "user" : "grace25",
+  "message" : "Search returned 1 results",
+  "results" : [ "Big Yellow Taxi" ]
+}, {
+  "command" : "select",
+  "timestamp" : 13905,
+  "user" : "grace25",
+  "message" : "Successfully selected Big Yellow Taxi."
+}, {
+  "command" : "load",
+  "timestamp" : 13905,
+  "user" : "grace25",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "adBreak",
+  "timestamp" : 13962,
+  "user" : "grace25",
+  "message" : "Ad inserted successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 13982,
+  "user" : "grace25",
+  "message" : "Search returned 1 results",
+  "results" : [ "Morning Morgantown" ]
+}, {
+  "command" : "select",
+  "timestamp" : 13982,
+  "user" : "grace25",
+  "message" : "Successfully selected Morning Morgantown."
+}, {
+  "command" : "load",
+  "timestamp" : 13982,
+  "user" : "grace25",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 14016,
+  "user" : "grace25",
+  "message" : "Search returned 1 results",
+  "results" : [ "The Arrangement" ]
+}, {
+  "command" : "select",
+  "timestamp" : 14016,
+  "user" : "grace25",
+  "message" : "Successfully selected The Arrangement."
+}, {
+  "command" : "load",
+  "timestamp" : 14016,
+  "user" : "grace25",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "adBreak",
+  "timestamp" : 14040,
+  "user" : "grace25",
+  "message" : "Ad inserted successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 14060,
+  "user" : "grace25",
+  "message" : "Search returned 1 results",
+  "results" : [ "Morning Morgantown" ]
+}, {
+  "command" : "select",
+  "timestamp" : 14060,
+  "user" : "grace25",
+  "message" : "Successfully selected Morning Morgantown."
+}, {
+  "command" : "load",
+  "timestamp" : 14060,
+  "user" : "grace25",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 14129,
+  "user" : "grace25",
+  "message" : "Search returned 1 results",
+  "results" : [ "The Arrangement" ]
+}, {
+  "command" : "select",
+  "timestamp" : 14129,
+  "user" : "grace25",
+  "message" : "Successfully selected The Arrangement."
+}, {
+  "command" : "load",
+  "timestamp" : 14129,
+  "user" : "grace25",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "adBreak",
+  "timestamp" : 14153,
+  "user" : "grace25",
+  "message" : "Ad inserted successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 14173,
+  "user" : "grace25",
+  "message" : "Search returned 1 results",
+  "results" : [ "The Priest" ]
+}, {
+  "command" : "select",
+  "timestamp" : 14173,
+  "user" : "grace25",
+  "message" : "Successfully selected The Priest."
+}, {
+  "command" : "load",
+  "timestamp" : 14173,
+  "user" : "grace25",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 14207,
+  "user" : "grace25",
+  "message" : "Search returned 1 results",
+  "results" : [ "Conversation" ]
+}, {
+  "command" : "select",
+  "timestamp" : 14207,
+  "user" : "grace25",
+  "message" : "Successfully selected Conversation."
+}, {
+  "command" : "load",
+  "timestamp" : 14207,
+  "user" : "grace25",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 14241,
+  "user" : "grace25",
+  "message" : "Search returned 1 results",
+  "results" : [ "Big Yellow Taxi" ]
+}, {
+  "command" : "select",
+  "timestamp" : 14241,
+  "user" : "grace25",
+  "message" : "Successfully selected Big Yellow Taxi."
+}, {
+  "command" : "load",
+  "timestamp" : 14241,
+  "user" : "grace25",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 14308,
+  "user" : "grace25",
+  "message" : "Search returned 1 results",
+  "results" : [ "Morning Morgantown" ]
+}, {
+  "command" : "select",
+  "timestamp" : 14308,
+  "user" : "grace25",
+  "message" : "Successfully selected Morning Morgantown."
+}, {
+  "command" : "load",
+  "timestamp" : 14308,
+  "user" : "grace25",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "wrapped",
+  "timestamp" : 14425,
+  "user" : "The Rolling Stones",
+  "result" : {
+    "listeners" : 3,
+    "topSongs" : {
+      "Lady Jane" : 6,
+      "Out of Time" : 4,
+      "Flight 505" : 3,
+      "Gimme Shelter" : 3,
+      "Live With Me" : 3
+    },
+    "topAlbums" : {
+      "Rolled Gold" : 30,
+      "Aftermath" : 15,
+      "Let It Bleed" : 13,
+      "Some Girls" : 13
+    },
+    "topFans" : [ "grace25", "david27", "irene33" ]
+  }
+}, {
+  "command" : "search",
+  "timestamp" : 14425,
+  "user" : "david27",
+  "message" : "Search returned 1 results",
+  "results" : [ "Ladies of the Canyon" ]
+}, {
+  "command" : "select",
+  "timestamp" : 14425,
+  "user" : "david27",
+  "message" : "Successfully selected Ladies of the Canyon."
+}, {
+  "command" : "load",
+  "timestamp" : 14425,
+  "user" : "david27",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "wrapped",
+  "timestamp" : 14442,
   "user" : "grace25",
   "result" : {
     "topSongs" : {
-      "I Say a Little Prayer" : 3,
-      "Ain't No Way" : 2,
-      "Baby I Love You" : 2,
-      "Baby, Baby, Baby" : 2,
-      "Cluster One" : 2
+      "Morning Morgantown" : 3,
+      "Out of Time" : 3,
+      "The Arrangement" : 3,
+      "Big Yellow Taxi" : 2,
+      "Christopher Tracy's Parade" : 2
     },
     "topAlbums" : {
-      "Soul Queen" : 49,
-      "The Division Bell" : 16,
-      "20 All-Time Greatest Hits!" : 15,
-      "The Dark Side of the Moon" : 11,
-      "The 50th Anniversary Collection" : 7
+      "Rolled Gold" : 20,
+      "The Definitive Collection" : 14,
+      "Ladies of the Canyon" : 12,
+      "Parade - Music From the Motion Picture Under the Cherry Moon" : 11,
+      "Let It Bleed" : 8
     },
     "topArtists" : {
-      "Aretha Franklin" : 49,
-      "Pink Floyd" : 30,
-      "James Brown" : 25
+      "The Rolling Stones" : 35,
+      "Stevie Wonder" : 26,
+      "Prince" : 20,
+      "Joni Mitchell" : 12
     },
     "topGenres" : {
-      "soul" : 49,
-      "progressive rock" : 30,
-      "funk" : 25
+      "classic rock" : 35,
+      "soul" : 26,
+      "folk" : 12,
+      "rnb" : 11,
+      "80s" : 9
+    },
+    "topEpisodes" : { }
+  }
+}, {
+  "command" : "search",
+  "timestamp" : 16465,
+  "user" : "david27",
+  "message" : "Search returned 1 results",
+  "results" : [ "Blue Boy" ]
+}, {
+  "command" : "select",
+  "timestamp" : 16465,
+  "user" : "david27",
+  "message" : "Successfully selected Blue Boy."
+}, {
+  "command" : "load",
+  "timestamp" : 16465,
+  "user" : "david27",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 16499,
+  "user" : "david27",
+  "message" : "Search returned 1 results",
+  "results" : [ "Morning Morgantown" ]
+}, {
+  "command" : "select",
+  "timestamp" : 16499,
+  "user" : "david27",
+  "message" : "Successfully selected Morning Morgantown."
+}, {
+  "command" : "load",
+  "timestamp" : 16499,
+  "user" : "david27",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 16533,
+  "user" : "david27",
+  "message" : "Search returned 1 results",
+  "results" : [ "Ladies of the Canyon" ]
+}, {
+  "command" : "select",
+  "timestamp" : 16533,
+  "user" : "david27",
+  "message" : "Successfully selected Ladies of the Canyon."
+}, {
+  "command" : "load",
+  "timestamp" : 16533,
+  "user" : "david27",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 16622,
+  "user" : "david27",
+  "message" : "Search returned 1 results",
+  "results" : [ "For Free" ]
+}, {
+  "command" : "select",
+  "timestamp" : 16622,
+  "user" : "david27",
+  "message" : "Successfully selected For Free."
+}, {
+  "command" : "load",
+  "timestamp" : 16622,
+  "user" : "david27",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "adBreak",
+  "timestamp" : 16765,
+  "user" : "david27",
+  "message" : "Ad inserted successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 16785,
+  "user" : "david27",
+  "message" : "Search returned 1 results",
+  "results" : [ "The Arrangement" ]
+}, {
+  "command" : "select",
+  "timestamp" : 16785,
+  "user" : "david27",
+  "message" : "Successfully selected The Arrangement."
+}, {
+  "command" : "load",
+  "timestamp" : 16785,
+  "user" : "david27",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 16819,
+  "user" : "david27",
+  "message" : "Search returned 1 results",
+  "results" : [ "Willy" ]
+}, {
+  "command" : "select",
+  "timestamp" : 16819,
+  "user" : "david27",
+  "message" : "Successfully selected Willy."
+}, {
+  "command" : "load",
+  "timestamp" : 16819,
+  "user" : "david27",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 16928,
+  "user" : "david27",
+  "message" : "Search returned 1 results",
+  "results" : [ "Willy" ]
+}, {
+  "command" : "select",
+  "timestamp" : 16928,
+  "user" : "david27",
+  "message" : "Successfully selected Willy."
+}, {
+  "command" : "load",
+  "timestamp" : 16928,
+  "user" : "david27",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "adBreak",
+  "timestamp" : 17027,
+  "user" : "david27",
+  "message" : "Ad inserted successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 17047,
+  "user" : "david27",
+  "message" : "Search returned 1 results",
+  "results" : [ "The Arrangement" ]
+}, {
+  "command" : "select",
+  "timestamp" : 17047,
+  "user" : "david27",
+  "message" : "Successfully selected The Arrangement."
+}, {
+  "command" : "load",
+  "timestamp" : 17047,
+  "user" : "david27",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 17081,
+  "user" : "david27",
+  "message" : "Search returned 1 results",
+  "results" : [ "Blue Boy" ]
+}, {
+  "command" : "select",
+  "timestamp" : 17081,
+  "user" : "david27",
+  "message" : "Successfully selected Blue Boy."
+}, {
+  "command" : "load",
+  "timestamp" : 17081,
+  "user" : "david27",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 17115,
+  "user" : "david27",
+  "message" : "Search returned 1 results",
+  "results" : [ "Ladies of the Canyon" ]
+}, {
+  "command" : "select",
+  "timestamp" : 17115,
+  "user" : "david27",
+  "message" : "Successfully selected Ladies of the Canyon."
+}, {
+  "command" : "load",
+  "timestamp" : 17115,
+  "user" : "david27",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 17204,
+  "user" : "david27",
+  "message" : "Search returned 1 results",
+  "results" : [ "Rainy Night House" ]
+}, {
+  "command" : "select",
+  "timestamp" : 17204,
+  "user" : "david27",
+  "message" : "Successfully selected Rainy Night House."
+}, {
+  "command" : "load",
+  "timestamp" : 17204,
+  "user" : "david27",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "adBreak",
+  "timestamp" : 17316,
+  "user" : "david27",
+  "message" : "Ad inserted successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 17336,
+  "user" : "david27",
+  "message" : "Search returned 1 results",
+  "results" : [ "For Free" ]
+}, {
+  "command" : "select",
+  "timestamp" : 17336,
+  "user" : "david27",
+  "message" : "Successfully selected For Free."
+}, {
+  "command" : "load",
+  "timestamp" : 17336,
+  "user" : "david27",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "adBreak",
+  "timestamp" : 17479,
+  "user" : "david27",
+  "message" : "Ad inserted successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 17499,
+  "user" : "david27",
+  "message" : "Search returned 1 results",
+  "results" : [ "Woodstock" ]
+}, {
+  "command" : "select",
+  "timestamp" : 17499,
+  "user" : "david27",
+  "message" : "Successfully selected Woodstock."
+}, {
+  "command" : "load",
+  "timestamp" : 17499,
+  "user" : "david27",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "adBreak",
+  "timestamp" : 17649,
+  "user" : "david27",
+  "message" : "Ad inserted successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 17669,
+  "user" : "david27",
+  "message" : "Search returned 1 results",
+  "results" : [ "Morning Morgantown" ]
+}, {
+  "command" : "select",
+  "timestamp" : 17669,
+  "user" : "david27",
+  "message" : "Successfully selected Morning Morgantown."
+}, {
+  "command" : "load",
+  "timestamp" : 17669,
+  "user" : "david27",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 17703,
+  "user" : "david27",
+  "message" : "Search returned 1 results",
+  "results" : [ "The Priest" ]
+}, {
+  "command" : "select",
+  "timestamp" : 17703,
+  "user" : "david27",
+  "message" : "Successfully selected The Priest."
+}, {
+  "command" : "load",
+  "timestamp" : 17703,
+  "user" : "david27",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "adBreak",
+  "timestamp" : 17762,
+  "user" : "david27",
+  "message" : "Ad inserted successfully."
+}, {
+  "command" : "search",
+  "timestamp" : 17782,
+  "user" : "david27",
+  "message" : "Search returned 1 results",
+  "results" : [ "Woodstock" ]
+}, {
+  "command" : "select",
+  "timestamp" : 17782,
+  "user" : "david27",
+  "message" : "Successfully selected Woodstock."
+}, {
+  "command" : "load",
+  "timestamp" : 17782,
+  "user" : "david27",
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "wrapped",
+  "timestamp" : 17942,
+  "user" : "Joni Mitchell",
+  "result" : {
+    "listeners" : 3,
+    "topSongs" : {
+      "The Arrangement" : 8,
+      "Morning Morgantown" : 6,
+      "Big Yellow Taxi" : 4,
+      "Blue Boy" : 4,
+      "Ladies of the Canyon" : 4
+    },
+    "topAlbums" : {
+      "Ladies of the Canyon" : 48
+    },
+    "topFans" : [ "david27", "grace25", "irene33" ]
+  }
+}, {
+  "command" : "wrapped",
+  "timestamp" : 17942,
+  "user" : "Pink Floyd",
+  "message" : "No data to show for artist Pink Floyd."
+}, {
+  "command" : "wrapped",
+  "timestamp" : 18042,
+  "user" : "david27",
+  "result" : {
+    "topSongs" : {
+      "All The Critics Love U In New York" : 3,
+      "Blue Boy" : 3,
+      "D.M.S.R." : 3,
+      "For Free" : 3,
+      "Ladies of the Canyon" : 3
+    },
+    "topAlbums" : {
+      "Ladies of the Canyon" : 28,
+      "1999" : 18,
+      "Songs in the Key of Life" : 12,
+      "Some Girls" : 9,
+      "Rolled Gold" : 6
+    },
+    "topArtists" : {
+      "Joni Mitchell" : 28,
+      "Prince" : 22,
+      "Stevie Wonder" : 22,
+      "The Rolling Stones" : 21
+    },
+    "topGenres" : {
+      "folk" : 28,
+      "soul" : 22,
+      "80s" : 21,
+      "classic rock" : 21,
+      "rnb" : 1
     },
     "topEpisodes" : { }
   }
 }, {
   "command" : "endProgram",
   "result" : {
-    "Pink Floyd" : {
+    "Prince" : {
       "merchRevenue" : 0.0,
-      "mostProfitableSong" : "Young Lust",
+      "mostProfitableSong" : "Free",
+      "ranking" : 4,
+      "songRevenue" : 3843.0
+    },
+    "Joni Mitchell" : {
+      "merchRevenue" : 0.0,
+      "mostProfitableSong" : "The Arrangement",
       "ranking" : 3,
-      "songRevenue" : 1019230.77
+      "songRevenue" : 4915.0
     },
-    "Aretha Franklin" : {
+    "Stevie Wonder" : {
       "merchRevenue" : 0.0,
-      "mostProfitableSong" : "You're A Sweet Sweet Man",
+      "mostProfitableSong" : "He's Misstra Know It All",
       "ranking" : 2,
-      "songRevenue" : 1086538.46
+      "songRevenue" : 5661.0
     },
-    "James Brown" : {
+    "The Rolling Stones" : {
       "merchRevenue" : 0.0,
-      "mostProfitableSong" : "Try Me - Single Version / Mono",
+      "mostProfitableSong" : "Miss You",
       "ranking" : 1,
-      "songRevenue" : 1894230.77
+      "songRevenue" : 5981.0
     }
   }
 } ]

@@ -9,26 +9,43 @@ public class GetNotificationsResult extends Result {
     private String user;
     private ArrayList<Notification> notifications;
 
-    public GetNotificationsResult(InputCommands inputCommand, ArrayList<Notification> notifications) {
+    public GetNotificationsResult(final InputCommands inputCommand,
+                                  final ArrayList<Notification> notifications) {
         this.command = inputCommand.getCommand();
         this.timestamp = inputCommand.getTimestamp();
         this.user = inputCommand.getUsername();
         this.notifications = notifications;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getUser() {
         return user;
     }
 
-    public void setUser(String user) {
+    /**
+     *
+     * @param user
+     */
+    public void setUser(final String user) {
         this.user = user;
     }
 
+    /**
+     *
+     * @return
+     */
     public ArrayList<Notification> getNotifications() {
         return notifications;
     }
 
-    public void setNotifications(ArrayList<Notification> notifications) {
+    /**
+     *
+     * @param notifications
+     */
+    public void setNotifications(final ArrayList<Notification> notifications) {
         this.notifications = notifications;
     }
 }

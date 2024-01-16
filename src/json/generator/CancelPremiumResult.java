@@ -14,7 +14,7 @@ public class CancelPremiumResult extends Result {
 
         if (returnValue == Errors.USER_NOT_EXIST) {
             this.message = "The username " + user + " doesn't exist.";
-        } else if (returnValue == Errors.USER_NOT_SUBSCRIBED){
+        } else if (returnValue == Errors.USER_NOT_SUBSCRIBED) {
             this.message = user +  " is not a premium user.";
         } else {
             this.message = user + " cancelled the subscription successfully.";

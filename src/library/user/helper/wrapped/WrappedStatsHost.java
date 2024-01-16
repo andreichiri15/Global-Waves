@@ -17,29 +17,53 @@ public class WrappedStatsHost extends WrappedStats {
 
     }
 
+    /**
+     *
+     * @return
+     */
     public HashMap<String, Integer> getTopEpisodes() {
         return topEpisodes;
     }
 
-    public void setTopEpisodes(HashMap<String, Integer> topEpisodes) {
+    /**
+     *
+     * @param topEpisodes
+     */
+    public void setTopEpisodes(final HashMap<String, Integer> topEpisodes) {
         this.topEpisodes = topEpisodes;
     }
 
+    /**
+     *
+     * @return
+     */
     public int getListeners() {
         return listeners;
     }
 
-    public void setListeners(int listeners) {
+    /**
+     *
+     * @param listeners
+     */
+    public void setListeners(final int listeners) {
         this.listeners = listeners;
     }
 
+    /**
+     *
+     * @return
+     */
     @JsonIgnore
     public HashMap<String, Integer> getListenersHash() {
         return listenersHash;
     }
 
+    /**
+     *
+     * @param listenersHash
+     */
     @JsonIgnore
-    public void setListenersHash(HashMap<String, Integer> listenersHash) {
+    public void setListenersHash(final HashMap<String, Integer> listenersHash) {
         this.listenersHash = listenersHash;
     }
 }

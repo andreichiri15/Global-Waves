@@ -1,12 +1,7 @@
 package json.generator;
 
 import commands.InputCommands;
-import library.fields.PodcastFields;
 import library.user.helper.wrapped.WrappedStats;
-import library.user.helper.wrapped.WrappedStatsUser;
-
-import java.util.ArrayList;
-import java.util.HashMap;
 
 public class WrappedResult extends Result {
     private String user;

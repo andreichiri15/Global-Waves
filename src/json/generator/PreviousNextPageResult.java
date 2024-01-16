@@ -17,25 +17,42 @@ public class PreviousNextPageResult extends Result {
         } else if (returnValue == Errors.HISTORY_EMPTY_NEXT) {
             this.message = "There are no pages left to go forward.";
         } else if (returnValue == Errors.SUCCES_PREV) {
-            this.message = "The user " + user + " has navigated successfully to the previous page.";
+            this.message = "The user " + user
+                    + " has navigated successfully to the previous page.";
         } else {
             this.message = "The user " + user + " has navigated successfully to the next page.";
         }
 
     }
 
+    /**
+     *
+     * @return
+     */
     public String getUser() {
         return user;
     }
 
+    /**
+     *
+     * @param user
+     */
     public void setUser(final String user) {
         this.user = user;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getMessage() {
         return message;
     }
 
+    /**
+     *
+     * @param message
+     */
     public void setMessage(final String message) {
         this.message = message;
     }

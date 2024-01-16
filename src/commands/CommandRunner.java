@@ -13,7 +13,6 @@ import library.filetypes.Song;
 import library.user.helper.RevenueStats;
 import library.user.helper.notifications.Notification;
 import library.user.helper.wrapped.WrappedStats;
-import library.user.helper.wrapped.WrappedStatsUser;
 import utils.Errors;
 
 import java.util.ArrayList;
@@ -21,6 +20,7 @@ import java.util.HashMap;
 
 public final class CommandRunner {
     private static CommandRunner instance = null;
+    private static final int STATE_TOP_5_ARTISTS = 3;
 
     private CommandRunner() {
 
@@ -826,12 +826,18 @@ public final class CommandRunner {
      */
     public void getTop5Artists(final User myUser, final InputCommands inputCommand,
                                final Library myLibrary, final ArrayList<Result> results) {
-        ArrayList<String> result = myLibrary.getTop5(3);
+        ArrayList<String> result = myLibrary.getTop5(STATE_TOP_5_ARTISTS);
 
         Result top5ArtistsResult = new GetTop5Result(inputCommand, result);
         results.add(top5ArtistsResult);
     }
 
+    /**
+     * method that handles wrapped command
+     * @param myUser user that gave the command
+     * @param inputCommand input from user
+     * @param results results list for json generation
+     */
     public void wrapped(final User myUser, final InputCommands inputCommand,
                         final ArrayList<Result> results) {
         WrappedStats result = myUser.getWrappedStats();
@@ -846,6 +852,13 @@ public final class CommandRunner {
         results.add(wrappedResult);
     }
 
+    /**
+     * method that handles subscribe command
+     * @param myUser user that gave the command
+     * @param inputCommand input from user
+     * @param myLibrary library
+     * @param results results list for json generation
+     */
     public void subscribe(final User myUser, final InputCommands inputCommand,
                           final Library myLibrary, final ArrayList<Result> results) {
         int returnValue;
@@ -854,10 +867,17 @@ public final class CommandRunner {
         } else {
             returnValue = myUser.subscribe(inputCommand, myLibrary);
         }
-        Result subscribeResult = new SubscribeResult(inputCommand, returnValue, myUser.getCurrentPage().getCurrentUserLoaded());
+        Result subscribeResult = new SubscribeResult(inputCommand, returnValue, myUser.
+                getCurrentPage().getCurrentUserLoaded());
         results.add(subscribeResult);
     }
 
+    /**
+     * method that handles getNotifications command
+     * @param myUser user that gave the command
+     * @param inputCommand input from user
+     * @param results results list for json generation
+     */
     public void getNotifications(final User myUser, final InputCommands inputCommand,
                                  final ArrayList<Result> results) {
 
@@ -869,6 +889,13 @@ public final class CommandRunner {
         myUser.setNotifications(new ArrayList<>());
     }
 
+    /**
+     * method that handles previousPage command
+     * @param myUser user that gave the command
+     * @param inputCommand input from user
+     * @param myLibrary library
+     * @param results results list for json generation
+     */
     public void previousPage(final User myUser, final InputCommands inputCommand,
                              final Library myLibrary, final ArrayList<Result> results) {
         int returnValue = myUser.previousPage();
@@ -877,6 +904,13 @@ public final class CommandRunner {
         results.add(previousNextPageResult);
     }
 
+    /**
+     * method that handles updateRecommendations command
+     * @param myUser user that gave the command
+     * @param inputCommand input from user
+     * @param myLibrary library
+     * @param results results list for json generation
+     */
     public void updateRecommendations(final User myUser, final InputCommands inputCommand,
                                       final Library myLibrary, final ArrayList<Result> results) {
         int returnValue;
@@ -886,10 +920,18 @@ public final class CommandRunner {
             returnValue = myUser.updateRecommendations(inputCommand, myLibrary);
         }
 
-        Result updateRecommendationsResult = new UpdateRecommendationsResult(inputCommand, returnValue);
+        Result updateRecommendationsResult = new UpdateRecommendationsResult(inputCommand,
+                returnValue);
         results.add(updateRecommendationsResult);
     }
 
+    /**
+     * method that handles buyMerch command
+     * @param myUser user that gave the command
+     * @param inputCommand input from user
+     * @param myLibrary library
+     * @param results results list for json generation
+     */
     public void buyMerch(final User myUser, final InputCommands inputCommand,
                          final Library myLibrary, final ArrayList<Result> results) {
         int returnValue;
@@ -903,6 +945,13 @@ public final class CommandRunner {
         results.add(buyMerchResult);
     }
 
+    /**
+     * method that handles seeMerch command
+     * @param myUser user that gave the command
+     * @param inputCommand input from user
+     * @param myLibrary library
+     * @param results results list for json generation
+     */
     public void seeMerch(final User myUser, final InputCommands inputCommand,
                          final Library myLibrary, final ArrayList<Result> results) {
         ArrayList<String> result = null;
@@ -914,6 +963,13 @@ public final class CommandRunner {
         results.add(seeMerchResult);
     }
 
+    /**
+     * method that handles loadRecommendations command
+     * @param myUser user that gave the command
+     * @param inputCommand input from user
+     * @param myLibrary library
+     * @param results results list for json generation
+     */
     public void loadRecommendations(final User myUser, final InputCommands inputCommand,
                                     final Library myLibrary, final ArrayList<Result> results) {
         int returnValue = myUser.loadRecommendations();
@@ -922,16 +978,28 @@ public final class CommandRunner {
         results.add(loadRecommendationsResult);
     }
 
-    public int nextPage(final User myUser, final InputCommands inputCommand,
+    /**
+     * method that handles nextPage command
+     * @param myUser user that gave the command
+     * @param inputCommand input from user
+     * @param myLibrary library
+     * @param results results list for json generation
+     */
+    public void nextPage(final User myUser, final InputCommands inputCommand,
                         final Library myLibrary, final ArrayList<Result> results) {
         int returnValue = myUser.nextPage();
 
         Result previousNextPageResult = new PreviousNextPageResult(inputCommand, returnValue);
         results.add(previousNextPageResult);
-
-        return returnValue;
     }
 
+    /**
+     * method that handles buyPremium command
+     * @param myUser user that gave the command
+     * @param inputCommand input from user
+     * @param myLibrary library
+     * @param results results list for json generation
+     */
     public void buyPremium(final User myUser, final InputCommands inputCommand,
                            final Library myLibrary, final ArrayList<Result> results) {
         int returnValue;
@@ -945,6 +1013,13 @@ public final class CommandRunner {
         results.add(buyPremiumResult);
     }
 
+    /**
+     * method that handles cancelPremium command
+     * @param myUser user that gave the command
+     * @param inputCommand input from user
+     * @param myLibrary library
+     * @param results results
+     */
     public void cancelPremium(final User myUser, final InputCommands inputCommand,
                               final Library myLibrary, final ArrayList<Result> results) {
         int returnValue;
@@ -958,6 +1033,11 @@ public final class CommandRunner {
         results.add(cancelPremiumResult);
     }
 
+    /**
+     * method that handles endProgram command
+     * @param results results list for json generation
+     * @param myLibrary library
+     */
     public void endProgram(final ArrayList<Result> results, final Library myLibrary) {
         HashMap<String, RevenueStats> result = myLibrary.endProgram();
         Result endProgramResult = new EndProgramResult(result);
@@ -965,9 +1045,24 @@ public final class CommandRunner {
         results.add(endProgramResult);
     }
 
+    /**
+     * method that handles adBreak command
+     * @param myUser user that gave the command
+     * @param inputCommand input from user
+     * @param myLibrary library
+     * @param results results list for json generation
+     */
     public void adBreak(final User myUser, final InputCommands inputCommand,
                         final Library myLibrary, final ArrayList<Result> results) {
-        int returnValue = myUser.getPlayer().adBreak();
+        int returnValue;
+
+        if (myUser == null) {
+            returnValue = Errors.USER_NOT_EXIST;
+        } else if (myUser.getPlayer() == null) {
+            returnValue = Errors.USER_NOT_PLAYING;
+        } else {
+            returnValue = myUser.getPlayer().adBreak(myLibrary, inputCommand.getPrice());
+        }
 
         Result adBreakResult = new AdBreakResult(inputCommand, returnValue);
         results.add(adBreakResult);

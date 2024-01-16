@@ -1,9 +1,19 @@
 package page.command;
 
-import page.Page;
-
 public interface Command {
+
+    /**
+     * method that executes the command
+     */
     void execute();
+
+    /**
+     * method that undoes the command
+     */
     void undo();
+
+    /**
+     * method that redoes the command
+     */
     void redo();
 }

@@ -21,7 +21,7 @@ import page.command.ChangePageCommand;
 import page.command.CommandManager;
 import utils.Errors;
 
-import library.user.helper.notifications.*;
+import library.user.helper.notifications.Notification;
 import java.util.*;
 
 public class User implements Observer, Observable {
@@ -55,7 +55,9 @@ public class User implements Observer, Observable {
     private boolean isPremium;
     private ArrayList<Song> premiumSongList;
     private ArrayList<Song> totalSongsListened;
+    private ArrayList<Song> nonPremiumSongList;
     private static final double PREMIUM_CREDITS = Math.pow(10, 6);
+    private static final int COUNTMAX = 5;
 
     /**
      *
@@ -79,6 +81,7 @@ public class User implements Observer, Observable {
         this.recommendedPlaylists = new ArrayList<>();
         this.boughtMerch = new ArrayList<>();
         this.isPremium = false;
+        this.nonPremiumSongList = new ArrayList<>();
     }
 
     public User(final InputCommands inputCommand) {
@@ -100,6 +103,7 @@ public class User implements Observer, Observable {
             this.recommendedPlaylists = new ArrayList<>();
             this.boughtMerch = new ArrayList<>();
             this.isPremium = false;
+            this.nonPremiumSongList = new ArrayList<>();
         } else if (userType.equals("artist")) {
             this.albums = new ArrayList<>();
             this.events = new ArrayList<>();
@@ -142,14 +146,27 @@ public class User implements Observer, Observable {
         }
     }
 
+    /**
+     * method that updates the queue of notifications for user
+     * @param name the name of the notification
+     * @param description the description of the notification
+     */
     @Override
     public void update(final String name, final String description) {
         Notification notification = new Notification(name, description);
         notifications.add(notification);
     }
 
+    /**
+     * method that handles the subscribe command, which subscribes the user to the artist whose
+     * page the current user is on
+     * @param inputCommand the input command
+     * @param library the library
+     * @return a number referring to an error / success of the command
+     */
     public int subscribe(final InputCommands inputCommand, final Library library) {
-        if (!currentPage.getCurrentPageType().equals("Artist") && !currentPage.getCurrentPageType().equals("Host")) {
+        if (!currentPage.getCurrentPageType().equals("Artist")
+                && !currentPage.getCurrentPageType().equals("Host")) {
             return Errors.PAGE_NOT_CORRESPONDENT;
         }
 
@@ -163,6 +180,10 @@ public class User implements Observer, Observable {
         return Errors.HAS_SUBSCRIBED;
     }
 
+    /**
+     * method that determines whether the user can purchase premium or not
+     * @return 0 if the user has become a premium user, an error number otherwise
+     */
     public int buyPremium() {
         if (isPremium) {
             return Errors.USER_ALREADY_SUBSCRIBED;
@@ -175,7 +196,12 @@ public class User implements Observer, Observable {
         return 0;
     }
 
-    public void paySongs(Library library) {
+    /**
+     * method that handles the updates the revenue of the songs after a user cancels their
+     * premium subscription
+     * @param library the library
+     */
+    public void paySongs(final Library library) {
         Double revenuePerSong = PREMIUM_CREDITS / premiumSongList.size();
 
         for (Song song : premiumSongList) {
@@ -188,7 +214,13 @@ public class User implements Observer, Observable {
         }
     }
 
-    public int cancelPremium(Library library) {
+    /**
+     * method that handles the cancel premium command, in which we cancel the premium subscription
+     * if we can and update the revenue of the songs
+     * @param library the library
+     * @return a number referring to an error / success of the command
+     */
+    public int cancelPremium(final Library library) {
         if (!isPremium) {
             return Errors.USER_NOT_SUBSCRIBED;
         }
@@ -202,6 +234,11 @@ public class User implements Observer, Observable {
         return 0;
     }
 
+    /**
+     * method that returns a list of all songs in the library are part of the genre specified
+     * @param genre the given genre
+     * @return a list of songs with the given genre
+     */
     public ArrayList<Song> getSongsWithGivenGenre(final String genre) {
         ArrayList<Song> songsWithGenre = new ArrayList<>();
         for (int i = 0; i < Library.songs.size(); i++) {
@@ -213,6 +250,13 @@ public class User implements Observer, Observable {
         return songsWithGenre;
     }
 
+    /**
+     * method that handles the update recommendations command, which updates the recommendations
+     * of the user
+     * @param inputCommand the input command
+     * @param library the library
+     * @return a number referring to an error / success of the command
+     */
     public int updateRecommendations(final InputCommands inputCommand, final Library library) {
         if (!userType.equals("user")) {
             return Errors.USER_NOT_NORMAL;
@@ -224,7 +268,7 @@ public class User implements Observer, Observable {
                 return Errors.NO_NEW_RECOMMANDATION;
             }
 
-            Song currentSong = (Song)player.getAudioFile();
+            Song currentSong = (Song) player.getAudioFile();
             ArrayList<Song> songsWithGenre = getSongsWithGivenGenre(currentSong.getGenre());
 
             Random random = new Random(timePassed);
@@ -252,13 +296,20 @@ public class User implements Observer, Observable {
         return 0;
     }
 
+    /**
+     * method that purchases merch from the artist whose page the user is on, if possible, while
+     * also updating the revenue of the artist
+     * @param inputCommand the input command
+     * @return a number referring to an error / success of the command
+     */
     public int buyMerch(final InputCommands inputCommand) {
         if (!currentPage.getCurrentPageType().equals("Artist")) {
             return Errors.PAGE_NOT_CORRESPONDENT;
         }
 
         for (int i = 0; i < currentPage.getCurrentUserLoaded().merchItems.size(); i++) {
-            if (currentPage.getCurrentUserLoaded().merchItems.get(i).getName().equals(inputCommand.getName())) {
+            if (currentPage.getCurrentUserLoaded().merchItems.get(i).getName().
+                    equals(inputCommand.getName())) {
                 boughtMerch.add(currentPage.getCurrentUserLoaded().merchItems.get(i));
                 currentPage.getCurrentUserLoaded().getRevenueStats().setArtistLoaded(true);
 
@@ -273,6 +324,10 @@ public class User implements Observer, Observable {
         return Errors.MERCH_NOT_EXIST;
     }
 
+    /**
+     * method that returns the list of the names of the merch items purchased by the user
+     * @return the list of the names of the merch items purchased by the user
+     */
     public ArrayList<String> seeMerch() {
         ArrayList<String> merchNames = new ArrayList<>();
         for (int i = 0; i < boughtMerch.size(); i++) {
@@ -281,6 +336,10 @@ public class User implements Observer, Observable {
         return merchNames;
     }
 
+    /**
+     * method that loads the last recommendation for the user
+     * @return a number referring to an error / success of the command
+     */
     public int loadRecommendations() {
         if (!isOnline) {
             return Errors.USER_NOT_ONLINE;
@@ -617,11 +676,7 @@ public class User implements Observer, Observable {
      * @param inputCommand input command
      * @return error number
      */
-    public int changePage(final InputCommands inputCommand, Library library) {
-//        if (!inputCommand.getNextPage().equals("Home") && !inputCommand.getNextPage().
-//                equals("LikedContent")) {
-//            return -1;
-//        }
+    public int changePage(final InputCommands inputCommand, final Library library) {
         User userLoaded = this;
         if (inputCommand.getNextPage().equals("Artist") || inputCommand.getNextPage().
                 equals("Host")) {
@@ -634,10 +689,18 @@ public class User implements Observer, Observable {
         return 0;
     }
 
+    /**
+     * method that undoes the last change page command
+     * @return error number
+     */
     public int previousPage() {
         return commandManager.undo();
     }
 
+    /**
+     * method that redoes the last undo of change page command
+     * @return error number
+     */
     public int nextPage() {
         return commandManager.redo();
     }
@@ -858,15 +921,13 @@ public class User implements Observer, Observable {
      * @param hm the hashmap I want sorted
      * @return the sorted hashmap
      */
-    public static HashMap<String, Integer> sortByValue(HashMap<String, Integer> hm)
-    {
+    public static HashMap<String, Integer> sortByValue(final HashMap<String, Integer> hm) {
         List<Map.Entry<String, Integer>> list =
-                new LinkedList<Map.Entry<String, Integer>> (hm.entrySet());
+                new LinkedList<>(hm.entrySet());
 
         Collections.sort(list, new Comparator<Map.Entry<String, Integer>>() {
-            public int compare(Map.Entry<String, Integer> o1,
-                               Map.Entry<String, Integer> o2)
-            {
+            public int compare(final Map.Entry<String, Integer> o1,
+                               final Map.Entry<String, Integer> o2) {
                 int returnValue = (o2.getValue()).compareTo(o1.getValue());
                 if (returnValue == 0) {
                     return (o1.getKey()).compareTo(o2.getKey());
@@ -878,7 +939,7 @@ public class User implements Observer, Observable {
         HashMap<String, Integer> temp = new LinkedHashMap<>();
         int count = 0;
         for (Map.Entry<String, Integer> aa : list) {
-            if (count == 5) {
+            if (count == COUNTMAX) {
                 break;
             }
             temp.put(aa.getKey(), aa.getValue());
@@ -887,10 +948,18 @@ public class User implements Observer, Observable {
         return temp;
     }
 
+    /**
+     *
+     * @return
+     */
     public WrappedStats getStats() {
         return wrappedStatsUser;
     }
 
+    /**
+     * method that returns the wrapped stats of the user, sorted
+     * @return the wrapped stats of the user, sorted
+     */
     public WrappedStats getWrappedStats() {
         if (userType.equals("user")) {
             WrappedStatsUser userStats = (WrappedStatsUser) wrappedStatsUser;
@@ -918,7 +987,8 @@ public class User implements Observer, Observable {
             WrappedStatsArtist sortedWrappedStats = new WrappedStatsArtist();
             sortedWrappedStats.setTopSongs(topSongs);
             sortedWrappedStats.setTopAlbums(topAlbums);
-            sortedWrappedStats.setListeners(((WrappedStatsArtist) wrappedStatsUser).getListenersHash().size());
+            sortedWrappedStats.setListeners(((WrappedStatsArtist) wrappedStatsUser).
+                    getListenersHash().size());
             ArrayList<String> keySet = new ArrayList<>(listenersHash.keySet().stream().toList());
             sortedWrappedStats.setTopFans(keySet);
             return sortedWrappedStats;
@@ -1265,6 +1335,10 @@ public class User implements Observer, Observable {
         this.subscribers = subscribers;
     }
 
+    /**
+     *
+     * @return
+     */
     public ArrayList<Notification> getNotifications() {
         return notifications;
     }
@@ -1419,5 +1493,21 @@ public class User implements Observer, Observable {
      */
     public void setTotalSongsListened(final ArrayList<Song> totalSongsListened) {
         this.totalSongsListened = totalSongsListened;
+    }
+
+    /**
+     *
+     * @return
+     */
+    public ArrayList<Song> getNonPremiumSongList() {
+        return nonPremiumSongList;
+    }
+
+    /**
+     *
+     * @param nonPremiumSongList
+     */
+    public void setNonPremiumSongList(final ArrayList<Song> nonPremiumSongList) {
+        this.nonPremiumSongList = nonPremiumSongList;
     }
 }

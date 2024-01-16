@@ -7,7 +7,7 @@ public class AdBreakResult extends Result {
     private String user;
     private String message;
 
-    public AdBreakResult(InputCommands inputCommand, int returnValue) {
+    public AdBreakResult(final InputCommands inputCommand, final int returnValue) {
         this.user = inputCommand.getUsername();
         this.command = inputCommand.getCommand();
         this.timestamp = inputCommand.getTimestamp();

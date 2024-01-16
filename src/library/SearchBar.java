@@ -317,8 +317,8 @@ public class SearchBar {
                     continue;
                 }
 
-                if (albumFilter.getDescription() != null && !Library.users.get(j).getAlbums().get(i).
-                        getDescription().equalsIgnoreCase(albumFilter.getDescription())) {
+                if (albumFilter.getDescription() != null && !Library.users.get(j).getAlbums().
+                        get(i).getDescription().equalsIgnoreCase(albumFilter.getDescription())) {
                     continue;
                 }
 

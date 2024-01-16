@@ -93,7 +93,7 @@ public class RevenueStats {
      *
      * @param artistLoaded
      */
-    public void setArtistLoaded(boolean artistLoaded) {
+    public void setArtistLoaded(final boolean artistLoaded) {
         isArtistLoaded = artistLoaded;
     }
 }

@@ -13,6 +13,7 @@ import library.user.helper.wrapped.WrappedStatsHost;
 import library.user.helper.wrapped.WrappedStatsUser;
 import utils.Errors;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Random;
@@ -32,6 +33,7 @@ public class Player {
     private int shuffleId;
     private static final int FORWARD_TIME = 90;
     private int shuffleSeed;
+    private static final int REPEAT_STATE_3 = 3;
 
     /**
      * constructor
@@ -55,19 +57,50 @@ public class Player {
         this.audioFile = Library.NULL_AUDIO_FILE;
     }
 
+    /**
+     * method that calculates the revenue of songs listened to before the ad break
+     * @param library the library
+     * @param adPrice the price of the ad
+     * @return a number referring to an error, similar to other methods
+     */
+    public int adBreak(final Library library, final int adPrice) {
+        if (audioFile.equals(Library.NULL_AUDIO_FILE)) {
+            return Errors.USER_NOT_PLAYING;
+        }
+
+        double revenuePerSong = (double) adPrice / user.getNonPremiumSongList().size();
+
+        System.out.println((double) adPrice + " " + user.getNonPremiumSongList().size() + " "
+                + revenuePerSong);
+
+        for (Song song : user.getNonPremiumSongList()) {
+            song.setRevenue(song.getRevenue() + revenuePerSong);
+
+            double currentArtistRevenue = library.getUserByUsername(song.getOwner()).
+                    getRevenueStats().getSongRevenue();
+            library.getUserByUsername(song.getOwner()).getRevenueStats().
+                    setSongRevenue(currentArtistRevenue + revenuePerSong);
+        }
+
+        user.setNonPremiumSongList(new ArrayList<>());
+
+        return 0;
+    }
+
+    /**
+     * method that loads the last recommendation for the current user
+     */
     public void loadRecommendations() {
         currentId = 0;
         currentTime = 0;
 
         if (user.getLastRecommandationType().equals("random_song")) {
             audioFile = user.getRecommendedSongs().get(user.getRecommendedSongs().size() - 1);
-//            user.getRecommendedSongs().remove((Song)audioFile);
 
             fileType = "song";
         } else {
             audioFile = user.getRecommendedPlaylists().get(user.getRecommendedPlaylists().
                     size() - 1);
-//            user.getRecommendedPlaylists().remove((Playlist)audioFile);
 
             fileType = "playlist";
         }
@@ -106,17 +139,21 @@ public class Player {
             int listenedTimes = 0;
             Podcast podcast = (Podcast) audioFile;
 
-            WrappedStatsUser userStats = (WrappedStatsUser)user.getWrappedStatsUser();
-            listenedTimes = userStats.getTopEpisodes().getOrDefault(podcast.getEpisodes().get(currentId).getName(), 0);
-            userStats.getTopEpisodes().put(podcast.getEpisodes().get(currentId).getName(), listenedTimes + 1);
+            WrappedStatsUser userStats = (WrappedStatsUser) user.getWrappedStatsUser();
+            listenedTimes = userStats.getTopEpisodes().getOrDefault(podcast.getEpisodes().
+                    get(currentId).getName(), 0);
+            userStats.getTopEpisodes().put(podcast.getEpisodes().
+                    get(currentId).getName(), listenedTimes + 1);
 
             User host = library.getUserByUsername(podcast.getOwner());
             System.out.println(podcast.getOwner());
 
             if (host != null) {
                 WrappedStatsHost hostStats = (WrappedStatsHost) host.getStats();
-                listenedTimes = hostStats.getTopEpisodes().getOrDefault(podcast.getEpisodes().get(currentId).getName(), 0);
-                hostStats.getTopEpisodes().put(podcast.getEpisodes().get(currentId).getName(), listenedTimes + 1);
+                listenedTimes = hostStats.getTopEpisodes().getOrDefault(podcast.getEpisodes().
+                        get(currentId).getName(), 0);
+                hostStats.getTopEpisodes().put(podcast.getEpisodes().
+                        get(currentId).getName(), listenedTimes + 1);
 
                 listenedTimes = hostStats.getListenersHash().getOrDefault(user.getUsername(), 0);
                 hostStats.getListenersHash().put(user.getUsername(), listenedTimes + 1);
@@ -124,12 +161,12 @@ public class Player {
 
         } else if (fileType.equals("album")) {
             currentId = 0;
-            int listenedTimes = 0;
+            int listenedTimes;
             User artist = library.getUserByUsername(audioFile.getOwner());
             artist.getRevenueStats().setArtistLoaded(true);
 
             Album album = (Album) audioFile;
-            WrappedStatsUser userStats = (WrappedStatsUser)user.getWrappedStatsUser();
+            WrappedStatsUser userStats = (WrappedStatsUser) user.getWrappedStatsUser();
 
             listenedTimes = userStats.getTopAlbums().getOrDefault(album.getName(), 0);
             userStats.getTopAlbums().put(album.getName(), listenedTimes + 1);
@@ -137,16 +174,19 @@ public class Player {
             listenedTimes = userStats.getTopArtists().getOrDefault(album.getOwner(), 0);
             userStats.getTopArtists().put(album.getOwner(), listenedTimes + 1);
 
-            listenedTimes = userStats.getTopSongs().getOrDefault(album.getSongs().get(0).getName(), 0);
+            listenedTimes = userStats.getTopSongs().getOrDefault(album.getSongs().
+                    get(0).getName(), 0);
             userStats.getTopSongs().put(album.getSongs().get(0).getName(), listenedTimes + 1);
 
-            listenedTimes = userStats.getTopGenres().getOrDefault(album.getSongs().get(0).getGenre(), 0);
+            listenedTimes = userStats.getTopGenres().getOrDefault(album.getSongs().
+                    get(0).getGenre(), 0);
             userStats.getTopGenres().put(album.getSongs().get(0).getGenre(), listenedTimes + 1);
 
             artist = library.getUserByUsername(album.getOwner());
-            WrappedStatsArtist artistStats = (WrappedStatsArtist)artist.getStats();
+            WrappedStatsArtist artistStats = (WrappedStatsArtist) artist.getStats();
 
-            listenedTimes = artistStats.getTopSongs().getOrDefault(album.getSongs().get(0).getName(), 0);
+            listenedTimes = artistStats.getTopSongs().getOrDefault(album.getSongs().
+                    get(0).getName(), 0);
             artistStats.getTopSongs().put(album.getSongs().get(0).getName(), listenedTimes + 1);
 
             listenedTimes = artistStats.getTopAlbums().getOrDefault(album.getName(), 0);
@@ -159,6 +199,8 @@ public class Player {
 
             if (user.isPremium()) {
                 user.getPremiumSongList().add(album.getSongs().get(currentId));
+            } else {
+                user.getNonPremiumSongList().add(album.getSongs().get(currentId));
             }
         } else if (fileType.equals("song")) {
             currentId = 0;
@@ -168,7 +210,7 @@ public class Player {
             User artist = library.getUserByUsername(audioFile.getOwner());
             artist.getRevenueStats().setArtistLoaded(true);
 
-            WrappedStatsUser userStats = (WrappedStatsUser)user.getWrappedStatsUser();
+            WrappedStatsUser userStats = (WrappedStatsUser) user.getWrappedStatsUser();
 
             listenedTimes = userStats.getTopSongs().getOrDefault(song.getName(), 0);
             userStats.getTopSongs().put(song.getName(), listenedTimes + 1);
@@ -183,7 +225,7 @@ public class Player {
             userStats.getTopGenres().put(song.getGenre(), listenedTimes + 1);
 
             artist = library.getUserByUsername(song.getOwner());
-            WrappedStatsArtist artistStats = (WrappedStatsArtist)artist.getStats();
+            WrappedStatsArtist artistStats = (WrappedStatsArtist) artist.getStats();
 
             listenedTimes = artistStats.getTopSongs().getOrDefault(song.getName(), 0);
             artistStats.getTopSongs().put(song.getName(), listenedTimes + 1);
@@ -198,6 +240,8 @@ public class Player {
 
             if (user.isPremium()) {
                 user.getPremiumSongList().add(song);
+            } else {
+                user.getNonPremiumSongList().add(song);
             }
         }
         paused = false;
@@ -375,7 +419,7 @@ public class Player {
         }
 
         repeatState++;
-        if (repeatState == 3) {
+        if (repeatState == REPEAT_STATE_3) {
             repeatState = 0;
         }
         return repeatState;

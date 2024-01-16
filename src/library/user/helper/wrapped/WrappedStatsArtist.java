@@ -20,45 +20,85 @@ public class WrappedStatsArtist extends WrappedStats {
         listenersHash = new HashMap<>();
     }
 
+    /**
+     *
+     * @return
+     */
     public int getListeners() {
         return listeners;
     }
 
-    public void setListeners(int listeners) {
+    /**
+     *
+     * @param listeners
+     */
+    public void setListeners(final int listeners) {
         this.listeners = listeners;
     }
 
+    /**
+     *
+     * @return
+     */
     public HashMap<String, Integer> getTopSongs() {
         return topSongs;
     }
 
-    public void setTopSongs(HashMap<String, Integer> topSongs) {
+    /**
+     *
+     * @param topSongs
+     */
+    public void setTopSongs(final HashMap<String, Integer> topSongs) {
         this.topSongs = topSongs;
     }
 
+    /**
+     *
+     * @return
+     */
     public HashMap<String, Integer> getTopAlbums() {
         return topAlbums;
     }
 
-    public void setTopAlbums(HashMap<String, Integer> topAlbums) {
+    /**
+     *
+     * @param topAlbums
+     */
+    public void setTopAlbums(final HashMap<String, Integer> topAlbums) {
         this.topAlbums = topAlbums;
     }
 
+    /**
+     *
+     * @return
+     */
     public ArrayList<String> getTopFans() {
         return topFans;
     }
 
-    public void setTopFans(ArrayList<String> topFans) {
+    /**
+     *
+     * @param topFans
+     */
+    public void setTopFans(final ArrayList<String> topFans) {
         this.topFans = topFans;
     }
 
+    /**
+     *
+     * @return
+     */
     @JsonIgnore
     public HashMap<String, Integer> getListenersHash() {
         return listenersHash;
     }
 
+    /**
+     *
+     * @param listenersHash
+     */
     @JsonIgnore
-    public void setListenersHash(HashMap<String, Integer> listenersHash) {
+    public void setListenersHash(final HashMap<String, Integer> listenersHash) {
         this.listenersHash = listenersHash;
     }
 }

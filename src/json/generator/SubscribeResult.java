@@ -8,8 +8,8 @@ public class SubscribeResult extends Result {
     private String user;
     private String message;
 
-    public SubscribeResult(InputCommands inputCommand, int returnValue,
-                           User userSubscribedTo) {
+    public SubscribeResult(final InputCommands inputCommand, final int returnValue,
+                           final User userSubscribedTo) {
         this.command = inputCommand.getCommand();
         this.timestamp = inputCommand.getTimestamp();
         this.user = inputCommand.getUsername();
@@ -28,19 +28,35 @@ public class SubscribeResult extends Result {
 
     }
 
+    /**
+     *
+     * @return
+     */
     public String getUser() {
         return user;
     }
 
-    public void setUser(String user) {
+    /**
+     *
+     * @param user
+     */
+    public void setUser(final String user) {
         this.user = user;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getMessage() {
         return message;
     }
 
-    public void setMessage(String message) {
+    /**
+     *
+     * @param message
+     */
+    public void setMessage(final String message) {
         this.message = message;
     }
 }

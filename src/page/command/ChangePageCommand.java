@@ -3,28 +3,36 @@ package page.command;
 import library.User;
 import page.Page;
 
-import java.util.LinkedList;
-
 public class ChangePageCommand implements Command {
     private Page nextPage;
     private Page previousPage;
     private Page undonePage;
     private User user;
 
-    public ChangePageCommand(User user, Page page) {
+    public ChangePageCommand(final User user, final Page page) {
         this.user = user;
         this.previousPage = user.getCurrentPage();
         this.nextPage = page;
     }
+
+    /**
+     * Executes the command (changes the current page of the user)
+     */
     public void execute() {
         user.setCurrentPage(nextPage);
     }
 
+    /**
+     * Undoes the command (changes the current page of the user to the previous one)
+     */
     public void undo() {
         user.setCurrentPage(previousPage);
         undonePage = nextPage;
     }
 
+    /**
+     * Redoes the command (changes the current page of the user to the next one)
+     */
     public void redo() {
         if (undonePage != null) {
             user.setCurrentPage(undonePage);
@@ -63,19 +71,35 @@ public class ChangePageCommand implements Command {
         this.previousPage = previousPage;
     }
 
+    /**
+     *
+     * @return
+     */
     public Page getUndonePage() {
         return undonePage;
     }
 
-    public void setUndonePage(Page undonePage) {
+    /**
+     *
+     * @param undonePage
+     */
+    public void setUndonePage(final Page undonePage) {
         this.undonePage = undonePage;
     }
 
+    /**
+     *
+     * @return
+     */
     public User getUser() {
         return user;
     }
 
-    public void setUser(User user) {
+    /**
+     *
+     * @param user
+     */
+    public void setUser(final User user) {
         this.user = user;
     }
 }

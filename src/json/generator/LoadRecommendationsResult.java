@@ -7,7 +7,7 @@ public class LoadRecommendationsResult extends Result {
     private String user;
     private String message;
 
-    public LoadRecommendationsResult(final InputCommands inputCommand, int returnValue) {
+    public LoadRecommendationsResult(final InputCommands inputCommand, final int returnValue) {
         this.command = inputCommand.getCommand();
         this.timestamp = inputCommand.getTimestamp();
         this.user = inputCommand.getUsername();
@@ -37,10 +37,18 @@ public class LoadRecommendationsResult extends Result {
         this.user = user;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getMessage() {
         return message;
     }
 
+    /**
+     *
+     * @param message
+     */
     public void setMessage(final String message) {
         this.message = message;
     }

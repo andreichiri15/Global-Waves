@@ -1,8 +1,5 @@
 package library.user.helper.wrapped;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import library.filetypes.Song;
-
 import java.util.HashMap;
 
 public class WrappedStatsUser extends WrappedStats {
@@ -21,43 +18,83 @@ public class WrappedStatsUser extends WrappedStats {
         topEpisodes = new HashMap<>();
     }
 
+    /**
+     *
+     * @return
+     */
     public HashMap<String, Integer> getTopSongs() {
         return topSongs;
     }
 
-    public void setTopSongs(HashMap<String, Integer> listenedSongs) {
+    /**
+     *
+     * @param listenedSongs
+     */
+    public void setTopSongs(final HashMap<String, Integer> listenedSongs) {
         this.topSongs = listenedSongs;
     }
 
+    /**
+     *
+     * @return
+     */
     public HashMap<String, Integer> getTopAlbums() {
         return topAlbums;
     }
 
-    public void setTopAlbums(HashMap<String, Integer> topAlbums) {
+    /**
+     *
+     * @param topAlbums
+     */
+    public void setTopAlbums(final HashMap<String, Integer> topAlbums) {
         this.topAlbums = topAlbums;
     }
 
+    /**
+     *
+     * @return
+     */
     public HashMap<String, Integer> getTopArtists() {
         return topArtists;
     }
 
-    public void setTopArtists(HashMap<String, Integer> topArtists) {
+    /**
+     *
+     * @param topArtists
+     */
+    public void setTopArtists(final HashMap<String, Integer> topArtists) {
         this.topArtists = topArtists;
     }
 
+    /**
+     *
+     * @return
+     */
     public HashMap<String, Integer> getTopGenres() {
         return topGenres;
     }
 
-    public void setTopGenres(HashMap<String, Integer> topGenres) {
+    /**
+     *
+     * @param topGenres
+     */
+    public void setTopGenres(final HashMap<String, Integer> topGenres) {
         this.topGenres = topGenres;
     }
 
+    /**
+     *
+     * @return
+     */
     public HashMap<String, Integer> getTopEpisodes() {
         return topEpisodes;
     }
 
-    public void setTopEpisodes(HashMap<String, Integer> topEpisodes) {
+    /**
+     *
+     * @param topEpisodes
+     */
+    public void setTopEpisodes(final HashMap<String, Integer> topEpisodes) {
         this.topEpisodes = topEpisodes;
     }
 }
